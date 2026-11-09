@@ -88,7 +88,8 @@ describe('05 · Assertions — implicit, explicit, retry-ability', { tags: ['@as
     expected: 'all negative assertions hold' }, () => {
     cy.get('.does-not-exist').should('not.exist')
     cy.get('.assertion-table tbody tr:first').should('not.have.class', 'success')
-    cy.get('.assertions-link').should('not.have.attr', 'target')
+    cy.get('.assertions-link').should('not.have.attr', 'download').and('not.have.class', 'disabled')
+    cy.get('.assertions-link').should('not.contain', 'Kitchen Sink')
   })
 
   tc({ id: 'TC-AS-011', title: 'CSS assertions on computed style', technique: 'Use-case', req: 'REQ-AS-01',

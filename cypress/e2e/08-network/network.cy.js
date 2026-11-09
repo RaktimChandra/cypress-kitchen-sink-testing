@@ -72,10 +72,10 @@ describe('08 · Network — stubbing and observing requests', { tags: ['@network
 
   tc({ id: 'TC-NW-010', title: 'Slow API: comment appears after the stubbed 1.5 s delay', technique: 'Use-case', req: 'REQ-NW-01', type: 'Performance',
     expected: 'not shown before the response; shown after' }, () => {
-    cy.intercept('GET', '**/comments/1', { body: { body: 'late' }, delay: 1500 }).as('slow')
+    cy.intercept('GET', '**/comments/1', { body: { body: 'late' }, delay: 1500 }).as('slowComment')
     cy.get('.network-btn').click()
     cy.get('.network-comment').should('not.have.text', 'late')
-    cy.wait('@slow')
+    cy.wait('@slowComment')
     cy.get('.network-comment').should('have.text', 'late')
   })
 
@@ -89,8 +89,14 @@ describe('08 · Network — stubbing and observing requests', { tags: ['@network
 
   tc({ id: 'TC-NW-012', title: 'Response can be modified in flight (req.continue)', technique: 'Use-case', req: 'REQ-NW-01',
     expected: 'server body passed through a handler that rewrites it' }, () => {
+    // keep the test offline: route the call to the local server, then rewrite the real response in flight
     cy.intercept('GET', '**/comments/1', (req) => {
-      req.reply((res) => { res.send({ body: 'rewritten by test' }) })
+      req.url = `${Cypress.config('baseUrl')}/todo`
+      req.continue((res) => {
+        expect(res.statusCode, 'real upstream status').to.eq(200)
+        res.headers['content-type'] = 'application/json; charset=utf-8'
+        res.send({ body: 'rewritten by test' })
+      })
     }).as('mod')
     cy.get('.network-btn').click()
     cy.wait('@mod')
