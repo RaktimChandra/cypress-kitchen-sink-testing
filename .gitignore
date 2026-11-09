@@ -1,0 +1,12 @@
+node_modules/
+reports/
+instrumented/
+mutants/
+coverage/
+.nyc_output/
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+deliverables/
+*.zip
+.DS_Store
