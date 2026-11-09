@@ -59,6 +59,22 @@ docs/                   requirements, test plan
 .github/workflows/      CI (4 browsers + coverage), mutation testing
 ```
 
+## Latest results
+
+These come from GitHub Actions run 42705585437 on `main` (merge of PR #1). All numbers are copied from the published evidence on the `results` branch.
+
+| Browser | Cases | Pass | Known defect reproduced | Fail | Skipped |
+|---|---|---|---|---|---|
+| Chrome | 588 | 573 | 15 | 0 | 0 |
+| Firefox | 588 | 567 | 15 | 0 | 6 (CDP-only real events) |
+| Edge | 588 | 573 | 15 | 0 | 0 |
+| Electron | 588 | 573 | 15 | 0 | 0 |
+
+- **Mutation testing:** 31 of 31 non-equivalent mutants killed, so the score is 100 % (1 mutant is equivalent).
+- **Coverage of the app's JavaScript:** 97.9 % of lines, 95.8 % of functions and 86.8 % of branches.
+- **Defects:** 14 Kitchen Sink defects, 4 of them Major. See [DEFECTS.md](DEFECTS.md).
+- **History:** the first run failed 43 cases per browser. Triage sorted them into real defects, wrong oracles and browser behaviour; see [docs/ci-history.json](docs/ci-history.json).
+
 ## Documents
 
 The documents are generated from the repository, so they always match the code. Run `make deliverables` (needs Python 3 with openpyxl and matplotlib, plus the Node packages `docx` and `pptxgenjs`).
