@@ -8,7 +8,10 @@ mutation:     ; npm run mutation
 lint:         ; npm run lint
 catalogue:    ; node tools/catalogue.js
 charts: catalogue ; cd tools/deliverables && python3 charts.py
-deliverables: charts
+deliverables:
+	tools/deliverables/build_all.sh
+
+legacy-deliverables: charts
 	cd tools/deliverables && python3 build_workbook.py
 	node tools/deliverables/build_report.js
 	node tools/deliverables/build_deck.js
