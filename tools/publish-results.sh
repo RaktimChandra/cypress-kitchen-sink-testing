@@ -19,7 +19,7 @@ if [ "$KIND" = "mutation" ]; then
   mkdir -p "$DEST/mutation"
   find artifacts -path '*mutation*' -name '*.json' -exec cp {} "$DEST/mutation/" \;
 else
-  rm -rf "$DEST/browsers" "$DEST/coverage"
+  rm -rf "$DEST/browsers" "$DEST/coverage" "$DEST/snapshots"
   mkdir -p "$DEST/browsers" "$DEST/coverage"
   for d in artifacts/evidence-*; do
     [ -d "$d" ] || continue
