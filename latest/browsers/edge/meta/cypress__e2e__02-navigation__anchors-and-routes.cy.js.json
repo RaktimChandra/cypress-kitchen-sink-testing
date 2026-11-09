@@ -176,7 +176,7 @@
   "id": "TC-NAV-080",
   "title": "Every documented section heading on every page has a working \"on.cypress.io\" docs link",
   "req": "REQ-NAV-05",
-  "expected": "each h4[id] section links to https://on.cypress.io (in the heading, or in the first paragraph for chai helpers such as expect/assert)",
+  "expected": "each h4[id] section links to its documentation (on.cypress.io, or Sinon/Chai for library helpers) in the heading or first paragraph",
   "spec": "cypress/e2e/02-navigation/anchors-and-routes.cy.js"
  },
  {
@@ -239,6 +239,20 @@
   "defect": "DEF-KS-001",
   "expected": "#/unknown shows the 2 seed items and raises no error (actual: uncaught \"this[activeRoute] is not a function\", empty list)",
   "knownDefect": "DEF-KS-001",
+  "spec": "cypress/e2e/02-navigation/anchors-and-routes.cy.js"
+ },
+ {
+  "level": "System",
+  "priority": "P4",
+  "type": "Functional",
+  "technique": "Error guessing",
+  "tags": [],
+  "id": "TC-NAV-086",
+  "title": "The \"cy.fixture or require\" section links to its documentation like every other section",
+  "req": "REQ-NAV-05",
+  "defect": "DEF-KS-014",
+  "expected": "h4#require or its first paragraph links to on.cypress.io (actual: no link at all)",
+  "knownDefect": "DEF-KS-014",
   "spec": "cypress/e2e/02-navigation/anchors-and-routes.cy.js"
  }
 ]

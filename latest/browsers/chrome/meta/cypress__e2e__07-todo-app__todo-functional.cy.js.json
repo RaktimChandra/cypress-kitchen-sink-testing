@@ -30,9 +30,9 @@
   "technique": "Use-case",
   "tags": [],
   "id": "TC-TD-003",
-  "title": "New-todo input has autofocus on load",
+  "title": "New-todo input requests autofocus on load",
   "req": "REQ-TD-01",
-  "expected": "focused element is .new-todo",
+  "expected": "the input carries the autofocus attribute and is the only autofocus element (browsers suppress autofocus inside the test runner iframe, so the focus itself is verified top-level in the exploratory probe)",
   "spec": "cypress/e2e/07-todo-app/todo-functional.cy.js"
  },
  {

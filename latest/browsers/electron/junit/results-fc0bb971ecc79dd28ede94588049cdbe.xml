@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="5.566" tests="20" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-11-09T21:47:19" tests="0" file="cypress/e2e/03-form-controls/checkboxes-radios.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="03 · Form controls — checkboxes and radios" timestamp="2026-11-09T21:47:19" tests="20" time="5.564" failures="0">
+    <testcase name="03 · Form controls — checkboxes and radios TC-FC-080 | Check all enabled checkboxes" time="0.480" classname="TC-FC-080 | Check all enabled checkboxes">
+    </testcase>
+    <testcase name="03 · Form controls — checkboxes and radios TC-FC-081 | Disabled checkbox cannot be checked by a user" time="0.133" classname="TC-FC-081 | Disabled checkbox cannot be checked by a user">
+    </testcase>
+    <testcase name="03 · Form controls — checkboxes and radios TC-FC-082 | force:true checks the disabled checkbox (test escape hatch)" time="0.183" classname="TC-FC-082 | force:true checks the disabled checkbox (test escape hatch)">
+    </testcase>
+    <testcase name="03 · Form controls — checkboxes and radios TC-FC-083 | Decision table rule R1: check {∅}" time="0.140" classname="TC-FC-083 | Decision table rule R1: check {∅}">
+    </testcase>
+    <testcase name="03 · Form controls — checkboxes and radios TC-FC-084 | Decision table rule R2: check {checkbox1}" time="0.212" classname="TC-FC-084 | Decision table rule R2: check {checkbox1}">
+    </testcase>
+    <testcase name="03 · Form controls — checkboxes and radios TC-FC-085 | Decision table rule R3: check {checkbox2}" time="0.204" classname="TC-FC-085 | Decision table rule R3: check {checkbox2}">
+    </testcase>
+    <testcase name="03 · Form controls — checkboxes and radios TC-FC-086 | Decision table rule R4: check {checkbox1, checkbox2}" time="0.287" classname="TC-FC-086 | Decision table rule R4: check {checkbox1, checkbox2}">
+    </testcase>
+    <testcase name="03 · Form controls — checkboxes and radios TC-FC-087 | Decision table rule R5: check {checkbox3}" time="0.195" classname="TC-FC-087 | Decision table rule R5: check {checkbox3}">
+    </testcase>
+    <testcase name="03 · Form controls — checkboxes and radios TC-FC-088 | Decision table rule R6: check {checkbox1, checkbox3}" time="0.289" classname="TC-FC-088 | Decision table rule R6: check {checkbox1, checkbox3}">
+    </testcase>
+    <testcase name="03 · Form controls — checkboxes and radios TC-FC-089 | Decision table rule R7: check {checkbox2, checkbox3}" time="0.278" classname="TC-FC-089 | Decision table rule R7: check {checkbox2, checkbox3}">
+    </testcase>
+    <testcase name="03 · Form controls — checkboxes and radios TC-FC-090 | Decision table rule R8: check {checkbox1, checkbox2, checkbox3}" time="0.348" classname="TC-FC-090 | Decision table rule R8: check {checkbox1, checkbox2, checkbox3}">
+    </testcase>
+    <testcase name="03 · Form controls — checkboxes and radios TC-FC-091 | Uncheck all pre-checked enabled boxes" time="0.281" classname="TC-FC-091 | Uncheck all pre-checked enabled boxes">
+    </testcase>
+    <testcase name="03 · Form controls — checkboxes and radios TC-FC-092 | Uncheck a single box by value" time="0.200" classname="TC-FC-092 | Uncheck a single box by value">
+    </testcase>
+    <testcase name="03 · Form controls — checkboxes and radios TC-FC-093 | Clicking a label toggles its checkbox" time="0.308" classname="TC-FC-093 | Clicking a label toggles its checkbox">
+    </testcase>
+    <testcase name="03 · Form controls — checkboxes and radios TC-FC-094 | Radio group starts with nothing selected" time="0.120" classname="TC-FC-094 | Radio group starts with nothing selected">
+    </testcase>
+    <testcase name="03 · Form controls — checkboxes and radios TC-FC-095 | Selecting radio2 after radio1 deselects radio1" time="0.276" classname="TC-FC-095 | Selecting radio2 after radio1 deselects radio1">
+    </testcase>
+    <testcase name="03 · Form controls — checkboxes and radios TC-FC-096 | Selecting radio1 after radio2 deselects radio2" time="0.276" classname="TC-FC-096 | Selecting radio1 after radio2 deselects radio2">
+    </testcase>
+    <testcase name="03 · Form controls — checkboxes and radios TC-FC-097 | Disabled radio3 cannot be selected" time="0.205" classname="TC-FC-097 | Disabled radio3 cannot be selected">
+    </testcase>
+    <testcase name="03 · Form controls — checkboxes and radios TC-FC-098 | Re-checking the selected radio keeps it selected" time="0.288" classname="TC-FC-098 | Re-checking the selected radio keeps it selected">
+    </testcase>
+    <testcase name="03 · Form controls — checkboxes and radios TC-FC-099 | Radios cannot be unchecked with uncheck() (only checkboxes can)" time="0.273" classname="TC-FC-099 | Radios cannot be unchecked with uncheck() (only checkboxes can)">
+    </testcase>
+  </testsuite>
+</testsuites>

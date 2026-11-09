@@ -138,9 +138,9 @@
   "technique": "Use-case",
   "tags": [],
   "id": "TC-NW-012",
-  "title": "Response can be modified in flight (req.continue)",
+  "title": "A real server response can be modified in flight (req.continue)",
   "req": "REQ-NW-01",
-  "expected": "server body passed through a handler that rewrites it",
+  "expected": "the local server's HTML for this page passes through a handler that rewrites its heading before the browser sees it",
   "spec": "cypress/e2e/08-network/network.cy.js"
  },
  {

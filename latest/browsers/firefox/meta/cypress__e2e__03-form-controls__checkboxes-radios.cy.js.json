@@ -20,7 +20,7 @@
   "id": "TC-FC-081",
   "title": "Disabled checkbox cannot be checked by a user",
   "req": "REQ-FC-07",
-  "expected": "check() on a disabled box is refused",
+  "expected": "checkbox2 is disabled; a native click on it leaves it unchecked",
   "spec": "cypress/e2e/03-form-controls/checkboxes-radios.cy.js"
  },
  {
@@ -220,7 +220,7 @@
   "id": "TC-FC-097",
   "title": "Disabled radio3 cannot be selected",
   "req": "REQ-FC-08",
-  "expected": "check(\"radio3\") is refused; radio3 unchecked",
+  "expected": "radio3 is disabled; a native click on it changes nothing; radio3 unchecked",
   "spec": "cypress/e2e/03-form-controls/checkboxes-radios.cy.js"
  },
  {

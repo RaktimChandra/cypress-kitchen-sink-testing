@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="3.561" tests="17" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-11-09T21:47:06" tests="0" file="cypress/e2e/03-form-controls/email-validation.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="03 · Form controls — email field equivalence classes" timestamp="2026-11-09T21:47:06" tests="17" time="3.558" failures="0">
+    <testcase name="03 · Form controls — email field equivalence classes TC-FC-040 | Email V1 — simple local@domain → valid" time="0.311" classname="TC-FC-040 | Email V1 — simple local@domain → valid">
+    </testcase>
+    <testcase name="03 · Form controls — email field equivalence classes TC-FC-041 | Email V2 — single-label domain (allowed by HTML) → valid" time="0.204" classname="TC-FC-041 | Email V2 — single-label domain (allowed by HTML) → valid">
+    </testcase>
+    <testcase name="03 · Form controls — email field equivalence classes TC-FC-042 | Email V3 — dots and plus tag, multi-level domain → valid" time="0.210" classname="TC-FC-042 | Email V3 — dots and plus tag, multi-level domain → valid">
+    </testcase>
+    <testcase name="03 · Form controls — email field equivalence classes TC-FC-043 | Email V4 — upper case → valid" time="0.205" classname="TC-FC-043 | Email V4 — upper case → valid">
+    </testcase>
+    <testcase name="03 · Form controls — email field equivalence classes TC-FC-044 | Email V5 — digits only → valid" time="0.207" classname="TC-FC-044 | Email V5 — digits only → valid">
+    </testcase>
+    <testcase name="03 · Form controls — email field equivalence classes TC-FC-045 | Email V6 — empty (field is not required) → valid" time="0.073" classname="TC-FC-045 | Email V6 — empty (field is not required) → valid">
+    </testcase>
+    <testcase name="03 · Form controls — email field equivalence classes TC-FC-046 | Email I1 — no @ → invalid" time="0.199" classname="TC-FC-046 | Email I1 — no @ → invalid">
+    </testcase>
+    <testcase name="03 · Form controls — email field equivalence classes TC-FC-047 | Email I2 — missing domain → invalid" time="0.200" classname="TC-FC-047 | Email I2 — missing domain → invalid">
+    </testcase>
+    <testcase name="03 · Form controls — email field equivalence classes TC-FC-048 | Email I3 — missing local part → invalid" time="0.201" classname="TC-FC-048 | Email I3 — missing local part → invalid">
+    </testcase>
+    <testcase name="03 · Form controls — email field equivalence classes TC-FC-049 | Email I4 — space in local part → invalid" time="0.077" classname="TC-FC-049 | Email I4 — space in local part → invalid">
+    </testcase>
+    <testcase name="03 · Form controls — email field equivalence classes TC-FC-050 | Email I5 — consecutive dots in domain → invalid" time="0.192" classname="TC-FC-050 | Email I5 — consecutive dots in domain → invalid">
+    </testcase>
+    <testcase name="03 · Form controls — email field equivalence classes TC-FC-051 | Email I6 — two @ signs → invalid" time="0.202" classname="TC-FC-051 | Email I6 — two @ signs → invalid">
+    </testcase>
+    <testcase name="03 · Form controls — email field equivalence classes TC-FC-052 | Email I7 — trailing dot → invalid" time="0.199" classname="TC-FC-052 | Email I7 — trailing dot → invalid">
+    </testcase>
+    <testcase name="03 · Form controls — email field equivalence classes TC-FC-053 | Email I8 — label starting with hyphen → invalid" time="0.228" classname="TC-FC-053 | Email I8 — label starting with hyphen → invalid">
+    </testcase>
+    <testcase name="03 · Form controls — email field equivalence classes TC-FC-054 | Email I9 — quoted local part (RFC-valid, HTML-invalid) → invalid" time="0.200" classname="TC-FC-054 | Email I9 — quoted local part (RFC-valid, HTML-invalid) → invalid">
+    </testcase>
+    <testcase name="03 · Form controls — email field equivalence classes TC-FC-055 | Email I10 — non-ASCII local part → invalid" time="0.198" classname="TC-FC-055 | Email I10 — non-ASCII local part → invalid">
+    </testcase>
+    <testcase name="03 · Form controls — email field equivalence classes TC-FC-056 | Email I11 — underscore in domain → invalid" time="0.198" classname="TC-FC-056 | Email I11 — underscore in domain → invalid">
+    </testcase>
+  </testsuite>
+</testsuites>

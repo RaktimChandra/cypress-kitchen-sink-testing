@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="11.961" tests="24" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-11-09T21:47:35" tests="0" file="cypress/e2e/02-navigation/navbar.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="02 · Navigation — navbar menu" timestamp="2026-11-09T21:47:35" tests="24" time="11.951" failures="0">
+    <testcase name="02 · Navigation — navbar menu TC-NAV-001 | Commands dropdown lists all 17 command pages in documented order" time="0.359" classname="TC-NAV-001 | Commands dropdown lists all 17 command pages in documented order">
+    </testcase>
+    <testcase name="02 · Navigation — navbar menu TC-NAV-002 | Dropdown closes when clicking outside it" time="0.333" classname="TC-NAV-002 | Dropdown closes when clicking outside it">
+    </testcase>
+    <testcase name="02 · Navigation — navbar menu TC-NAV-010 | Menu → &quot;Querying&quot; opens /commands/querying" time="0.488" classname="TC-NAV-010 | Menu → &quot;Querying&quot; opens /commands/querying">
+    </testcase>
+    <testcase name="02 · Navigation — navbar menu TC-NAV-011 | Menu → &quot;Traversal&quot; opens /commands/traversal" time="0.474" classname="TC-NAV-011 | Menu → &quot;Traversal&quot; opens /commands/traversal">
+    </testcase>
+    <testcase name="02 · Navigation — navbar menu TC-NAV-012 | Menu → &quot;Actions&quot; opens /commands/actions" time="0.559" classname="TC-NAV-012 | Menu → &quot;Actions&quot; opens /commands/actions">
+    </testcase>
+    <testcase name="02 · Navigation — navbar menu TC-NAV-013 | Menu → &quot;Window&quot; opens /commands/window" time="0.420" classname="TC-NAV-013 | Menu → &quot;Window&quot; opens /commands/window">
+    </testcase>
+    <testcase name="02 · Navigation — navbar menu TC-NAV-014 | Menu → &quot;Viewport&quot; opens /commands/viewport" time="0.515" classname="TC-NAV-014 | Menu → &quot;Viewport&quot; opens /commands/viewport">
+    </testcase>
+    <testcase name="02 · Navigation — navbar menu TC-NAV-015 | Menu → &quot;Location&quot; opens /commands/location" time="0.543" classname="TC-NAV-015 | Menu → &quot;Location&quot; opens /commands/location">
+    </testcase>
+    <testcase name="02 · Navigation — navbar menu TC-NAV-016 | Menu → &quot;Navigation&quot; opens /commands/navigation" time="0.475" classname="TC-NAV-016 | Menu → &quot;Navigation&quot; opens /commands/navigation">
+    </testcase>
+    <testcase name="02 · Navigation — navbar menu TC-NAV-017 | Menu → &quot;Assertions&quot; opens /commands/assertions" time="0.535" classname="TC-NAV-017 | Menu → &quot;Assertions&quot; opens /commands/assertions">
+    </testcase>
+    <testcase name="02 · Navigation — navbar menu TC-NAV-018 | Menu → &quot;Misc&quot; opens /commands/misc" time="0.473" classname="TC-NAV-018 | Menu → &quot;Misc&quot; opens /commands/misc">
+    </testcase>
+    <testcase name="02 · Navigation — navbar menu TC-NAV-019 | Menu → &quot;Connectors&quot; opens /commands/connectors" time="0.488" classname="TC-NAV-019 | Menu → &quot;Connectors&quot; opens /commands/connectors">
+    </testcase>
+    <testcase name="02 · Navigation — navbar menu TC-NAV-020 | Menu → &quot;Aliasing&quot; opens /commands/aliasing" time="0.424" classname="TC-NAV-020 | Menu → &quot;Aliasing&quot; opens /commands/aliasing">
+    </testcase>
+    <testcase name="02 · Navigation — navbar menu TC-NAV-021 | Menu → &quot;Waiting&quot; opens /commands/waiting" time="0.535" classname="TC-NAV-021 | Menu → &quot;Waiting&quot; opens /commands/waiting">
+    </testcase>
+    <testcase name="02 · Navigation — navbar menu TC-NAV-022 | Menu → &quot;Network Requests&quot; opens /commands/network-requests" time="0.494" classname="TC-NAV-022 | Menu → &quot;Network Requests&quot; opens /commands/network-requests">
+    </testcase>
+    <testcase name="02 · Navigation — navbar menu TC-NAV-023 | Menu → &quot;Files&quot; opens /commands/files" time="0.477" classname="TC-NAV-023 | Menu → &quot;Files&quot; opens /commands/files">
+    </testcase>
+    <testcase name="02 · Navigation — navbar menu TC-NAV-024 | Menu → &quot;Storage&quot; opens /commands/storage" time="0.473" classname="TC-NAV-024 | Menu → &quot;Storage&quot; opens /commands/storage">
+    </testcase>
+    <testcase name="02 · Navigation — navbar menu TC-NAV-025 | Menu → &quot;Cookies&quot; opens /commands/cookies" time="0.478" classname="TC-NAV-025 | Menu → &quot;Cookies&quot; opens /commands/cookies">
+    </testcase>
+    <testcase name="02 · Navigation — navbar menu TC-NAV-026 | Menu → &quot;Spies, Stubs &amp; Clocks&quot; opens /commands/spies-stubs-clocks" time="0.482" classname="TC-NAV-026 | Menu → &quot;Spies, Stubs &amp; Clocks&quot; opens /commands/spies-stubs-clocks">
+    </testcase>
+    <testcase name="02 · Navigation — navbar menu TC-NAV-030 | Top-level link &quot;Utilities&quot; opens /utilities" time="0.359" classname="TC-NAV-030 | Top-level link &quot;Utilities&quot; opens /utilities">
+    </testcase>
+    <testcase name="02 · Navigation — navbar menu TC-NAV-031 | Top-level link &quot;Cypress API&quot; opens /cypress-api" time="0.387" classname="TC-NAV-031 | Top-level link &quot;Cypress API&quot; opens /cypress-api">
+    </testcase>
+    <testcase name="02 · Navigation — navbar menu TC-NAV-032 | Brand &quot;cypress.io&quot; returns to the home page from a deep page" time="0.576" classname="TC-NAV-032 | Brand &quot;cypress.io&quot; returns to the home page from a deep page">
+    </testcase>
+    <testcase name="02 · Navigation — navbar menu TC-NAV-033 | GitHub link points at the upstream repository (not followed — external)" time="0.169" classname="TC-NAV-033 | GitHub link points at the upstream repository (not followed — external)">
+    </testcase>
+    <testcase name="02 · Navigation — navbar menu TC-NAV-034 | Home page lists every command page as a link that resolves" time="0.479" classname="TC-NAV-034 | Home page lists every command page as a link that resolves">
+    </testcase>
+  </testsuite>
+</testsuites>
