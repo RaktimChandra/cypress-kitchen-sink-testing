@@ -22,7 +22,7 @@
    "killers": [
     "TC-FC-022"
    ],
-   "seconds": 36
+   "seconds": 39
   },
   {
    "id": "M08",
@@ -52,7 +52,7 @@
     "TC-FC-154",
     "TC-FC-160"
    ],
-   "seconds": 100
+   "seconds": 102
   },
   {
    "id": "M12",
@@ -64,12 +64,11 @@
    ],
    "status": "KILLED",
    "testsRun": 16,
-   "failed": 2,
+   "failed": 1,
    "killers": [
-    "TC-NW-003",
-    "TC-NW-012"
+    "TC-NW-003"
    ],
-   "seconds": 24
+   "seconds": 20
   },
   {
    "id": "M16",
@@ -86,7 +85,7 @@
     "TC-UI-061",
     "TC-UI-062"
    ],
-   "seconds": 14
+   "seconds": 15
   },
   {
    "id": "M20",
@@ -102,7 +101,7 @@
    "killers": [
     "TC-TD-050"
    ],
-   "seconds": 25
+   "seconds": 27
   },
   {
    "id": "M24",
@@ -119,7 +118,7 @@
     "TC-TD-086",
     "TC-TD-087"
    ],
-   "seconds": 22
+   "seconds": 23
   },
   {
    "id": "M28",
@@ -136,7 +135,7 @@
     "TC-TD-072",
     "TC-TD-074"
    ],
-   "seconds": 19
+   "seconds": 20
   },
   {
    "id": "M32",
@@ -151,7 +150,7 @@
    "testsRun": 21,
    "failed": 0,
    "killers": [],
-   "seconds": 19
+   "seconds": 20
   }
  ]
 }

@@ -1,11 +1,11 @@
 {
  "summary": {
   "total": 8,
-  "killed": 6,
-  "survived": 2,
+  "killed": 8,
+  "survived": 0,
   "equivalent": 0,
   "errors": 0,
-  "score": 75
+  "score": 100
  },
  "results": [
   {
@@ -22,7 +22,7 @@
    "killers": [
     "TC-FC-022"
    ],
-   "seconds": 30
+   "seconds": 39
   },
   {
    "id": "M07",
@@ -51,15 +51,14 @@
    ],
    "status": "KILLED",
    "testsRun": 16,
-   "failed": 5,
+   "failed": 4,
    "killers": [
     "TC-NW-001",
     "TC-NW-002",
     "TC-NW-010",
-    "TC-NW-012",
     "TC-NW-021"
    ],
-   "seconds": 43
+   "seconds": 37
   },
   {
    "id": "M15",
@@ -121,11 +120,13 @@
    "specs": [
     "07-todo-app/todo-decision-table"
    ],
-   "status": "SURVIVED",
+   "status": "KILLED",
    "testsRun": 5,
-   "failed": 0,
-   "killers": [],
-   "seconds": 8
+   "failed": 1,
+   "killers": [
+    "TC-TD-071"
+   ],
+   "seconds": 14
   },
   {
    "id": "M31",
@@ -135,10 +136,12 @@
    "specs": [
     "03-form-controls/checkboxes-radios"
    ],
-   "status": "SURVIVED",
+   "status": "KILLED",
    "testsRun": 20,
-   "failed": 0,
-   "killers": [],
+   "failed": 1,
+   "killers": [
+    "TC-FC-097"
+   ],
    "seconds": 18
   }
  ]

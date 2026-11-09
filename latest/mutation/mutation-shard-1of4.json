@@ -32,7 +32,7 @@
     "TC-FC-069",
     "TC-FC-070"
    ],
-   "seconds": 84
+   "seconds": 88
   },
   {
    "id": "M05",
@@ -77,7 +77,7 @@
     "TC-UI-014",
     "TC-UI-015"
    ],
-   "seconds": 98
+   "seconds": 99
   },
   {
    "id": "M13",
@@ -89,12 +89,11 @@
    ],
    "status": "KILLED",
    "testsRun": 16,
-   "failed": 2,
+   "failed": 1,
    "killers": [
-    "TC-NW-004",
-    "TC-NW-012"
+    "TC-NW-004"
    ],
-   "seconds": 25
+   "seconds": 19
   },
   {
    "id": "M17",
@@ -149,7 +148,7 @@
     "TC-SEC-007",
     "TC-SEC-008"
    ],
-   "seconds": 49
+   "seconds": 50
   },
   {
    "id": "M29",

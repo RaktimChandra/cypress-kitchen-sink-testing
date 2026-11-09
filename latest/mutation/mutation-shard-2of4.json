@@ -29,7 +29,7 @@
     "TC-FC-066",
     "TC-FC-067"
    ],
-   "seconds": 63
+   "seconds": 60
   },
   {
    "id": "M06",
@@ -45,7 +45,7 @@
    "killers": [
     "TC-FC-170"
    ],
-   "seconds": 14
+   "seconds": 17
   },
   {
    "id": "M10",
@@ -74,7 +74,7 @@
     "TC-UI-014",
     "TC-UI-015"
    ],
-   "seconds": 95
+   "seconds": 99
   },
   {
    "id": "M14",
@@ -94,7 +94,7 @@
     "TC-ST-005",
     "TC-ST-006"
    ],
-   "seconds": 37
+   "seconds": 40
   },
   {
    "id": "M18",
@@ -111,7 +111,7 @@
     "TC-UI-063",
     "TC-UI-064"
    ],
-   "seconds": 18
+   "seconds": 21
   },
   {
    "id": "M22",
@@ -127,7 +127,7 @@
    "killers": [
     "TC-TD-032"
    ],
-   "seconds": 16
+   "seconds": 20
   },
   {
    "id": "M26",
@@ -139,13 +139,12 @@
    ],
    "status": "KILLED",
    "testsRun": 16,
-   "failed": 3,
+   "failed": 2,
    "killers": [
-    "TC-TD-003",
     "TC-TD-014",
     "TC-TD-016"
    ],
-   "seconds": 20
+   "seconds": 18
   },
   {
    "id": "M30",
@@ -171,7 +170,7 @@
     "TC-FC-055",
     "TC-FC-056"
    ],
-   "seconds": 9
+   "seconds": 12
   }
  ]
 }
