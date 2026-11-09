@@ -36,7 +36,7 @@ describe('03 · Form controls — select lists', { tags: ['@forms'] }, () => {
 
   tc({ id: 'TC-FC-121', title: 'Selecting a non-existent text fails', technique: 'ECP (invalid)', req: 'REQ-FC-09',
     expected: 'select("mangoes") raises an error' }, () => {
-    cy.on('fail', (e) => { expect(e.message).to.match(/did not find/i); return false })
+    cy.on('fail', (e) => { expect(e.message).to.match(/could not find a single `<option>`/i); return false })
     cy.get('.action-select').select('mangoes', { timeout: 500 })
   })
 

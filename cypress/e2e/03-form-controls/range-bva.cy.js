@@ -35,6 +35,16 @@ describe('03 · Form controls — range slider boundary values', { tags: ['@form
   cases.forEach(([label, input, expected, technique], i) => {
     tc({ id: `TC-FC-${String(141 + i).padStart(3, '0')}`, title: `Range ${label}: set ${JSON.stringify(input)} → shows ${expected}`, technique,
       req: 'REQ-FC-11', priority: /min|max/.test(label) ? 'P1' : 'P2', data: String(input), expected: `value ${expected}; echo "${expected}"` }, () => {
+      if (input === '1e2') {
+        // "1e2" is itself a valid floating-point number, so the HTML sanitiser may keep the string as is
+        // (Firefox) or normalise it (Chromium). The number is what the spec fixes: valueAsNumber = 100,
+        // and the page echoes whatever string the browser reports.
+        cy.get('.trigger-input-range').invoke('val', input).trigger('change').should(($r) => {
+          expect($r[0].valueAsNumber).to.eq(100)
+          expect($r.next('p').text()).to.eq($r[0].value)
+        }).then(($r) => cy.task('evidence', { kind: 'compat', record: { case: 'TC-FC-152', browser: Cypress.browser.name, value: $r[0].value } }))
+        return
+      }
       cy.get('.trigger-input-range').invoke('val', input).trigger('change')
         .should('have.value', expected)
         .next('p').should('have.text', expected)

@@ -21,7 +21,8 @@ describe('03 · Form controls — text, email, password, textarea', { tags: ['@f
   seqs.forEach(([name, input, expected], i) => {
     tc({ id: `TC-FC-${String(2 + i).padStart(3, '0')}`, title: `Special keys: ${name}`, technique: 'ECP', req: 'REQ-FC-01',
       expected: `value = "${expected}"`, data: input }, () => {
-      cy.get('.action-email').type(input).should('have.value', expected)
+      // spaces are checked on the text field: typing into type=email re-sanitises the value after each key
+      cy.get(/ spaces /.test(name) ? '#fullName1' : '.action-email').type(input).should('have.value', expected)
     })
   })
 

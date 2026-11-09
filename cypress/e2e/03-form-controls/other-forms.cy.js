@@ -66,12 +66,17 @@ describe('03 · Form controls — editable regions and other forms', { tags: ['@
   })
 
   tc.chromium({ id: 'TC-FC-180', title: 'Tab order through the Actions forms follows visual order', technique: 'Use-case', req: 'REQ-NFR-A11Y',
-    type: 'Accessibility', expected: 'email → password (skipping disabled textarea)' }, () => {
+    type: 'Accessibility', expected: 'disabled textarea is skipped; password → .blur() heading link → paragraph link → name field' }, () => {
     cy.visitPage('/commands/actions')
     cy.get('.action-email').focus()
     cy.realPress('Tab')
     cy.focused().should('not.have.class', 'action-disabled')
     cy.get('.action-focus').focus()
+    cy.realPress('Tab')
+    // the .blur() section has two docs links (heading and paragraph) before its field
+    cy.focused().should('match', 'h4#blur a')
+    cy.realPress('Tab')
+    cy.focused().should('match', 'a[href="https://on.cypress.io/blur"]').and('not.match', 'h4 a')
     cy.realPress('Tab')
     cy.focused().should('have.class', 'action-blur')
   })

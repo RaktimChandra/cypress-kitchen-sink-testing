@@ -33,7 +33,12 @@ describe('03 · Form controls — email field equivalence classes', { tags: ['@f
     tc({ id: `TC-FC-${String(40 + i).padStart(3, '0')}`, title: `Email ${cls} — ${desc} → ${valid ? 'valid' : 'invalid'}`,
       technique: 'ECP', req: 'REQ-FC-02', priority: valid ? 'P2' : 'P1', data: value,
       expected: `checkValidity() = ${valid}; typeMismatch = ${!valid}` }, () => {
-      if (value) cy.get('.action-email').type(value, { parseSpecialCharSequences: false })
+      // values with inner spaces cannot be typed key by key into type=email (each set strips trailing space),
+      // so they are assigned in one step; everything else is typed like a user would
+      if (value) {
+        if (/\s/.test(value)) cy.get('.action-email').invoke('val', value)
+        else cy.get('.action-email').type(value, { parseSpecialCharSequences: false })
+      }
       cy.get('.action-email').should('have.value', value).then(($i) => {
         expect($i[0].checkValidity(), 'checkValidity').to.eq(valid)
         expect($i[0].validity.typeMismatch, 'typeMismatch').to.eq(!valid)
