@@ -1,4 +1,10 @@
 {
-  "_comment": "Known accessibility issues of the Kitchen Sink, each logged as a defect (docs/DEFECTS.md). A known rule is reported but does not fail the build; any NEW serious/critical violation does.",
-  "global": []
+  "_comment": "Known accessibility issues of the Kitchen Sink found by the first CI run (axe-core 4.11, all four browsers). Each rule is logged as a defect in DEFECTS.md and reproduced by a known-defect test (TC-A11Y-050…053). A known rule is still reported as evidence but does not fail the page audit; any NEW serious/critical violation does.",
+  "global": ["color-contrast"],
+  "/commands/querying": ["link-in-text-block"],
+  "/commands/assertions": ["link-in-text-block"],
+  "/commands/waiting": ["link-in-text-block", "label"],
+  "/commands/spies-stubs-clocks": ["link-in-text-block"],
+  "/commands/actions": ["label", "select-name", "scrollable-region-focusable"],
+  "/todo": ["label"]
 }
