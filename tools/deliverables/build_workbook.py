@@ -43,6 +43,9 @@ def status_colours(ws, rng):
 
 def main(out):
     m = load()
+    global TEAM
+    import json
+    TEAM = json.load(open(os.path.join(ROOT, 'docs', 'team.json'), encoding='utf-8'))
     wb = Workbook()
 
     # ---- Cover ------------------------------------------------------------------
@@ -61,7 +64,8 @@ def main(out):
         ("Institution", "SRM Institute of Science and Technology - B.Tech CSE (Software Engineering)"),
         ("Year / semester", "4th year, semester 7, 2026-27 - section AI2, Dept. of CINTEL"),
         ("Faculty", "Mr. Kaviyaraj R."),
-        ("Author", "Raktim Chandra (RA2311033010038)"),
+        ("Team", TEAM["team"]),
+        *[("Member", f"{x['name']} ({x['reg']})") for x in TEAM["members"]],
         ("System under test", "Cypress Kitchen Sink (cypress-io/cypress-example-kitchensink @ f2cb767)"),
         ("Tool", "Cypress 16.2.1 - Chrome, Firefox, Edge, Electron"),
         ("Designed cases", f"{len(m['cases'])} in {m['spec_count']} spec files"),
@@ -72,14 +76,15 @@ def main(out):
     for i, (k, v) in enumerate(info, 5):
         ws.cell(row=i, column=2, value=k).font = BOLD
         ws.cell(row=i, column=3, value=v).font = BASE
-    ws.cell(row=18, column=2, value="Sheets").font = BOLD
+    top = 5 + len(info) + 1
+    ws.cell(row=top, column=2, value="Sheets").font = BOLD
     for i, (k, v) in enumerate([
         ("Summary", "Counts by area, technique, type and priority (live formulas over Test Cases)"),
         ("Test Cases", "Every designed case with ID, technique, requirement, expected result and per-browser status"),
         ("Traceability", "Requirement -> test case matrix (RTM)"),
         ("Requirements", "The 53 requirements derived from the Kitchen Sink pages"),
         ("Defects", "Defect log with steps, expected/actual, severity and the test that reproduces each"),
-    ], 19):
+    ], top + 1):
         ws.cell(row=i, column=2, value=k).font = BASE
         ws.cell(row=i, column=3, value=v).font = BASE
 

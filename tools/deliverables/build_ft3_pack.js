@@ -11,6 +11,7 @@ const {
 } = require('docx')
 
 const ROOT = path.resolve(__dirname, '..', '..')
+const TEAM = JSON.parse(fs.readFileSync(path.join(ROOT, 'docs', 'team.json'), 'utf8'))
 const OUT = process.argv[2] || path.join(ROOT, 'deliverables', 'FT3_Prep_Pack.docx')
 const FONT = 'Arial'; const INK = '1B1E2E'; const ACCENT = '1F7A8C'; const MUTED = '5A6072'; const RULE = 'D5DAE3'; const LIGHT = 'EEF3F6'
 const W = 9638
@@ -46,7 +47,8 @@ const add = (...x) => k.push(...x.flat())
 add(
   new Paragraph({ spacing: { before: 600, after: 80 }, children: [t('SVV · FT3 PREPARATION PACK', { bold: true, color: ACCENT, size: 20 })] }),
   new Paragraph({ spacing: { after: 120 }, children: [t('Test-design and white-box techniques, solved on the Cypress Kitchen Sink', { bold: true, size: 40, color: INK })] }),
-  P([t('Raktim Chandra · RA2311033010038 · B.Tech CSE (SE), Sem 7, AI2 · Faculty: Mr. Kaviyaraj R.', { color: MUTED })]),
+  P([t(`${TEAM.team}: ${TEAM.members.map((m) => `${m.name} (${m.reg})`).join(' · ')}`, { color: MUTED, bold: true })]),
+  P([t('B.Tech CSE (SE) · Year 4, Sem 7 · AI2 · CINTEL, SRMIST · Faculty: Mr. Kaviyaraj R.', { color: MUTED })]),
   P('Every example uses real components and real test-case IDs from the project, so each answer can be checked against running code. Each section has the rule, a worked example, and a practice question with its answer.'),
   Box('Syllabus map', [
     [b('BVA '), t('§1 · '), b('ECP '), t('§2 · '), b('Decision tables '), t('§3 · '), b('Cause-effect graphing '), t('§4 · '), b('State transition '), t('§5')],
@@ -219,7 +221,7 @@ add(
 )
 
 const doc = new Document({
-  creator: 'Raktim Chandra', title: 'FT3 Preparation Pack',
+  creator: TEAM.team, title: 'FT3 Preparation Pack',
   styles: {
     default: { document: { run: { font: FONT, size: 21 } } },
     paragraphStyles: [
@@ -230,7 +232,7 @@ const doc = new Document({
   numbering: { config: [{ reference: 'bul', levels: [{ level: 0, format: LevelFormat.BULLET, text: '•', alignment: AlignmentType.LEFT, style: { paragraph: { indent: { left: 540, hanging: 270 } } } }] }] },
   sections: [{
     properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 1134, bottom: 1134, left: 1134, right: 1134 } } },
-    footers: { default: new Footer({ children: [new Paragraph({ tabStops: [{ type: TabStopType.RIGHT, position: W }], children: [t('FT3 Preparation Pack · Raktim Chandra', { size: 16, color: MUTED }), t('\tPage ', { size: 16, color: MUTED }), new TextRun({ children: [PageNumber.CURRENT], font: FONT, size: 16, color: MUTED })] })] }) },
+    footers: { default: new Footer({ children: [new Paragraph({ tabStops: [{ type: TabStopType.RIGHT, position: W }], children: [t(`FT3 Preparation Pack · ${TEAM.team}`, { size: 16, color: MUTED }), t('\tPage ', { size: 16, color: MUTED }), new TextRun({ children: [PageNumber.CURRENT], font: FONT, size: 16, color: MUTED })] })] }) },
     children: k,
   }],
 })

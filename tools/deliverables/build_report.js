@@ -19,6 +19,8 @@ const cat = rd('reports/catalogue.json')
 const cases = cat.cases
 const reqs = rd('docs/requirements.json')
 const defects = rd('docs/defects.json')
+const TEAM = rd('docs/team.json')
+const MEMBERS = TEAM.members.map((m) => `${m.name} (${m.reg})`)
 const byId = Object.fromEntries(cases.map((c) => [c.id, c]))
 
 // optional CI evidence -------------------------------------------------------------
@@ -111,7 +113,8 @@ add(
   new Paragraph({ spacing: { after: 120 }, children: [t('Interactive Web Components Testing', { size: 56, bold: true, color: INK })] }),
   new Paragraph({ spacing: { after: 600 }, children: [t('Automated verification of the Cypress Kitchen Sink with Cypress 16: test plan, design, implementation, defects and evidence', { size: 26, color: MUTED })] }),
   kv([
-    ['Author', 'Raktim Chandra · RA2311033010038'],
+    ['Team', TEAM.team],
+    ['Members', MEMBERS.join(' · ')],
     ['Course', 'Software Verification and Validation (SVV)'],
     ['Faculty', 'Mr. Kaviyaraj R.'],
     ['Programme', 'B.Tech Computer Science & Engineering (Software Engineering) · Year 4, Semester 7 · Section AI2'],
@@ -390,7 +393,7 @@ add(
     ['Comprehensiveness', `${reqs.length}/${reqs.length} requirements covered; every page visited by smoke, a11y, performance and visual suites.`],
     ['Incidents', `${defects.length} defects logged (Section 9).`],
     ['Evaluation', 'The application is fit for its purpose as a demo; the two Major defects should be fixed before it is used as a reference for robust coding.'],
-    ['Approvals', 'Prepared by Raktim Chandra · Reviewed by: ____________ (faculty)'],
+    ['Approvals', `Prepared by ${TEAM.team} (${TEAM.members.map((m) => m.name).join(', ')}) · Reviewed by: ____________ (faculty)`],
   ], 2400),
 )
 
@@ -446,7 +449,7 @@ npm run report                              # merged mochawesome HTML`),
 
 // ---- document -----------------------------------------------------------------------
 const doc = new Document({
-  creator: 'Raktim Chandra', title: 'Interactive Web Components Testing – Project Report',
+  creator: TEAM.team, title: 'Interactive Web Components Testing – Project Report',
   styles: {
     default: { document: { run: { font: FONT, size: 21, color: '222222' } } },
     paragraphStyles: [
@@ -462,7 +465,7 @@ const doc = new Document({
   sections: [{
     properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 1134, bottom: 1134, left: 1134, right: 1134 } } },
     headers: { default: new Header({ children: [new Paragraph({ border: { bottom: { style: BorderStyle.SINGLE, size: 4, color: RULE, space: 4 } }, tabStops: [{ type: TabStopType.RIGHT, position: W }], children: [t('Interactive Web Components Testing', { size: 16, color: MUTED }), t('\tSVV · FT3 Automated Testing · SRMIST', { size: 16, color: MUTED })] })] }) },
-    footers: { default: new Footer({ children: [new Paragraph({ tabStops: [{ type: TabStopType.RIGHT, position: W }], children: [t('Raktim Chandra · RA2311033010038', { size: 16, color: MUTED }), t('\tPage ', { size: 16, color: MUTED }), new TextRun({ children: [PageNumber.CURRENT], font: FONT, size: 16, color: MUTED })] })] }) },
+    footers: { default: new Footer({ children: [new Paragraph({ tabStops: [{ type: TabStopType.RIGHT, position: W }], children: [t(`${TEAM.team} · SVV FT3`, { size: 16, color: MUTED }), t('\tPage ', { size: 16, color: MUTED }), new TextRun({ children: [PageNumber.CURRENT], font: FONT, size: 16, color: MUTED })] })] }) },
     children: kids,
   }],
 })

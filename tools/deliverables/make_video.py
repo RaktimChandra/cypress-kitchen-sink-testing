@@ -71,7 +71,8 @@ def main():
     p = os.path.join(tmp, '00.mp4')
     card(p, [('SVV · FT3 AUTOMATED TESTING · CYPRESS 16', BOLD, 22, GREEN, 230), ('Interactive Web Components Testing', BOLD, 48, 'white', 280),
              ('Cypress Kitchen Sink · real recordings from the CI run (Chrome)', FONT, 24, '0xC9D1E3', 360),
-             ('Raktim Chandra · RA2311033010038 · SRMIST · Faculty: Mr. Kaviyaraj R.', FONT, 20, '0xC9D1E3', 470)], 5)
+             ('Team 6 · Raktim Chandra · Juhi Hai · Rijit Ghosh · Shaurya Rathi', BOLD, 22, 'white', 450),
+             ('SRMIST · B.Tech CSE (SE) · Faculty: Mr. Kaviyaraj R.', FONT, 20, '0xC9D1E3', 490)], 5)
     parts.append(p)
     for i, (spec, title, caption, ids) in enumerate(SEGMENTS, 1):
         src = next((v for k, v in vids.items() if k.endswith(spec + '.mp4')), None)
