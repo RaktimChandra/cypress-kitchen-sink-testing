@@ -1,0 +1,17 @@
+{
+  "team": "Team 6",
+  "members": [
+    { "name": "Raktim Chandra", "reg": "RA2311033010038" },
+    { "name": "Juhi Hai", "reg": "RA2311033010027" },
+    { "name": "Rijit Ghosh", "reg": "RA2311033010017" },
+    { "name": "Shaurya Rathi", "reg": "RA2311033010034" }
+  ],
+  "course": "Software Verification and Validation (SVV)",
+  "component": "FT3 · Automated Testing",
+  "faculty": "Mr. Kaviyaraj R.",
+  "programme": "B.Tech Computer Science & Engineering (Software Engineering)",
+  "year": "Year 4 · Semester 7 · Section AI2",
+  "department": "Department of Computational Intelligence (CINTEL)",
+  "institution": "SRM Institute of Science and Technology, Kattankulathur",
+  "academicYear": "2026–2027"
+}
