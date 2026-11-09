@@ -4,10 +4,15 @@
 
 **The Cypress Kitchen Sink, tested like a production product: form controls, navigation, assertions and UI interactions — plus black-box, white-box, accessibility, visual, performance, security and mutation testing.**
 
+Software Verification & Validation · FT3 Automated Testing · **Team 6**, SRM Institute of Science and Technology
+
 [![CI](https://github.com/RaktimChandra/cypress-kitchen-sink-testing/actions/workflows/ci.yml/badge.svg)](https://github.com/RaktimChandra/cypress-kitchen-sink-testing/actions/workflows/ci.yml)
 [![Mutation testing](https://github.com/RaktimChandra/cypress-kitchen-sink-testing/actions/workflows/mutation.yml/badge.svg)](https://github.com/RaktimChandra/cypress-kitchen-sink-testing/actions/workflows/mutation.yml)
 ![Cypress](https://img.shields.io/badge/Cypress-16.2.1-17202C?logo=cypress)
-![Test cases](https://img.shields.io/badge/test%20cases-582-0F6E78)
+![Test cases](https://img.shields.io/badge/test%20cases-588-0F6E78)
+![Mutation score](https://img.shields.io/badge/mutation%20score-100%25-1E9E6A)
+![Coverage](https://img.shields.io/badge/line%20coverage-97.9%25-1E9E6A)
+![Release](https://img.shields.io/badge/release-v1.0.0-4659A8)
 ![Browsers](https://img.shields.io/badge/browsers-Chrome%20·%20Firefox%20·%20Edge%20·%20Electron-2A78D6)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
