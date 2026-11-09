@@ -1,0 +1,511 @@
+[
+ {
+  "page": "/",
+  "browser": "chrome",
+  "violations": [
+   {
+    "id": "color-contrast",
+    "impact": "serious",
+    "help": "Elements must meet minimum color contrast ratio thresholds",
+    "nodes": 7,
+    "targets": [
+     "h1",
+     ".container > p",
+     "a[href$=\"www.cypress.io\"]",
+     "a[href$=\"docs.cypress.io\"]",
+     "#commands > p"
+    ]
+   }
+  ],
+  "at": "2026-11-09T22:22:36.432Z"
+ },
+ {
+  "page": "/commands/querying",
+  "browser": "chrome",
+  "violations": [
+   {
+    "id": "color-contrast",
+    "impact": "serious",
+    "help": "Elements must meet minimum color contrast ratio thresholds",
+    "nodes": 21,
+    "targets": [
+     "h1",
+     ".container > p",
+     "p > a[href$=\"api\"]",
+     ".container > p > a[target=\"_blank\"]:nth-child(2)",
+     ".row:nth-child(1) > .col-xs-7 > pre > .javascript.hljs > .hljs-comment:nth-child(10)"
+    ]
+   },
+   {
+    "id": "link-in-text-block",
+    "impact": "serious",
+    "help": "Links must be distinguishable without relying on color",
+    "nodes": 2,
+    "targets": [
+     ".col-xs-7 > p > a[target=\"_blank\"]",
+     ".row:nth-child(7) > .col-xs-7 > p > a"
+    ]
+   }
+  ],
+  "at": "2026-11-09T22:22:36.762Z"
+ },
+ {
+  "page": "/commands/traversal",
+  "browser": "chrome",
+  "violations": [
+   {
+    "id": "color-contrast",
+    "impact": "serious",
+    "help": "Elements must meet minimum color contrast ratio thresholds",
+    "nodes": 17,
+    "targets": [
+     "h1",
+     ".container > p",
+     "p > a[href$=\"api\"]",
+     "ol > li:nth-child(1) > a[href=\"#\"]",
+     "ol > li:nth-child(2) > a[href=\"#\"]"
+    ]
+   }
+  ],
+  "at": "2026-11-09T22:22:37.132Z"
+ },
+ {
+  "page": "/commands/actions",
+  "browser": "chrome",
+  "violations": [
+   {
+    "id": "color-contrast",
+    "impact": "serious",
+    "help": "Elements must meet minimum color contrast ratio thresholds",
+    "nodes": 113,
+    "targets": [
+     "h1",
+     ".container > p",
+     "p > a[href$=\"api\"]",
+     ".col-xs-7:nth-child(1) > pre > .javascript.hljs > .hljs-comment:nth-child(6)",
+     ".col-xs-7:nth-child(1) > pre > .javascript.hljs > .hljs-comment:nth-child(11)"
+    ]
+   },
+   {
+    "id": "label",
+    "impact": "critical",
+    "help": "Form elements must have labels",
+    "nodes": 2,
+    "targets": [
+     "textarea",
+     ".trigger-input-range"
+    ]
+   },
+   {
+    "id": "scrollable-region-focusable",
+    "impact": "serious",
+    "help": "Scrollable region must have keyboard access",
+    "nodes": 2,
+    "targets": [
+     "#scrollable-horizontal",
+     "#scrollable-vertical"
+    ]
+   },
+   {
+    "id": "select-name",
+    "impact": "critical",
+    "help": "Select element must have an accessible name",
+    "nodes": 2,
+    "targets": [
+     ".action-select",
+     ".action-select-multiple"
+    ]
+   }
+  ],
+  "at": "2026-11-09T22:22:37.741Z"
+ },
+ {
+  "page": "/commands/window",
+  "browser": "chrome",
+  "violations": [
+   {
+    "id": "color-contrast",
+    "impact": "serious",
+    "help": "Elements must meet minimum color contrast ratio thresholds",
+    "nodes": 3,
+    "targets": [
+     "h1",
+     ".container > p",
+     "p > a[href$=\"api\"]"
+    ]
+   }
+  ],
+  "at": "2026-11-09T22:22:37.958Z"
+ },
+ {
+  "page": "/commands/viewport",
+  "browser": "chrome",
+  "violations": [
+   {
+    "id": "color-contrast",
+    "impact": "serious",
+    "help": "Elements must meet minimum color contrast ratio thresholds",
+    "nodes": 29,
+    "targets": [
+     "h1",
+     ".container > p",
+     "p > a[href$=\"api\"]",
+     ".hljs-number:nth-child(3)",
+     ".hljs-number:nth-child(4)"
+    ]
+   }
+  ],
+  "at": "2026-11-09T22:22:38.177Z"
+ },
+ {
+  "page": "/commands/location",
+  "browser": "chrome",
+  "violations": [
+   {
+    "id": "color-contrast",
+    "impact": "serious",
+    "help": "Elements must meet minimum color contrast ratio thresholds",
+    "nodes": 3,
+    "targets": [
+     "h1",
+     ".container > p",
+     "p > a[href$=\"api\"]"
+    ]
+   }
+  ],
+  "at": "2026-11-09T22:22:38.379Z"
+ },
+ {
+  "page": "/commands/navigation",
+  "browser": "chrome",
+  "violations": [
+   {
+    "id": "color-contrast",
+    "impact": "serious",
+    "help": "Elements must meet minimum color contrast ratio thresholds",
+    "nodes": 12,
+    "targets": [
+     "h1",
+     ".container > p",
+     "p > a[href$=\"api\"]",
+     ".hljs-comment:nth-child(12)",
+     ".hljs-number:nth-child(13)"
+    ]
+   }
+  ],
+  "at": "2026-11-09T22:22:38.597Z"
+ },
+ {
+  "page": "/commands/assertions",
+  "browser": "chrome",
+  "violations": [
+   {
+    "id": "color-contrast",
+    "impact": "serious",
+    "help": "Elements must meet minimum color contrast ratio thresholds",
+    "nodes": 43,
+    "targets": [
+     "h1",
+     ".container > p",
+     "p > a[href$=\"api\"]",
+     ".col-xs-7:nth-child(2) > pre > .javascript.hljs > .hljs-comment:nth-child(6)",
+     ".hljs-comment:nth-child(13)"
+    ]
+   },
+   {
+    "id": "link-in-text-block",
+    "impact": "serious",
+    "help": "Links must be distinguishable without relying on color",
+    "nodes": 3,
+    "targets": [
+     "p:nth-child(4) > a[target=\"_blank\"]",
+     ".col-xs-12:nth-child(23) > p > a",
+     ".col-xs-12:nth-child(26) > p > a"
+    ]
+   }
+  ],
+  "at": "2026-11-09T22:22:38.903Z"
+ },
+ {
+  "page": "/commands/misc",
+  "browser": "chrome",
+  "violations": [
+   {
+    "id": "color-contrast",
+    "impact": "serious",
+    "help": "Elements must meet minimum color contrast ratio thresholds",
+    "nodes": 3,
+    "targets": [
+     "h1",
+     ".container > p",
+     "p > a[href$=\"api\"]"
+    ]
+   }
+  ],
+  "at": "2026-11-09T22:22:39.113Z"
+ },
+ {
+  "page": "/commands/connectors",
+  "browser": "chrome",
+  "violations": [
+   {
+    "id": "color-contrast",
+    "impact": "serious",
+    "help": "Elements must meet minimum color contrast ratio thresholds",
+    "nodes": 12,
+    "targets": [
+     "h1",
+     ".container > p",
+     "p > a[href$=\"api\"]",
+     ".hljs-built_in",
+     ".col-xs-7:nth-child(4) > pre > .javascript.hljs > .hljs-comment"
+    ]
+   }
+  ],
+  "at": "2026-11-09T22:22:39.347Z"
+ },
+ {
+  "page": "/commands/aliasing",
+  "browser": "chrome",
+  "violations": [
+   {
+    "id": "color-contrast",
+    "impact": "serious",
+    "help": "Elements must meet minimum color contrast ratio thresholds",
+    "nodes": 12,
+    "targets": [
+     "h1",
+     ".container > p",
+     "p > a[href$=\"api\"]",
+     ".hljs-comment:nth-child(1)",
+     ".hljs-comment:nth-child(2)"
+    ]
+   }
+  ],
+  "at": "2026-11-09T22:22:39.562Z"
+ },
+ {
+  "page": "/commands/waiting",
+  "browser": "chrome",
+  "violations": [
+   {
+    "id": "color-contrast",
+    "impact": "serious",
+    "help": "Elements must meet minimum color contrast ratio thresholds",
+    "nodes": 12,
+    "targets": [
+     "h1",
+     ".container > p",
+     "p > a[href$=\"api\"]",
+     ".hljs-number:nth-child(3)",
+     ".hljs-number:nth-child(6)"
+    ]
+   },
+   {
+    "id": "label",
+    "impact": "critical",
+    "help": "Form elements must have labels",
+    "nodes": 3,
+    "targets": [
+     ".wait-input1",
+     ".wait-input2",
+     ".wait-input3"
+    ]
+   },
+   {
+    "id": "link-in-text-block",
+    "impact": "serious",
+    "help": "Links must be distinguishable without relying on color",
+    "nodes": 1,
+    "targets": [
+     ".col-xs-12:nth-child(3) > div > ul > li:nth-child(3) > a"
+    ]
+   }
+  ],
+  "at": "2026-11-09T22:22:39.773Z"
+ },
+ {
+  "page": "/commands/network-requests",
+  "browser": "chrome",
+  "violations": [
+   {
+    "id": "color-contrast",
+    "impact": "serious",
+    "help": "Elements must meet minimum color contrast ratio thresholds",
+    "nodes": 46,
+    "targets": [
+     "h1",
+     ".container > p",
+     "p > a[href$=\"api\"]",
+     ".hljs-number:nth-child(2)",
+     ".hljs-number:nth-child(3)"
+    ]
+   }
+  ],
+  "at": "2026-11-09T22:22:40.027Z"
+ },
+ {
+  "page": "/commands/files",
+  "browser": "chrome",
+  "violations": [
+   {
+    "id": "color-contrast",
+    "impact": "serious",
+    "help": "Elements must meet minimum color contrast ratio thresholds",
+    "nodes": 26,
+    "targets": [
+     "h1",
+     ".container > p",
+     "p > a[href$=\"api\"]",
+     ".row:nth-child(1) > .col-xs-7 > pre > .javascript.hljs > .hljs-comment:nth-child(1)",
+     ".row:nth-child(1) > .col-xs-7 > pre > .javascript.hljs > .hljs-comment:nth-child(2)"
+    ]
+   }
+  ],
+  "at": "2026-11-09T22:22:40.293Z"
+ },
+ {
+  "page": "/commands/storage",
+  "browser": "chrome",
+  "violations": [
+   {
+    "id": "color-contrast",
+    "impact": "serious",
+    "help": "Elements must meet minimum color contrast ratio thresholds",
+    "nodes": 13,
+    "targets": [
+     "h1",
+     ".container > p",
+     "p > a[href$=\"api\"]",
+     ".hljs-comment:nth-child(20)",
+     ".hljs-comment:nth-child(35)"
+    ]
+   }
+  ],
+  "at": "2026-11-09T22:22:40.531Z"
+ },
+ {
+  "page": "/commands/cookies",
+  "browser": "chrome",
+  "violations": [
+   {
+    "id": "color-contrast",
+    "impact": "serious",
+    "help": "Elements must meet minimum color contrast ratio thresholds",
+    "nodes": 22,
+    "targets": [
+     "h1",
+     ".container > p",
+     "p > a[href$=\"api\"]",
+     "#getCookie > .row > .col-xs-7 > pre > .javascript.hljs > .hljs-comment",
+     "#getCookie > .row > .col-xs-5 > .well > .set-a-cookie.btn.btn-success"
+    ]
+   }
+  ],
+  "at": "2026-11-09T22:22:40.822Z"
+ },
+ {
+  "page": "/commands/spies-stubs-clocks",
+  "browser": "chrome",
+  "violations": [
+   {
+    "id": "color-contrast",
+    "impact": "serious",
+    "help": "Elements must meet minimum color contrast ratio thresholds",
+    "nodes": 37,
+    "targets": [
+     "h1",
+     ".container > p",
+     "p > a[href$=\"api\"]",
+     ".hljs-number:nth-child(4)",
+     ".hljs-number:nth-child(5)"
+    ]
+   },
+   {
+    "id": "link-in-text-block",
+    "impact": "serious",
+    "help": "Links must be distinguishable without relying on color",
+    "nodes": 2,
+    "targets": [
+     ".col-xs-7:nth-child(13) > p > a",
+     ".col-xs-7:nth-child(15) > p > a"
+    ]
+   }
+  ],
+  "at": "2026-11-09T22:22:41.096Z"
+ },
+ {
+  "page": "/utilities",
+  "browser": "chrome",
+  "violations": [
+   {
+    "id": "color-contrast",
+    "impact": "serious",
+    "help": "Elements must meet minimum color contrast ratio thresholds",
+    "nodes": 22,
+    "targets": [
+     "h1",
+     ".container > p",
+     "a[target=\"_blank\"]",
+     ".list-group-item:nth-child(2) > .badge",
+     ".list-group-item:nth-child(3) > .badge"
+    ]
+   }
+  ],
+  "at": "2026-11-09T22:22:41.324Z"
+ },
+ {
+  "page": "/cypress-api",
+  "browser": "chrome",
+  "violations": [
+   {
+    "id": "color-contrast",
+    "impact": "serious",
+    "help": "Elements must meet minimum color contrast ratio thresholds",
+    "nodes": 26,
+    "targets": [
+     "h1",
+     ".container > p",
+     "a[target=\"_blank\"]",
+     ".col-xs-12:nth-child(1) > pre > .javascript.hljs > .hljs-literal",
+     ".col-xs-12:nth-child(1) > pre > .javascript.hljs > .hljs-comment"
+    ]
+   }
+  ],
+  "at": "2026-11-09T22:22:41.574Z"
+ },
+ {
+  "page": "/todo",
+  "browser": "chrome",
+  "violations": [
+   {
+    "id": "label",
+    "impact": "critical",
+    "help": "Form elements must have labels",
+    "nodes": 2,
+    "targets": [
+     "li[data-id=\"1794262961698\"] > .view > .toggle[type=\"checkbox\"]",
+     "li[data-id=\"1794262961699\"] > .view > .toggle[type=\"checkbox\"]"
+    ]
+   }
+  ],
+  "at": "2026-11-09T22:22:41.810Z"
+ },
+ {
+  "page": "/todo (state)",
+  "browser": "chrome",
+  "violations": [
+   {
+    "id": "label",
+    "impact": "critical",
+    "help": "Form elements must have labels",
+    "nodes": 2,
+    "targets": [
+     ".completed > .view > .toggle[type=\"checkbox\"]",
+     ".edit"
+    ]
+   }
+  ],
+  "at": "2026-11-09T22:22:42.100Z"
+ }
+]

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="7.000" tests="16" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-11-09T22:23:21" tests="0" file="cypress/e2e/08-network/network.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="08 · Network — stubbing and observing requests" timestamp="2026-11-09T22:23:21" tests="13" time="6.144" failures="0">
+    <testcase name="08 · Network — stubbing and observing requests TC-NW-001 | Get Comment shows the body returned by the API (stubbed)" time="0.784" classname="TC-NW-001 | Get Comment shows the body returned by the API (stubbed)">
+    </testcase>
+    <testcase name="08 · Network — stubbing and observing requests TC-NW-002 | Get Comment with a fixture response" time="0.239" classname="TC-NW-002 | Get Comment with a fixture response">
+    </testcase>
+    <testcase name="08 · Network — stubbing and observing requests TC-NW-003 | Post Comment sends the documented form fields and shows success" time="0.218" classname="TC-NW-003 | Post Comment sends the documented form fields and shows success">
+    </testcase>
+    <testcase name="08 · Network — stubbing and observing requests TC-NW-004 | Update Comment shows the API error message on 404" time="0.511" classname="TC-NW-004 | Update Comment shows the API error message on 404">
+    </testcase>
+    <testcase name="08 · Network — stubbing and observing requests TC-NW-005 | Update Comment with 200 shows nothing (only 404 is handled)" time="0.225" classname="TC-NW-005 | Update Comment with 200 shows nothing (only 404 is handled)">
+    </testcase>
+    <testcase name="08 · Network — stubbing and observing requests TC-NW-006 | Get Comment with HTTP 500 (server error) leaves the comment area unchanged" time="0.192" classname="TC-NW-006 | Get Comment with HTTP 500 (server error) leaves the comment area unchanged">
+    </testcase>
+    <testcase name="08 · Network — stubbing and observing requests TC-NW-007 | Get Comment with HTTP 503 (unavailable) leaves the comment area unchanged" time="0.198" classname="TC-NW-007 | Get Comment with HTTP 503 (unavailable) leaves the comment area unchanged">
+    </testcase>
+    <testcase name="08 · Network — stubbing and observing requests TC-NW-008 | Get Comment with HTTP 429 (rate limited) leaves the comment area unchanged" time="0.244" classname="TC-NW-008 | Get Comment with HTTP 429 (rate limited) leaves the comment area unchanged">
+    </testcase>
+    <testcase name="08 · Network — stubbing and observing requests TC-NW-009 | Network failure (connection dropped) is survived without a crash" time="0.215" classname="TC-NW-009 | Network failure (connection dropped) is survived without a crash">
+    </testcase>
+    <testcase name="08 · Network — stubbing and observing requests TC-NW-010 | Slow API: comment appears after the stubbed 1.5 s delay" time="1.682" classname="TC-NW-010 | Slow API: comment appears after the stubbed 1.5 s delay">
+    </testcase>
+    <testcase name="08 · Network — stubbing and observing requests TC-NW-011 | Each click issues exactly one request (no duplicate calls)" time="0.373" classname="TC-NW-011 | Each click issues exactly one request (no duplicate calls)">
+    </testcase>
+    <testcase name="08 · Network — stubbing and observing requests TC-NW-012 | A real server response can be modified in flight (req.continue)" time="0.251" classname="TC-NW-012 | A real server response can be modified in flight (req.continue)">
+    </testcase>
+    <testcase name="08 · Network — stubbing and observing requests TC-NW-013 | No un-stubbed third-party call is made on page load" time="0.625" classname="TC-NW-013 | No un-stubbed third-party call is made on page load">
+    </testcase>
+  </testsuite>
+  <testsuite name="08 · Network — fixtures page and aliasing/waiting pages" timestamp="2026-11-09T22:23:27" tests="3" time="0.848" failures="0">
+    <testcase name="08 · Network — fixtures page and aliasing/waiting pages TC-NW-020 | Files page: fixture button loads the comment" time="0.237" classname="TC-NW-020 | Files page: fixture button loads the comment">
+    </testcase>
+    <testcase name="08 · Network — fixtures page and aliasing/waiting pages TC-NW-021 | Waiting page: wait on an aliased route instead of a fixed time" time="0.242" classname="TC-NW-021 | Waiting page: wait on an aliased route instead of a fixed time">
+    </testcase>
+    <testcase name="08 · Network — fixtures page and aliasing/waiting pages TC-NW-022 | Aliasing page: route alias with a spy (no stub) still counts calls" time="0.216" classname="TC-NW-022 | Aliasing page: route alias with a spy (no stub) still counts calls">
+    </testcase>
+  </testsuite>
+</testsuites>

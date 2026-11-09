@@ -1,0 +1,98 @@
+[
+ {
+  "level": "System",
+  "priority": "P2",
+  "type": "Functional",
+  "technique": "Use-case",
+  "tags": [],
+  "id": "TC-UI-060",
+  "title": "Querying page button is found by id and class and is clickable",
+  "req": "REQ-QT-01",
+  "expected": "#query-btn has text \"Button\" and classes query-btn btn btn-primary",
+  "spec": "cypress/e2e/04-ui-interactions/page-widgets.cy.js"
+ },
+ {
+  "level": "System",
+  "priority": "P1",
+  "type": "Functional",
+  "technique": "State transition",
+  "tags": [],
+  "id": "TC-UI-061",
+  "title": "Utilities list items become active when clicked",
+  "req": "REQ-UI-07",
+  "expected": "clicked <li> gets class active; others unaffected",
+  "spec": "cypress/e2e/04-ui-interactions/page-widgets.cy.js"
+ },
+ {
+  "level": "System",
+  "priority": "P2",
+  "type": "Functional",
+  "technique": "Decision table",
+  "tags": [],
+  "id": "TC-UI-062",
+  "title": "Clicking every utilities item activates all of them (no single-selection)",
+  "req": "REQ-UI-07",
+  "expected": "all items active",
+  "spec": "cypress/e2e/04-ui-interactions/page-widgets.cy.js"
+ },
+ {
+  "level": "System",
+  "priority": "P2",
+  "type": "Functional",
+  "technique": "State transition",
+  "tags": [],
+  "id": "TC-UI-063",
+  "title": "Aliasing page: table buttons change to \"Changed\" when clicked",
+  "req": "REQ-UI-07",
+  "expected": "button text \"Changed\" and class btn-success",
+  "spec": "cypress/e2e/04-ui-interactions/page-widgets.cy.js"
+ },
+ {
+  "level": "System",
+  "priority": "P2",
+  "type": "Functional",
+  "technique": "Decision table",
+  "tags": [],
+  "id": "TC-UI-064",
+  "title": "Aliasing table: each row button changes independently",
+  "req": "REQ-UI-07",
+  "expected": "clicking row 2 leaves row 1 unchanged",
+  "spec": "cypress/e2e/04-ui-interactions/page-widgets.cy.js"
+ },
+ {
+  "level": "System",
+  "priority": "P2",
+  "type": "Functional",
+  "technique": "Use-case",
+  "tags": [],
+  "id": "TC-UI-065",
+  "title": "Hidden connectors div can be shown with jQuery .show()",
+  "req": "REQ-AS-01",
+  "expected": "div hidden on load → visible after invoke(\"show\")",
+  "spec": "cypress/e2e/04-ui-interactions/page-widgets.cy.js"
+ },
+ {
+  "level": "System",
+  "priority": "P2",
+  "type": "Functional",
+  "technique": "Use-case",
+  "tags": [],
+  "id": "TC-UI-066",
+  "title": "Connectors list items can be iterated with .each()",
+  "req": "REQ-AS-01",
+  "expected": "3 items: Lara Williams, William Grey, Monica Pharrel",
+  "spec": "cypress/e2e/04-ui-interactions/page-widgets.cy.js"
+ },
+ {
+  "level": "System",
+  "priority": "P2",
+  "type": "Functional",
+  "technique": "Use-case",
+  "tags": [],
+  "id": "TC-UI-067",
+  "title": "Connectors .its(\"length\") and .invoke() on lists",
+  "req": "REQ-AS-01",
+  "expected": "its-ul has 3 items",
+  "spec": "cypress/e2e/04-ui-interactions/page-widgets.cy.js"
+ }
+]

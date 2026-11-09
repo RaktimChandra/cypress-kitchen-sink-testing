@@ -1,0 +1,74 @@
+[
+ {
+  "level": "System",
+  "priority": "P2",
+  "type": "Functional",
+  "technique": "Use-case",
+  "tags": [],
+  "id": "TC-AS-030",
+  "title": ".invoke() calls a function on the subject",
+  "req": "REQ-AS-01",
+  "expected": "invoke(\"show\") makes the hidden div visible; invoke(\"text\") yields \"This is a div\"",
+  "spec": "cypress/e2e/05-assertions/connectors-and-aliases.cy.js"
+ },
+ {
+  "level": "System",
+  "priority": "P2",
+  "type": "Functional",
+  "technique": "Use-case",
+  "tags": [],
+  "id": "TC-AS-031",
+  "title": ".spread() unpacks an array subject into arguments",
+  "req": "REQ-AS-01",
+  "expected": "arguments foo, bar, baz",
+  "spec": "cypress/e2e/05-assertions/connectors-and-aliases.cy.js"
+ },
+ {
+  "level": "System",
+  "priority": "P2",
+  "type": "Functional",
+  "technique": "Use-case",
+  "tags": [],
+  "id": "TC-AS-032",
+  "title": ".then() return value becomes the next subject; undefined keeps the old one",
+  "req": "REQ-AS-01",
+  "expected": "1 → 2 (returned) → 2 (undefined returned keeps subject)",
+  "spec": "cypress/e2e/05-assertions/connectors-and-aliases.cy.js"
+ },
+ {
+  "level": "System",
+  "priority": "P2",
+  "type": "Functional",
+  "technique": "Use-case",
+  "tags": [],
+  "id": "TC-AS-033",
+  "title": ".its() reads nested properties",
+  "req": "REQ-AS-01",
+  "expected": "its(\"a.b.c\") = 42",
+  "spec": "cypress/e2e/05-assertions/connectors-and-aliases.cy.js"
+ },
+ {
+  "level": "System",
+  "priority": "P2",
+  "type": "Functional",
+  "technique": "Use-case",
+  "tags": [],
+  "id": "TC-AS-034",
+  "title": "Aliases of elements and of values (this.*)",
+  "req": "REQ-AS-01",
+  "expected": "aliased cell re-queried; aliased value available on this",
+  "spec": "cypress/e2e/05-assertions/connectors-and-aliases.cy.js"
+ },
+ {
+  "level": "System",
+  "priority": "P2",
+  "type": "Functional",
+  "technique": "Use-case",
+  "tags": [],
+  "id": "TC-AS-035",
+  "title": "Snapshot of a structured object with deep equality",
+  "req": "REQ-QT-01",
+  "expected": "traversal table read into objects equals the expected list",
+  "spec": "cypress/e2e/05-assertions/connectors-and-aliases.cy.js"
+ }
+]

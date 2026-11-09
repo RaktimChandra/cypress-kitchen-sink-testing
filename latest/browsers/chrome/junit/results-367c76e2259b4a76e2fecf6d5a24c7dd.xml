@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="7.208" tests="26" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-11-09T22:22:35" tests="0" file="cypress/e2e/11-accessibility/axe-pages.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page" timestamp="2026-11-09T22:22:35" tests="22" time="6.129" failures="0">
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-001 | / has no new serious/critical WCAG 2.1 AA violations" time="0.454" classname="TC-A11Y-001 | / has no new serious/critical WCAG 2.1 AA violations">
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-002 | /commands/querying has no new serious/critical WCAG 2.1 AA violations" time="0.315" classname="TC-A11Y-002 | /commands/querying has no new serious/critical WCAG 2.1 AA violations">
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-003 | /commands/traversal has no new serious/critical WCAG 2.1 AA violations" time="0.358" classname="TC-A11Y-003 | /commands/traversal has no new serious/critical WCAG 2.1 AA violations">
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-004 | /commands/actions has no new serious/critical WCAG 2.1 AA violations" time="0.578" classname="TC-A11Y-004 | /commands/actions has no new serious/critical WCAG 2.1 AA violations">
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-005 | /commands/window has no new serious/critical WCAG 2.1 AA violations" time="0.202" classname="TC-A11Y-005 | /commands/window has no new serious/critical WCAG 2.1 AA violations">
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-006 | /commands/viewport has no new serious/critical WCAG 2.1 AA violations" time="0.203" classname="TC-A11Y-006 | /commands/viewport has no new serious/critical WCAG 2.1 AA violations">
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-007 | /commands/location has no new serious/critical WCAG 2.1 AA violations" time="0.189" classname="TC-A11Y-007 | /commands/location has no new serious/critical WCAG 2.1 AA violations">
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-008 | /commands/navigation has no new serious/critical WCAG 2.1 AA violations" time="0.204" classname="TC-A11Y-008 | /commands/navigation has no new serious/critical WCAG 2.1 AA violations">
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-009 | /commands/assertions has no new serious/critical WCAG 2.1 AA violations" time="0.294" classname="TC-A11Y-009 | /commands/assertions has no new serious/critical WCAG 2.1 AA violations">
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-010 | /commands/misc has no new serious/critical WCAG 2.1 AA violations" time="0.198" classname="TC-A11Y-010 | /commands/misc has no new serious/critical WCAG 2.1 AA violations">
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-011 | /commands/connectors has no new serious/critical WCAG 2.1 AA violations" time="0.222" classname="TC-A11Y-011 | /commands/connectors has no new serious/critical WCAG 2.1 AA violations">
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-012 | /commands/aliasing has no new serious/critical WCAG 2.1 AA violations" time="0.203" classname="TC-A11Y-012 | /commands/aliasing has no new serious/critical WCAG 2.1 AA violations">
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-013 | /commands/waiting has no new serious/critical WCAG 2.1 AA violations" time="0.199" classname="TC-A11Y-013 | /commands/waiting has no new serious/critical WCAG 2.1 AA violations">
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-014 | /commands/network-requests has no new serious/critical WCAG 2.1 AA violations" time="0.240" classname="TC-A11Y-014 | /commands/network-requests has no new serious/critical WCAG 2.1 AA violations">
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-015 | /commands/files has no new serious/critical WCAG 2.1 AA violations" time="0.253" classname="TC-A11Y-015 | /commands/files has no new serious/critical WCAG 2.1 AA violations">
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-016 | /commands/storage has no new serious/critical WCAG 2.1 AA violations" time="0.253" classname="TC-A11Y-016 | /commands/storage has no new serious/critical WCAG 2.1 AA violations">
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-017 | /commands/cookies has no new serious/critical WCAG 2.1 AA violations" time="0.248" classname="TC-A11Y-017 | /commands/cookies has no new serious/critical WCAG 2.1 AA violations">
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-018 | /commands/spies-stubs-clocks has no new serious/critical WCAG 2.1 AA violations" time="0.263" classname="TC-A11Y-018 | /commands/spies-stubs-clocks has no new serious/critical WCAG 2.1 AA violations">
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-019 | /utilities has no new serious/critical WCAG 2.1 AA violations" time="0.217" classname="TC-A11Y-019 | /utilities has no new serious/critical WCAG 2.1 AA violations">
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-020 | /cypress-api has no new serious/critical WCAG 2.1 AA violations" time="0.236" classname="TC-A11Y-020 | /cypress-api has no new serious/critical WCAG 2.1 AA violations">
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-021 | /todo has no new serious/critical WCAG 2.1 AA violations" time="0.221" classname="TC-A11Y-021 | /todo has no new serious/critical WCAG 2.1 AA violations">
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-030 | Todo app in a populated, edited state is audited too" time="0.275" classname="TC-A11Y-030 | Todo app in a populated, edited state is audited too">
+    </testcase>
+  </testsuite>
+  <testsuite name="11 · Accessibility — known WCAG defects" timestamp="2026-11-09T22:22:42" tests="4" time="1.076" failures="0">
+    <testcase name="11 · Accessibility — known WCAG defects TC-A11Y-050 | Text meets the 4.5:1 contrast minimum (WCAG 1.4.3) on /commands/actions" time="0.460" classname="TC-A11Y-050 | Text meets the 4.5:1 contrast minimum (WCAG 1.4.3) on /commands/actions">
+    </testcase>
+    <testcase name="11 · Accessibility — known WCAG defects TC-A11Y-051 | Every form field has an accessible name (WCAG 4.1.2, 1.3.1) on /commands/actions" time="0.170" classname="TC-A11Y-051 | Every form field has an accessible name (WCAG 4.1.2, 1.3.1) on /commands/actions">
+    </testcase>
+    <testcase name="11 · Accessibility — known WCAG defects TC-A11Y-052 | Links in text are not distinguished by colour alone (WCAG 1.4.1) on /commands/assertions" time="0.186" classname="TC-A11Y-052 | Links in text are not distinguished by colour alone (WCAG 1.4.1) on /commands/assertions">
+    </testcase>
+    <testcase name="11 · Accessibility — known WCAG defects TC-A11Y-053 | Scrollable regions can be reached with the keyboard (WCAG 2.1.1) on /commands/actions" time="0.187" classname="TC-A11Y-053 | Scrollable regions can be reached with the keyboard (WCAG 2.1.1) on /commands/actions">
+    </testcase>
+  </testsuite>
+</testsuites>

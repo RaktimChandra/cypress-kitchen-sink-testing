@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="4.377" tests="16" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-11-09T22:22:18" tests="0" file="cypress/e2e/07-todo-app/todo-functional.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="07 · TodoMVC — functional behaviour" timestamp="2026-11-09T22:22:18" tests="16" time="4.376" failures="0">
+    <testcase name="07 · TodoMVC — functional behaviour TC-TD-001 | First visit seeds two example todos" time="0.306" classname="TC-TD-001 | First visit seeds two example todos">
+    </testcase>
+    <testcase name="07 · TodoMVC — functional behaviour TC-TD-002 | Add a todo with Enter" time="0.296" classname="TC-TD-002 | Add a todo with Enter">
+    </testcase>
+    <testcase name="07 · TodoMVC — functional behaviour TC-TD-003 | New-todo input requests autofocus on load" time="0.138" classname="TC-TD-003 | New-todo input requests autofocus on load">
+    </testcase>
+    <testcase name="07 · TodoMVC — functional behaviour TC-TD-004 | Items keep insertion order" time="0.485" classname="TC-TD-004 | Items keep insertion order">
+    </testcase>
+    <testcase name="07 · TodoMVC — functional behaviour TC-TD-005 | Toggle marks an item completed (class + checkbox)" time="0.217" classname="TC-TD-005 | Toggle marks an item completed (class + checkbox)">
+    </testcase>
+    <testcase name="07 · TodoMVC — functional behaviour TC-TD-006 | Un-toggle returns the item to active" time="0.206" classname="TC-TD-006 | Un-toggle returns the item to active">
+    </testcase>
+    <testcase name="07 · TodoMVC — functional behaviour TC-TD-007 | &quot;Mark all as complete&quot; completes every item" time="0.252" classname="TC-TD-007 | &quot;Mark all as complete&quot; completes every item">
+    </testcase>
+    <testcase name="07 · TodoMVC — functional behaviour TC-TD-008 | Toggle-all again re-activates every item" time="0.207" classname="TC-TD-008 | Toggle-all again re-activates every item">
+    </testcase>
+    <testcase name="07 · TodoMVC — functional behaviour TC-TD-009 | Delete an item with its × button" time="0.219" classname="TC-TD-009 | Delete an item with its × button">
+    </testcase>
+    <testcase name="07 · TodoMVC — functional behaviour TC-TD-010 | Delete button appears only on hover (real mouse hover)" time="0.210" classname="TC-TD-010 | Delete button appears only on hover (real mouse hover)">
+    </testcase>
+    <testcase name="07 · TodoMVC — functional behaviour TC-TD-011 | Clear completed removes only completed items" time="0.207" classname="TC-TD-011 | Clear completed removes only completed items">
+    </testcase>
+    <testcase name="07 · TodoMVC — functional behaviour TC-TD-012 | Filter &quot;All&quot; shows a, b, c" time="0.221" classname="TC-TD-012 | Filter &quot;All&quot; shows a, b, c">
+    </testcase>
+    <testcase name="07 · TodoMVC — functional behaviour TC-TD-013 | Filter &quot;Active&quot; shows b" time="0.219" classname="TC-TD-013 | Filter &quot;Active&quot; shows b">
+    </testcase>
+    <testcase name="07 · TodoMVC — functional behaviour TC-TD-014 | Filter &quot;Completed&quot; shows a, c" time="0.226" classname="TC-TD-014 | Filter &quot;Completed&quot; shows a, c">
+    </testcase>
+    <testcase name="07 · TodoMVC — functional behaviour TC-TD-015 | Completing an item while on &quot;Active&quot; removes it from the view" time="0.295" classname="TC-TD-015 | Completing an item while on &quot;Active&quot; removes it from the view">
+    </testcase>
+    <testcase name="07 · TodoMVC — functional behaviour TC-TD-016 | Adding an item while on &quot;Completed&quot; keeps it out of that view" time="0.329" classname="TC-TD-016 | Adding an item while on &quot;Completed&quot; keeps it out of that view">
+    </testcase>
+  </testsuite>
+</testsuites>

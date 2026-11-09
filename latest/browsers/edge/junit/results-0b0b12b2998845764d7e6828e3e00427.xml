@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="2.936" tests="9" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-11-09T22:23:46" tests="0" file="cypress/e2e/12-visual/visual.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="12 · Visual regression" timestamp="2026-11-09T22:23:46" tests="9" time="2.933" failures="0">
+    <testcase name="12 · Visual regression TC-VIS-001 | home-banner matches its baseline" time="0.443" classname="TC-VIS-001 | home-banner matches its baseline">
+    </testcase>
+    <testcase name="12 · Visual regression TC-VIS-002 | navbar matches its baseline" time="0.244" classname="TC-VIS-002 | navbar matches its baseline">
+    </testcase>
+    <testcase name="12 · Visual regression TC-VIS-003 | actions-type-form matches its baseline" time="0.310" classname="TC-VIS-003 | actions-type-form matches its baseline">
+    </testcase>
+    <testcase name="12 · Visual regression TC-VIS-004 | assertions-table matches its baseline" time="0.258" classname="TC-VIS-004 | assertions-table matches its baseline">
+    </testcase>
+    <testcase name="12 · Visual regression TC-VIS-005 | traversal-table matches its baseline" time="0.201" classname="TC-VIS-005 | traversal-table matches its baseline">
+    </testcase>
+    <testcase name="12 · Visual regression TC-VIS-006 | todo-app matches its baseline" time="0.252" classname="TC-VIS-006 | todo-app matches its baseline">
+    </testcase>
+    <testcase name="12 · Visual regression TC-VIS-010 | Home page above the fold on mobile (375×667) matches its baseline" time="0.281" classname="TC-VIS-010 | Home page above the fold on mobile (375×667) matches its baseline">
+    </testcase>
+    <testcase name="12 · Visual regression TC-VIS-011 | Home page above the fold on tablet (768×1024) matches its baseline" time="0.296" classname="TC-VIS-011 | Home page above the fold on tablet (768×1024) matches its baseline">
+    </testcase>
+    <testcase name="12 · Visual regression TC-VIS-012 | Detector check: a deliberate CSS change IS reported as a visual difference" time="0.456" classname="TC-VIS-012 | Detector check: a deliberate CSS change IS reported as a visual difference">
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="21.046" tests="7" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-11-09T22:22:47" tests="0" file="cypress/e2e/07-todo-app/todo-persistence.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="07 · TodoMVC — persistence in localStorage" timestamp="2026-11-09T22:22:47" tests="6" time="14.753" failures="0">
+    <testcase name="07 · TodoMVC — persistence in localStorage TC-TD-130 | Added items survive a reload" time="0.410" classname="TC-TD-130 | Added items survive a reload">
+    </testcase>
+    <testcase name="07 · TodoMVC — persistence in localStorage TC-TD-131 | Completed state survives a reload" time="0.328" classname="TC-TD-131 | Completed state survives a reload">
+    </testcase>
+    <testcase name="07 · TodoMVC — persistence in localStorage TC-TD-132 | Storage record schema: {title, completed, id}" time="0.290" classname="TC-TD-132 | Storage record schema: {title, completed, id}">
+    </testcase>
+    <testcase name="07 · TodoMVC — persistence in localStorage TC-TD-133 | Deleting all items keeps an empty list (seed items are not re-added)" time="6.385" classname="TC-TD-133 | Deleting all items keeps an empty list (seed items are not re-added)">
+    </testcase>
+    <testcase name="07 · TodoMVC — persistence in localStorage TC-TD-134 | Corrupt storage value is handled gracefully" time="6.448" classname="TC-TD-134 | Corrupt storage value is handled gracefully">
+    </testcase>
+    <testcase name="07 · TodoMVC — persistence in localStorage TC-TD-135 | Storage written for every mutation (add, toggle, edit, delete)" time="0.658" classname="TC-TD-135 | Storage written for every mutation (add, toggle, edit, delete)">
+    </testcase>
+  </testsuite>
+  <testsuite name="07 · TodoMVC — identity of items" timestamp="2026-11-09T22:23:02" tests="1" time="6.287" failures="0">
+    <testcase name="07 · TodoMVC — identity of items TC-TD-136 | Two items created in the same millisecond can still be toggled independently" time="6.215" classname="TC-TD-136 | Two items created in the same millisecond can still be toggled independently">
+    </testcase>
+  </testsuite>
+</testsuites>
