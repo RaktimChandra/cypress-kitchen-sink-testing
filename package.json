@@ -22,6 +22,7 @@
     "test:coverage": "start-server-and-test start:coverage http://localhost:8080 \"cypress run --expose coverage=true\"",
     "mutation": "node tools/mutation.js",
     "report": "node tools/aggregate.js",
+    "report:html": "mochawesome-merge \"reports/mochawesome/*.json\" > reports/merged.json && marge reports/merged.json --reportDir reports/html --inline",
     "lint": "eslint .",
     "deliverables": "make deliverables"
   },

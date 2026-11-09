@@ -41,6 +41,7 @@ npm test                  # starts the app on :8080 and runs all specs headless 
 npm run test:chrome       # same in Chrome   (test:firefox, test:edge)
 npm run test:demo         # headed Chrome: form controls, navigation, assertions, UI interactions
 npm run cy:open           # interactive Test Runner (start the app first with `npm start`)
+npm run report:html       # merge the mochawesome JSON into one HTML report
 ```
 
 Run a group by tag with `@cypress/grep`:
