@@ -8,7 +8,7 @@ const fs = require('fs')
 const path = require('path')
 const {
   Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType, Table, TableRow, TableCell, WidthType,
-  ShadingType, BorderStyle, ImageRun, PageBreak, Header, Footer, PageNumber, TableOfContents, LevelFormat,
+  ShadingType, BorderStyle, ImageRun, Header, Footer, PageNumber, TableOfContents, LevelFormat,
   TabStopType,
 } = require('docx')
 
@@ -48,7 +48,6 @@ const H1 = (text) => new Paragraph({ heading: HeadingLevel.HEADING_1, pageBreakB
 const H2 = (text) => new Paragraph({ heading: HeadingLevel.HEADING_2, children: [t(text)] })
 const H3 = (text) => new Paragraph({ heading: HeadingLevel.HEADING_3, children: [t(text)] })
 const B = (text, lvl = 0) => new Paragraph({ numbering: { reference: 'bul', level: lvl }, spacing: { after: 60, line: 280 }, children: Array.isArray(text) ? text : [t(text)] })
-const N = (text) => new Paragraph({ numbering: { reference: 'num', level: 0 }, spacing: { after: 60, line: 280 }, children: Array.isArray(text) ? text : [t(text)] })
 const bold = (s) => t(s, { bold: true })
 const Caption = (s) => new Paragraph({ alignment: AlignmentType.CENTER, spacing: { before: 60, after: 200 }, children: [t(s, { italics: true, size: 18, color: MUTED })] })
 const Code = (src) => src.split('\n').map((line, i, a) => new Paragraph({
@@ -96,7 +95,6 @@ const AREAS = [['SMK', 'Smoke'], ['NAV', 'Navigation'], ['FC', 'Form controls'],
 const areaOf = (c) => c.id.split('-')[1]
 const count = (f) => cases.filter(f).length
 const specsOf = (a) => [...new Set(cases.filter((c) => areaOf(c) === a).map((c) => c.spec.replace('cypress/e2e/', '')))]
-const known = cases.filter((c) => c.knownDefect)
 const total = cases.length
 const nSpecs = new Set(cases.map((c) => c.spec)).size
 const by = (k) => cases.reduce((m, c) => { m[c[k]] = (m[c[k]] || 0) + 1; return m }, {})

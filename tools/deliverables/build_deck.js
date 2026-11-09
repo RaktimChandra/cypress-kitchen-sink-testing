@@ -60,7 +60,6 @@ async function main () {
   pres.title = 'Interactive Web Components Testing'
   pres.theme = { headFontFace: THEME.headFontFace, bodyFontFace: THEME.bodyFontFace }
   const C = pres.SchemeColor
-  const SW = 13.333
 
   // ---- layouts ----------------------------------------------------------------------
   pres.defineSlideMaster({
