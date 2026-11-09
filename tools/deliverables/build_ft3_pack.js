@@ -216,7 +216,7 @@ add(
   ...QA('What is an equivalent mutant?', 'A change that does not alter observable behaviour (let → const on a variable that is never reassigned). No test can kill it, so it is excluded from the score.'),
   ...QA('How do you test accessibility automatically, and what can\'t you test?', 'axe-core checks rules such as labels, contrast, ARIA and landmarks. It cannot judge whether alt text is meaningful or whether a flow makes sense to a screen-reader user; that needs manual review.'),
   ...QA('How does the visual test avoid false failures across browsers?', 'Baselines are stored per browser and a 0.2 % pixel threshold absorbs anti-aliasing noise. A self-test proves the comparison can detect a real change.'),
-  ...QA('What defects did you find, and how?', 'Eight. Examples: an unknown route crashes the router (error guessing), corrupt storage breaks the app (fault injection), Enter reloads a form (error guessing), overflow on phones (breakpoint BVA), broken links (HTTP link check).'),
+  ...QA('What defects did you find, and how?', 'Fourteen. Examples: ticking one todo completes its neighbour because ids are millisecond timestamps (found while triaging CI), form fields without accessible names (axe-core), an unknown route crashes the router (error guessing), corrupt storage breaks the app (fault injection), Enter reloads a form (error guessing), overflow on phones (breakpoint BVA), broken links (HTTP link check).'),
   ...QA('Where does verification end and validation start in your project?', 'Lint, static catalogue validation and spec conformance are verification. The Given/When/Then journeys and requirement coverage against user needs are validation.'),
 )
 

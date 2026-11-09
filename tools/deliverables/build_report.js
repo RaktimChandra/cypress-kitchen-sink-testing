@@ -24,7 +24,7 @@ const MEMBERS = TEAM.members.map((m) => `${m.name} (${m.reg})`)
 const byId = Object.fromEntries(cases.map((c) => [c.id, c]))
 
 // optional CI evidence -------------------------------------------------------------
-const EVID = process.env.EVIDENCE_DIR || path.join(ROOT, 'evidence')
+const EVID = process.env.EVIDENCE_DIR || path.join(ROOT, 'deliverables', 'build', 'evidence', 'latest')
 const results = {}
 function walk (d) {
   if (!fs.existsSync(d)) return
@@ -36,6 +36,14 @@ function walk (d) {
 }
 walk(EVID)
 const haveResults = Object.keys(results).length > 0
+const rdMaybe = (p) => { try { return JSON.parse(fs.readFileSync(p, 'utf8')) } catch (_e) { return null } }
+const HIST = rd('docs/ci-history.json')
+const coverage = rdMaybe(path.join(EVID, 'coverage', 'coverage-summary.json'))
+const perf = (rdMaybe(path.join(EVID, 'browsers', 'chrome', 'evidence', 'perf-chrome.json')) || []).filter((p) => p.page && p.page.startsWith('/') && !/\s/.test(p.page) && Number.isFinite(p.domContentLoaded))
+const a11yEv = rdMaybe(path.join(EVID, 'browsers', 'chrome', 'evidence', 'a11y-chrome.json')) || []
+let mutants = []
+if (fs.existsSync(path.join(EVID, 'mutation'))) for (const f of fs.readdirSync(path.join(EVID, 'mutation'))) { const j = rdMaybe(path.join(EVID, 'mutation', f)); if (j) mutants = mutants.concat(j.results || []) }
+const mK = mutants.filter((m) => m.status === 'KILLED').length; const mS = mutants.filter((m) => m.status === 'SURVIVED').length; const mE = mutants.filter((m) => m.status === 'EQUIVALENT').length
 
 // ---- styling helpers ------------------------------------------------------------------
 const FONT = 'Arial'
@@ -148,7 +156,7 @@ add(
     ['Execution results', haveResults ? `Included from CI: ${Object.keys(results).join(', ')}` : 'Pending the first CI run. This report prints no pass/fail figures until real evidence exists.'],
   ]),
   gap(),
-  P([bold('Key findings. '), t('The Kitchen Sink is functionally solid on its documented happy paths, but negative and robustness testing found eight defects. Two are Major: an unknown todo route crashes the router (DEF-KS-001), and corrupt localStorage makes the todo app unusable (DEF-KS-003). The other six are Minor: the Enter key wipes the email field through implicit form submission, deleted todos come back on reload, links are broken, a directory listing is exposed, target=_blank links lack noopener, and pages overflow horizontally on phones.')]),
+  P([bold('Key findings. '), t(`The Kitchen Sink is functionally solid on its documented happy paths, but negative, robustness and checklist testing found ${defects.length} defects. Four are Major: an unknown todo route crashes the router (DEF-KS-001), corrupt localStorage makes the todo app unusable (DEF-KS-003), items created in the same millisecond share an id so ticking one completes its neighbour (DEF-KS-009), and form fields have no accessible name (DEF-KS-011). The rest include the Enter key wiping the email field, deleted todos returning on reload, broken links, an exposed directory listing, tab-nabbing links, phone overflow and WCAG contrast and link-cue failures.`)]),
 )
 
 // 2 Introduction
@@ -386,7 +394,27 @@ add(
         fs.existsSync(path.join(ROOT, 'docs/figures/charts/results_by_browser.png')) ? png('docs/figures/charts/results_by_browser.png', 560) : gap()]
     : [P('No execution evidence was available when this version of the report was generated. The CI pipeline (Section 5.4) produces it; re-running node tools/deliverables/build_report.js with the evidence folder present fills this section with the real figures, per browser and per case. No result in this document is estimated.'),
         table(['Browser', 'Total', 'Pass', 'Known defect', 'Fail', 'Skipped'], ['chrome', 'firefox', 'edge', 'electron'].map((b) => [b, String(total), 'pending', 'pending', 'pending', 'pending']), [2000, 1500, 1500, 1700, 1400, 1538])]),
-  H2('10.1 Test summary (IEEE 829 TSR)'),
+  H2('10.1 How the suite converged (real CI history)'),
+  table(['Run', 'Commit', 'Cases', 'Chrome pass / KD / fail', 'Firefox pass / KD / fail / skip'], [
+    ...HIST.runs.map((r) => [r.label, r.commit, String(r.cases), `${r.browsers.chrome.pass} / ${r.browsers.chrome.knownDefect} / ${r.browsers.chrome.fail}`, `${r.browsers.firefox.pass} / ${r.browsers.firefox.knownDefect} / ${r.browsers.firefox.fail} / ${r.browsers.firefox.skipped}`]),
+    ...(haveResults && results.chrome && results.firefox ? [['Final run', 'main', String(results.chrome.summary.total), `${results.chrome.summary.pass} / ${results.chrome.summary.knownDefect} / ${results.chrome.summary.fail}`, `${results.firefox.summary.pass} / ${results.firefox.summary.knownDefect} / ${results.firefox.summary.fail} / ${results.firefox.summary.skipped}`]] : []),
+  ], [2600, 1100, 900, 2400, 2638]),
+  gap(),
+  P(HIST.triage_note || ''),
+  table(['Triage category', 'Failing cases', 'Examples'], HIST.triage.map((t) => [t.category, String(t.count), t.examples]), [3000, 1300, 5338]),
+  gap(),
+  H2('10.2 Code coverage'),
+  ...(coverage ? [table(['Metric', 'Covered', 'Total', '%'], ['lines', 'statements', 'functions', 'branches'].map((k) => [k[0].toUpperCase() + k.slice(1), String(coverage.total[k].covered), String(coverage.total[k].total), `${coverage.total[k].pct}%`]), [3000, 2200, 2200, 2238]),
+    P('Istanbul (nyc) instrumentation of app/assets/js, vendor libraries excluded, collected while the full suite ran in Chrome.')] : [P('Coverage evidence not available for this build.')]),
+  H2('10.3 Mutation testing'),
+  ...(mutants.length ? [P(`${mutants.length} mutants: ${mK} killed, ${mS} survived, ${mE} equivalent. Mutation score = ${mK} / (${mK + mS}) = ${Math.round(1000 * mK / (mK + mS)) / 10}%.`),
+    table(['Mutant', 'Operator', 'File', 'Change', 'Status'], mutants.sort((a, b) => a.id.localeCompare(b.id)).map((m) => [m.id, m.op || '', (m.file || '').split('/').pop(), m.desc || '', m.status]), [900, 2200, 1700, 3638, 1200], { size: 15 }),
+    P(HIST.mutation && HIST.mutation[0] ? `The first mutation run left ${HIST.mutation[0].survived} survivors (${HIST.mutation[0].survivors}). Both tests were strengthened: the footer decision-table cases now assert the rendered display of "Clear completed", and the disabled-control cases no longer hide failures inside cy.on('fail').` : '')] : [P('Mutation evidence not available for this build.')]),
+  H2('10.4 Performance evidence'),
+  ...(perf.length ? [table(['Page', 'TTFB ms', 'DCL ms', 'Load ms', 'Requests', 'KB', 'DOM nodes'], perf.map((p) => [p.page, Math.round(p.ttfb), Math.round(p.domContentLoaded), Math.round(p.load), p.resources, p.transferKB, p.domNodes].map(String)), [3000, 1000, 1000, 1100, 1100, 1100, 1338], { size: 15 })] : [P('Performance evidence not available for this build.')]),
+  H2('10.5 Accessibility evidence'),
+  ...(a11yEv.length ? [table(['Page', 'Serious/critical rules (nodes)'], (() => { const seen = new Set(); return a11yEv.filter((r) => !seen.has(r.page) && seen.add(r.page)).map((r) => [r.page, r.violations.filter((v) => ['serious', 'critical'].includes(v.impact)).map((v) => `${v.id} (${v.nodes})`).join(', ') || 'none']) })(), [3000, 6638], { size: 15 })] : [P('Accessibility evidence not available for this build.')]),
+  H2('10.6 Test summary (IEEE 829 TSR)'),
   kv([
     ['Summary', `${total} cases across ${nSpecs} specs were executed against the Kitchen Sink f2cb767 in the browsers listed above.`],
     ['Variances', 'Visibility checks inside overflow containers use geometry instead of :visible because of the Cypress 16 visibility algorithm; Firefox and Electron use the legacy network path for cy.intercept.'],
@@ -410,9 +438,12 @@ add(
   H2('12.1 The Enter key that erased the user\'s work (DEF-KS-002)'),
   P('While writing text-input tests, the first draft typed "fake@email.com{enter}". The test failed for a reason that had nothing to do with the assertion: the page had reloaded. The Actions page wraps the email input in a <form> with a single text field and no submit handler, and HTML defines "implicit submission": pressing Enter in such a form submits it. The browser sent GET /commands/actions? and the typed value was lost.'),
   P('Lesson: a flaky-looking failure was a real defect. We kept the regular tests free of {enter}, wrote one known-defect test that asserts the URL does not gain a "?" and the value survives, and logged the defect with a one-line fix (preventDefault in a submit handler).'),
-  H2('12.2 Choosing the right oracle for email validation'),
+  H2('12.2 The todo item that toggled its neighbour (DEF-KS-009)'),
+  P('In the first CI run, TC-TD-132 found two stored items where three were expected. Chasing that discrepancy showed that the two demo items are created in the same millisecond and receive the same id, because store.js uses new Date().getTime() as the id. With duplicate ids, ticking the second item ("Walk the dog") completes the first ("Pay electric bill") instead, and the wrong state is persisted.'),
+  P('The defect is timing-dependent, so a naive test would be flaky. TC-TD-136 freezes only Date with cy.clock before the page loads, which makes the collision happen on every run in every browser. The lesson: when a defect depends on time, control time.'),
+  H2('12.3 Choosing the right oracle for email validation'),
   P('The first ECP draft used RFC 5322 as the oracle and expected "quoted"@b.com to be valid. The browser said otherwise, which looked like a defect. It is not: HTML deliberately uses a stricter, "willful violation" grammar. The partitions were re-derived from the HTML standard and the test reads checkValidity() and validity.typeMismatch, which removes any dependence on how the page reacts to submission. The case study shows why every test needs a named oracle.'),
-  H2('12.3 Testing a state machine, then breaking it on purpose'),
+  H2('12.4 Testing a state machine, then breaking it on purpose'),
   P('The todo item has six states. Building the diagram before writing code exposed two transitions that are easy to miss: editing a completed item keeps it completed (T7), and Enter on an empty edit deletes rather than restores (T9). Fault injection then targeted the state the diagram assumes is always valid, the persisted list. Writing "{not json" or "{}" into localStorage made the app unusable (DEF-KS-003), and an empty list re-seeded the demo items (DEF-KS-004). Mutation testing then checked that the suite notices when transitions are broken in the code.'),
 )
 
@@ -420,7 +451,8 @@ add(
 add(
   H1('13. Conclusion and lessons'),
   B('Naming the technique and the oracle for every case made the suite reviewable: anyone can see why a value was chosen and where its expected result comes from.'),
-  B('Negative, boundary and fault-injection cases found all eight defects. Happy-path tests found none.'),
+  B(`Negative, boundary, fault-injection and checklist cases found all ${defects.length} defects. Happy-path tests found none.`),
+  B('Triage matters: most first-run failures were wrong oracles or browser behaviour, not product defects. Each was resolved against its specification before anything was logged.'),
   B('The known-defect pattern keeps CI green without hiding defects and turns each fix into an automatic regression test.'),
   B('Cross-browser runs and per-browser visual baselines separate real regressions from rendering differences.'),
   B('Mutation testing and coverage measure the tests themselves, which is the "verification of the verification".'),
