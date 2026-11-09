@@ -59,6 +59,20 @@ docs/                   requirements, test plan
 .github/workflows/      CI (4 browsers + coverage), mutation testing
 ```
 
+## Documents
+
+The documents are generated from the repository, so they always match the code. Run `make deliverables` (needs Python 3 with openpyxl and matplotlib, plus the Node packages `docx` and `pptxgenjs`).
+
+| Output | Generator |
+|---|---|
+| Test-management workbook: every case, RTM, defects, live summary | `tools/deliverables/build_workbook.py` |
+| Project report: test plan, design, defects, TSR, case studies | `tools/deliverables/build_report.js` |
+| Presentation deck | `tools/deliverables/build_deck.js` |
+| FT3 preparation pack: solved BVA/ECP/DT/CEG/STT/MC-DC problems | `tools/deliverables/build_ft3_pack.js` |
+| Charts | `tools/deliverables/charts.py` → `docs/figures/charts/` |
+
+See also [TEST_STRATEGY.md](TEST_STRATEGY.md), [DEFECTS.md](DEFECTS.md) and [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## Evidence
 
 CI publishes every run (results per browser, JUnit, mochawesome, coverage, accessibility/performance/security evidence, screenshots and demo videos) to the [`results`](../../tree/results) branch.
