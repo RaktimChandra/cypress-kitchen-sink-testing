@@ -7,7 +7,9 @@
  * The test title becomes "TC-FC-BVA-001 | Range at 0 shows 0" so every report line is
  * traceable, and the metadata is written to reports/meta/ after each spec.
  */
-export const catalogue = []
+// Specs and the support file are separate bundles, so the catalogue lives on the shared window
+// rather than in module scope (a module-level array would be a different instance in each bundle).
+export const catalogue = (globalThis.__tcCatalogue = globalThis.__tcCatalogue || [])
 
 const DEFAULTS = { level: 'System', priority: 'P2', type: 'Functional', technique: 'Use-case', tags: [] }
 
