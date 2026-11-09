@@ -658,7 +658,6 @@ cy.get('.assertions-link').should('not.have.class', 'disabled')`, 0.6, 1.6, 7.0,
 
   s = slide('From 43 failures to zero: the triage story')
   const hr = HIST.runs.map((r) => ({ label: r.label, fail: r.browsers.chrome.fail, kd: r.browsers.chrome.knownDefect }))
-  if (have && results.chrome) hr.push({ label: 'Final run', fail: results.chrome.summary.fail, kd: results.chrome.summary.knownDefect })
   s.addChart(pres.ChartType.bar, [{ name: 'Failing cases (Chrome)', labels: hr.map((r) => r.label), values: hr.map((r) => r.fail) }, { name: 'Known defects reproduced', labels: hr.map((r) => r.label), values: hr.map((r) => r.kd) }],
     { x: 0.6, y: 1.6, w: 6.4, h: 5.2, barDir: 'col', barGrouping: 'clustered', chartColors: [HEX.accent4, HEX.accent3], showLegend: true, legendPos: 'b', legendFontSize: 11, showValue: true, dataLabelPosition: 'outEnd', dataLabelColor: HEX.dk1, ...chartBase })
   HIST.triage.forEach((t, i) => card(s, 7.3, 1.6 + i * 1.75, 5.4, 1.6, `${t.count} · ${t.category}`, t.examples, { headSize: 13.5, bodySize: 11.5, fill: ['FDECEA', 'EEF2F7', 'FFF8EA'][i] }))

@@ -65,6 +65,38 @@
           "skipped": 6
         }
       }
+    },
+    {
+      "label": "Run 3 · final (main, after PR #1)",
+      "run": 42705585437,
+      "commit": "1b0c4cc",
+      "cases": 588,
+      "browsers": {
+        "chrome": {
+          "pass": 573,
+          "fail": 0,
+          "knownDefect": 15,
+          "skipped": 0
+        },
+        "edge": {
+          "pass": 573,
+          "fail": 0,
+          "knownDefect": 15,
+          "skipped": 0
+        },
+        "electron": {
+          "pass": 573,
+          "fail": 0,
+          "knownDefect": 15,
+          "skipped": 0
+        },
+        "firefox": {
+          "pass": 567,
+          "fail": 0,
+          "knownDefect": 15,
+          "skipped": 6
+        }
+      }
     }
   ],
   "triage": [
@@ -92,6 +124,14 @@
       "survived": 2,
       "equivalent": 1,
       "survivors": "M27 (Clear completed rendered when 0 done), M31 (disabled radio)"
+    },
+    {
+      "label": "Mutation run 2 (after strengthening TC-TD-071…073, TC-FC-081, TC-FC-097)",
+      "run": 42705585446,
+      "killed": 31,
+      "survived": 0,
+      "equivalent": 1,
+      "survivors": "none"
     }
   ],
   "triage_note": "44 distinct failing cases in run 1 (43 in Chromium browsers + TC-FC-152 in Firefox only). Three harness bugs were found and fixed alongside: catalogue lost across bundles, browser name unknown in plugins, axe evidence written after the assertion."

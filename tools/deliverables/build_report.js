@@ -397,7 +397,6 @@ add(
   H2('10.1 How the suite converged (real CI history)'),
   table(['Run', 'Commit', 'Cases', 'Chrome pass / KD / fail', 'Firefox pass / KD / fail / skip'], [
     ...HIST.runs.map((r) => [r.label, r.commit, String(r.cases), `${r.browsers.chrome.pass} / ${r.browsers.chrome.knownDefect} / ${r.browsers.chrome.fail}`, `${r.browsers.firefox.pass} / ${r.browsers.firefox.knownDefect} / ${r.browsers.firefox.fail} / ${r.browsers.firefox.skipped}`]),
-    ...(haveResults && results.chrome && results.firefox ? [['Final run', 'main', String(results.chrome.summary.total), `${results.chrome.summary.pass} / ${results.chrome.summary.knownDefect} / ${results.chrome.summary.fail}`, `${results.firefox.summary.pass} / ${results.firefox.summary.knownDefect} / ${results.firefox.summary.fail} / ${results.firefox.summary.skipped}`]] : []),
   ], [2600, 1100, 900, 2400, 2638]),
   gap(),
   P(HIST.triage_note || ''),
