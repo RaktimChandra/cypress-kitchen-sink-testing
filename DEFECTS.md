@@ -17,6 +17,7 @@ Defects found in the Cypress Kitchen Sink (commit `f2cb767`). Each one is reprod
 | DEF-KS-011 | Form fields without an accessible name | Major | P2 | `TC-A11Y-051` |
 | DEF-KS-012 | Links inside text are distinguished by colour alone | Minor | P3 | `TC-A11Y-052` |
 | DEF-KS-013 | Scrollable demo boxes cannot be reached with the keyboard | Minor | P3 | `TC-A11Y-053` |
+| DEF-KS-014 | The "cy.fixture or require" section has no documentation link | Trivial | P4 | `TC-NAV-086` |
 
 ## DEF-KS-001 — Unknown todo route throws and blanks the list
 
@@ -134,3 +135,12 @@ Defects found in the Cypress Kitchen Sink (commit `f2cb767`). Each one is reprod
 - **Expected:** Scrollable regions are focusable (tabindex=0) so keyboard users can scroll them.
 - **Actual:** The overflow boxes used by the scrollTo demos are not focusable.
 - **Suggested fix:** Add tabindex="0" and an accessible name to the scroll containers.
+
+## DEF-KS-014 — The "cy.fixture or require" section has no documentation link
+
+- **Area:** Content / navigation
+- **Found by:** Error guessing (consistency check across all sections)
+- **Steps:** Open /commands/files#require and look for an on.cypress.io link in the heading or its paragraph.
+- **Expected:** Like every other documented section, a link to the command's documentation.
+- **Actual:** Neither the heading nor the paragraph links anywhere; every other h4 section on the 13 documented pages does.
+- **Suggested fix:** Link the heading to https://on.cypress.io/fixture.
