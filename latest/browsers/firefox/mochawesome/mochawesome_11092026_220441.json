@@ -1,0 +1,221 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-11-09T22:04:25.214Z",
+    "end": "2026-11-09T22:04:41.307Z",
+    "duration": 16093,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7921f4e6-f8be-47c8-9b1e-e61e5bc17661",
+      "title": "",
+      "fullFile": "cypress/e2e/18-robustness/robustness.cy.js",
+      "file": "cypress/e2e/18-robustness/robustness.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0013f564-54b6-4802-9dbc-dad15b58d519",
+          "title": "18 · Robustness — monkey testing and stress of interactions",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC-ROB-001 | Monkey test: 60 seeded random interactions on /commands/actions (seed 20261110) raise no errors",
+              "fullTitle": "18 · Robustness — monkey testing and stress of interactions TC-ROB-001 | Monkey test: 60 seeded random interactions on /commands/actions (seed 20261110) raise no errors",
+              "timedOut": null,
+              "duration": 4996,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const r = rng(seed);\ncy.visitPage(page);\nconst actions = page === '/todo' ? [() => cy.get('.new-todo').type(`m${Math.floor(r() * 1000)}{enter}`, {\n  delay: 0\n}), () => cy.get('body').then($b => {\n  const t = $b.find('.todo-list li .toggle');\n  if (t.length) cy.wrap(t.eq(Math.floor(r() * t.length))).click();\n}), () => cy.get('.filters a').eq(Math.floor(r() * 3)).click(), () => cy.get('body').then($b => {\n  const d = $b.find('.todo-list li .destroy');\n  if (d.length) cy.wrap(d.eq(Math.floor(r() * d.length))).click({\n    force: true\n  });\n})] : [() => cy.get('#action-canvas').click(Math.floor(r() * 250), Math.floor(r() * 250)), () => cy.get('.action-labels>.label').eq(Math.floor(r() * 6)).click(), () => cy.get('.action-email').type(String.fromCharCode(97 + Math.floor(r() * 26)), {\n  delay: 0\n}), () => cy.get('.action-multiple-checkboxes [type=checkbox]').eq(Math.floor(r() * 3)).click(), () => cy.get('.action-select').select(Math.floor(r() * 4)), () => cy.get('.trigger-input-range').invoke('val', Math.floor(r() * 120) - 10).trigger('change'), () => cy.get('#scrollable-both').scrollTo(Math.floor(r() * 700), Math.floor(r() * 850), {\n  ensureScrollable: false\n}), () => cy.get('.action-btn').click()];\nfor (let k = 0; k < 60; k++) actions[Math.floor(r() * actions.length)]();\ncy.assertNoPageErrors();\ncy.get('body').should('be.visible');",
+              "err": {},
+              "uuid": "e38e0df3-fb36-49c7-83a2-a8c78dba7b71",
+              "parentUUID": "0013f564-54b6-4802-9dbc-dad15b58d519",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-ROB-002 | Monkey test: 60 seeded random interactions on /commands/actions (seed 7) raise no errors",
+              "fullTitle": "18 · Robustness — monkey testing and stress of interactions TC-ROB-002 | Monkey test: 60 seeded random interactions on /commands/actions (seed 7) raise no errors",
+              "timedOut": null,
+              "duration": 4748,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const r = rng(seed);\ncy.visitPage(page);\nconst actions = page === '/todo' ? [() => cy.get('.new-todo').type(`m${Math.floor(r() * 1000)}{enter}`, {\n  delay: 0\n}), () => cy.get('body').then($b => {\n  const t = $b.find('.todo-list li .toggle');\n  if (t.length) cy.wrap(t.eq(Math.floor(r() * t.length))).click();\n}), () => cy.get('.filters a').eq(Math.floor(r() * 3)).click(), () => cy.get('body').then($b => {\n  const d = $b.find('.todo-list li .destroy');\n  if (d.length) cy.wrap(d.eq(Math.floor(r() * d.length))).click({\n    force: true\n  });\n})] : [() => cy.get('#action-canvas').click(Math.floor(r() * 250), Math.floor(r() * 250)), () => cy.get('.action-labels>.label').eq(Math.floor(r() * 6)).click(), () => cy.get('.action-email').type(String.fromCharCode(97 + Math.floor(r() * 26)), {\n  delay: 0\n}), () => cy.get('.action-multiple-checkboxes [type=checkbox]').eq(Math.floor(r() * 3)).click(), () => cy.get('.action-select').select(Math.floor(r() * 4)), () => cy.get('.trigger-input-range').invoke('val', Math.floor(r() * 120) - 10).trigger('change'), () => cy.get('#scrollable-both').scrollTo(Math.floor(r() * 700), Math.floor(r() * 850), {\n  ensureScrollable: false\n}), () => cy.get('.action-btn').click()];\nfor (let k = 0; k < 60; k++) actions[Math.floor(r() * actions.length)]();\ncy.assertNoPageErrors();\ncy.get('body').should('be.visible');",
+              "err": {},
+              "uuid": "704e80f3-1fa3-4100-bc89-3bdae6e35a84",
+              "parentUUID": "0013f564-54b6-4802-9dbc-dad15b58d519",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-ROB-003 | Monkey test: 60 seeded random interactions on /todo (seed 42) raise no errors",
+              "fullTitle": "18 · Robustness — monkey testing and stress of interactions TC-ROB-003 | Monkey test: 60 seeded random interactions on /todo (seed 42) raise no errors",
+              "timedOut": null,
+              "duration": 4772,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const r = rng(seed);\ncy.visitPage(page);\nconst actions = page === '/todo' ? [() => cy.get('.new-todo').type(`m${Math.floor(r() * 1000)}{enter}`, {\n  delay: 0\n}), () => cy.get('body').then($b => {\n  const t = $b.find('.todo-list li .toggle');\n  if (t.length) cy.wrap(t.eq(Math.floor(r() * t.length))).click();\n}), () => cy.get('.filters a').eq(Math.floor(r() * 3)).click(), () => cy.get('body').then($b => {\n  const d = $b.find('.todo-list li .destroy');\n  if (d.length) cy.wrap(d.eq(Math.floor(r() * d.length))).click({\n    force: true\n  });\n})] : [() => cy.get('#action-canvas').click(Math.floor(r() * 250), Math.floor(r() * 250)), () => cy.get('.action-labels>.label').eq(Math.floor(r() * 6)).click(), () => cy.get('.action-email').type(String.fromCharCode(97 + Math.floor(r() * 26)), {\n  delay: 0\n}), () => cy.get('.action-multiple-checkboxes [type=checkbox]').eq(Math.floor(r() * 3)).click(), () => cy.get('.action-select').select(Math.floor(r() * 4)), () => cy.get('.trigger-input-range').invoke('val', Math.floor(r() * 120) - 10).trigger('change'), () => cy.get('#scrollable-both').scrollTo(Math.floor(r() * 700), Math.floor(r() * 850), {\n  ensureScrollable: false\n}), () => cy.get('.action-btn').click()];\nfor (let k = 0; k < 60; k++) actions[Math.floor(r() * actions.length)]();\ncy.assertNoPageErrors();\ncy.get('body').should('be.visible');",
+              "err": {},
+              "uuid": "88147ceb-9c61-4a71-8a3c-976c116c947a",
+              "parentUUID": "0013f564-54b6-4802-9dbc-dad15b58d519",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-ROB-010 | Rapid double submission is handled (each submit acknowledged, no crash)",
+              "fullTitle": "18 · Robustness — monkey testing and stress of interactions TC-ROB-010 | Rapid double submission is handled (each submit acknowledged, no crash)",
+              "timedOut": null,
+              "duration": 682,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visitPage('/commands/actions');\nfor (let k = 0; k < 10; k++) cy.get('.action-form').submit();\ncy.get('.action-form').nextAll('p').should('have.length', 10);\ncy.assertNoPageErrors();",
+              "err": {},
+              "uuid": "61cea6e7-87e6-48e1-8e80-4c6138aa36bf",
+              "parentUUID": "0013f564-54b6-4802-9dbc-dad15b58d519",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-ROB-011 | Very long todo title (10 000 chars) does not break layout or storage",
+              "fullTitle": "18 · Robustness — monkey testing and stress of interactions TC-ROB-011 | Very long todo title (10 000 chars) does not break layout or storage",
+              "timedOut": null,
+              "duration": 174,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const long = 'w'.repeat(10000);\ncy.visitTodos([long]);\ncy.storedTodos().its('0.title.length').should('eq', 10000);\ncy.document().then(d => expect(d.documentElement.scrollWidth - d.documentElement.clientWidth).to.be.at.most(1));",
+              "err": {},
+              "uuid": "3d1c73f7-0708-4670-9713-1c861bbaa592",
+              "parentUUID": "0013f564-54b6-4802-9dbc-dad15b58d519",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-ROB-012 | Storage quota pressure: app still works when localStorage is nearly full",
+              "fullTitle": "18 · Robustness — monkey testing and stress of interactions TC-ROB-012 | Storage quota pressure: app still works when localStorage is nearly full",
+              "timedOut": null,
+              "duration": 281,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visitPage('/todo', {\n  onBeforeLoad(w) {\n    try {\n      w.localStorage.setItem('filler', 'x'.repeat(4 * 1024 * 1024));\n    } catch (e) {\n      w.__fillerError = e.name;\n    }\n  }\n});\ncy.get('.new-todo').type('under pressure{enter}');\ncy.get('.todo-list li').should('have.length.at.least', 2);",
+              "err": {},
+              "uuid": "76d5094c-2231-4072-8202-04a26292ff4c",
+              "parentUUID": "0013f564-54b6-4802-9dbc-dad15b58d519",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-ROB-013 | Every page survives resize storms (10 alternating viewports)",
+              "fullTitle": "18 · Robustness — monkey testing and stress of interactions TC-ROB-013 | Every page survives resize storms (10 alternating viewports)",
+              "timedOut": null,
+              "duration": 137,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visitPage('/commands/actions');\nfor (let k = 0; k < 10; k++) cy.viewport(k % 2 ? 375 : 1280, k % 2 ? 667 : 800);\ncy.assertNoPageErrors();",
+              "err": {},
+              "uuid": "e4edafd2-4068-4248-be2e-9669c5fe4bab",
+              "parentUUID": "0013f564-54b6-4802-9dbc-dad15b58d519",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e38e0df3-fb36-49c7-83a2-a8c78dba7b71",
+            "704e80f3-1fa3-4100-bc89-3bdae6e35a84",
+            "88147ceb-9c61-4a71-8a3c-976c116c947a",
+            "61cea6e7-87e6-48e1-8e80-4c6138aa36bf",
+            "3d1c73f7-0708-4670-9713-1c861bbaa592",
+            "76d5094c-2231-4072-8202-04a26292ff4c",
+            "e4edafd2-4068-4248-be2e-9669c5fe4bab"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 15790,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "8.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.3.2"
+    }
+  }
+}

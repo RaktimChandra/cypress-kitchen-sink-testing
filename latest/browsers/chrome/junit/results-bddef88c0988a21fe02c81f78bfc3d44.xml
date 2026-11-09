@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="3.433" tests="15" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-11-09T22:00:57" tests="0" file="cypress/e2e/07-todo-app/todo-state-transition.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="07 · TodoMVC — state transitions of a todo item" timestamp="2026-11-09T22:00:57" tests="15" time="3.431" failures="0">
+    <testcase name="07 · TodoMVC — state transitions of a todo item TC-TD-100 | T1: S0 —add→ S1" time="0.417" classname="TC-TD-100 | T1: S0 —add→ S1">
+    </testcase>
+    <testcase name="07 · TodoMVC — state transitions of a todo item TC-TD-101 | T2: S1 —toggle→ S2" time="0.146" classname="TC-TD-101 | T2: S1 —toggle→ S2">
+    </testcase>
+    <testcase name="07 · TodoMVC — state transitions of a todo item TC-TD-102 | T3: S2 —toggle→ S1" time="0.141" classname="TC-TD-102 | T3: S2 —toggle→ S1">
+    </testcase>
+    <testcase name="07 · TodoMVC — state transitions of a todo item TC-TD-103 | T4: S1 —dblclick→ S3" time="0.138" classname="TC-TD-103 | T4: S1 —dblclick→ S3">
+    </testcase>
+    <testcase name="07 · TodoMVC — state transitions of a todo item TC-TD-104 | T5: S2 —dblclick→ S4" time="0.143" classname="TC-TD-104 | T5: S2 —dblclick→ S4">
+    </testcase>
+    <testcase name="07 · TodoMVC — state transitions of a todo item TC-TD-105 | T6: S3 —enter(non-empty)→ S1" time="0.197" classname="TC-TD-105 | T6: S3 —enter(non-empty)→ S1">
+    </testcase>
+    <testcase name="07 · TodoMVC — state transitions of a todo item TC-TD-106 | T7: S4 —enter(non-empty)→ S2 (completion kept)" time="0.192" classname="TC-TD-106 | T7: S4 —enter(non-empty)→ S2 (completion kept)">
+    </testcase>
+    <testcase name="07 · TodoMVC — state transitions of a todo item TC-TD-107 | T8: S3 —esc→ S1 (unchanged)" time="0.201" classname="TC-TD-107 | T8: S3 —esc→ S1 (unchanged)">
+    </testcase>
+    <testcase name="07 · TodoMVC — state transitions of a todo item TC-TD-108 | T9: S3 —enter(empty)→ S5" time="0.239" classname="TC-TD-108 | T9: S3 —enter(empty)→ S5">
+    </testcase>
+    <testcase name="07 · TodoMVC — state transitions of a todo item TC-TD-109 | T10: S1 —destroy→ S5" time="0.139" classname="TC-TD-109 | T10: S1 —destroy→ S5">
+    </testcase>
+    <testcase name="07 · TodoMVC — state transitions of a todo item TC-TD-110 | T11: S2 —destroy→ S5" time="0.147" classname="TC-TD-110 | T11: S2 —destroy→ S5">
+    </testcase>
+    <testcase name="07 · TodoMVC — state transitions of a todo item TC-TD-111 | T12: S2 —clear-completed→ S5" time="0.134" classname="TC-TD-111 | T12: S2 —clear-completed→ S5">
+    </testcase>
+    <testcase name="07 · TodoMVC — state transitions of a todo item TC-TD-115 | Invalid: clear-completed while S1 (active) leaves the item" time="0.141" classname="TC-TD-115 | Invalid: clear-completed while S1 (active) leaves the item">
+    </testcase>
+    <testcase name="07 · TodoMVC — state transitions of a todo item TC-TD-116 | Invalid: single click on a label does not enter edit mode" time="0.142" classname="TC-TD-116 | Invalid: single click on a label does not enter edit mode">
+    </testcase>
+    <testcase name="07 · TodoMVC — state transitions of a todo item TC-TD-117 | 1-switch sequence: add → complete → edit → save → un-complete → delete" time="0.703" classname="TC-TD-117 | 1-switch sequence: add → complete → edit → save → un-complete → delete">
+    </testcase>
+  </testsuite>
+</testsuites>

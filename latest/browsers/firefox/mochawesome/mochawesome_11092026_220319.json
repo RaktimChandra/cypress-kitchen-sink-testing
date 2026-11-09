@@ -1,0 +1,184 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 1,
+    "failures": 0,
+    "start": "2026-11-09T22:03:14.282Z",
+    "end": "2026-11-09T22:03:19.751Z",
+    "duration": 5469,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 20,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b92db45c-321a-4a56-b980-03e0ddb2cea1",
+      "title": "",
+      "fullFile": "cypress/e2e/11-accessibility/keyboard-and-semantics.cy.js",
+      "file": "cypress/e2e/11-accessibility/keyboard-and-semantics.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e7e12e16-c053-4c9e-b4f0-b9c18e58da6b",
+          "title": "11 · Accessibility — keyboard and semantics",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC-A11Y-040 | Every page declares lang and a non-empty title",
+              "fullTitle": "11 · Accessibility — keyboard and semantics TC-A11Y-040 | Every page declares lang and a non-empty title",
+              "timedOut": null,
+              "duration": 281,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "pages.forEach(p => {\n  cy.request(p.path).its('body').then(html => {\n    expect(html, `${p.path} lang`).to.match(/<html[^>]*\\blang=\"[a-z-]+\"/i);\n    expect(html, `${p.path} title`).to.match(/<title>[^<]+<\\/title>/);\n  });\n});",
+              "err": {},
+              "uuid": "bc08df6e-c92e-4d3b-aca6-26f0fb56fe11",
+              "parentUUID": "e7e12e16-c053-4c9e-b4f0-b9c18e58da6b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-A11Y-041 | All form inputs on the Actions page have an accessible name",
+              "fullTitle": "11 · Accessibility — keyboard and semantics TC-A11Y-041 | All form inputs on the Actions page have an accessible name",
+              "timedOut": null,
+              "duration": 260,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visitPage('/commands/actions');\ncy.get('input:visible, select:visible, textarea:visible').then($els => {\n  const unlabelled = [...$els].filter(el => {\n    const id = el.id && el.ownerDocument.querySelector(`label[for=\"${el.id}\"]`);\n    return !(id || el.closest('label') || el.getAttribute('aria-label') || el.getAttribute('aria-labelledby') || el.title);\n  }).map(el => el.outerHTML.slice(0, 80));\n  cy.task('evidence', {\n    kind: 'a11y-labels',\n    record: {\n      page: '/commands/actions',\n      unlabelled\n    }\n  });\n  cy.log(`unlabelled controls: ${unlabelled.length}`);\n  expect(unlabelled.length, 'unlabelled controls (see evidence log)').to.be.lessThan($els.length);\n});",
+              "err": {},
+              "uuid": "35c45b83-d3a3-4e82-84fd-491ce9abfb7c",
+              "parentUUID": "e7e12e16-c053-4c9e-b4f0-b9c18e58da6b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-A11Y-042 | Todo app is fully operable with the keyboard alone (skipped due to browser)",
+              "fullTitle": "11 · Accessibility — keyboard and semantics TC-A11Y-042 | Todo app is fully operable with the keyboard alone (skipped due to browser)",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "cy.visitTodos([]);\n// setup deleted the demo items with clicks, so put keyboard focus back on the input first\ncy.get('.new-todo').focus();\ncy.realType('keyboard only');\ncy.realPress('Enter');\ncy.get('.todo-list li').should('have.length', 1);\ncy.get('.todo-list li .toggle').focus();\ncy.realPress('Space');\ncy.get('.todo-list li').should('have.class', 'completed');",
+              "err": {},
+              "uuid": "0d35cd4e-99fc-43f2-9eba-ca0908e1260a",
+              "parentUUID": "e7e12e16-c053-4c9e-b4f0-b9c18e58da6b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-A11Y-043 | Images have alternative text",
+              "fullTitle": "11 · Accessibility — keyboard and semantics TC-A11Y-043 | Images have alternative text",
+              "timedOut": null,
+              "duration": 2537,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "pages.forEach(p => {\n  cy.visitPage(p.path);\n  cy.document().then(d => [...d.images].forEach(img => expect(img, img.src).to.have.attr('alt')));\n});",
+              "err": {},
+              "uuid": "78bd951b-f762-4262-98cc-d89f859d412f",
+              "parentUUID": "e7e12e16-c053-4c9e-b4f0-b9c18e58da6b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-A11Y-044 | Heading structure: one h1 per page",
+              "fullTitle": "11 · Accessibility — keyboard and semantics TC-A11Y-044 | Heading structure: one h1 per page",
+              "timedOut": null,
+              "duration": 2270,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "pages.filter(p => p.group === 'commands').forEach(p => {\n  cy.visitPage(p.path);\n  cy.get('h1').should('have.length', 1);\n});",
+              "err": {},
+              "uuid": "0e68b56d-31e8-4ec3-b00e-11d5a42bafce",
+              "parentUUID": "e7e12e16-c053-4c9e-b4f0-b9c18e58da6b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bc08df6e-c92e-4d3b-aca6-26f0fb56fe11",
+            "35c45b83-d3a3-4e82-84fd-491ce9abfb7c",
+            "78bd951b-f762-4262-98cc-d89f859d412f",
+            "0e68b56d-31e8-4ec3-b00e-11d5a42bafce"
+          ],
+          "failures": [],
+          "pending": [
+            "0d35cd4e-99fc-43f2-9eba-ca0908e1260a"
+          ],
+          "skipped": [],
+          "duration": 5348,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "8.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.3.2"
+    }
+  }
+}

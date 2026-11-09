@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="3.365" tests="12" failures="0" skipped="2">
+  <testsuite name="Root Suite" timestamp="2026-11-09T21:59:45" tests="0" file="cypress/e2e/03-form-controls/other-forms.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="03 · Form controls — editable regions and other forms" timestamp="2026-11-09T21:59:45" tests="12" time="3.357" failures="0">
+    <testcase name="03 · Form controls — editable regions and other forms TC-FC-170 | Double-click turns the label into a focused input" time="0.317" classname="TC-FC-170 | Double-click turns the label into a focused input">
+    </testcase>
+    <testcase name="03 · Form controls — editable regions and other forms TC-FC-171 | Edited value can be typed after double-click" time="0.379" classname="TC-FC-171 | Edited value can be typed after double-click">
+    </testcase>
+    <testcase name="03 · Form controls — editable regions and other forms TC-FC-172 | Single click does NOT open the editor (only dblclick)" time="0.213" classname="TC-FC-172 | Single click does NOT open the editor (only dblclick)">
+    </testcase>
+    <testcase name="03 · Form controls — editable regions and other forms TC-FC-173 | Right-click turns the label into a focused input" time="0.224" classname="TC-FC-173 | Right-click turns the label into a focused input">
+    </testcase>
+    <testcase name="03 · Form controls — editable regions and other forms TC-FC-174 | Left click on the right-click region does nothing" time="0.239" classname="TC-FC-174 | Left click on the right-click region does nothing">
+    </testcase>
+    <testcase name="03 · Form controls — editable regions and other forms TC-FC-175 | Querying page: .within() scopes typing to the query form" time="0.422" classname="TC-FC-175 | Querying page: .within() scopes typing to the query form">
+    </testcase>
+    <testcase name="03 · Form controls — editable regions and other forms TC-FC-176 | Misc page: name and description fields accept input and report focus" time="0.410" classname="TC-FC-176 | Misc page: name and description fields accept input and report focus">
+    </testcase>
+    <testcase name="03 · Form controls — editable regions and other forms TC-FC-177 | Waiting page: input 1 accepts text" time="0.271" classname="TC-FC-177 | Waiting page: input 1 accepts text">
+    </testcase>
+    <testcase name="03 · Form controls — editable regions and other forms TC-FC-178 | Waiting page: input 2 accepts text" time="0.270" classname="TC-FC-178 | Waiting page: input 2 accepts text">
+    </testcase>
+    <testcase name="03 · Form controls — editable regions and other forms TC-FC-179 | Waiting page: input 3 accepts text" time="0.240" classname="TC-FC-179 | Waiting page: input 3 accepts text">
+    </testcase>
+  </testsuite>
+</testsuites>

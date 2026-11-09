@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="3.380" tests="16" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-11-09T21:59:49" tests="0" file="cypress/e2e/05-assertions/assertions.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="05 · Assertions — implicit, explicit, retry-ability" timestamp="2026-11-09T21:59:49" tests="16" time="3.377" failures="0">
+    <testcase name="05 · Assertions — implicit, explicit, retry-ability TC-AS-001 | Implicit .should(): row class, cell text, cell html" time="0.179" classname="TC-AS-001 | Implicit .should(): row class, cell text, cell html">
+    </testcase>
+    <testcase name="05 · Assertions — implicit, explicit, retry-ability TC-AS-002 | Chained .and() assertions on the docs link" time="0.082" classname="TC-AS-002 | Chained .and() assertions on the docs link">
+    </testcase>
+    <testcase name="05 · Assertions — implicit, explicit, retry-ability TC-AS-003 | BDD expect: equality, deep equality, regex, type" time="0.064" classname="TC-AS-003 | BDD expect: equality, deep equality, regex, type">
+    </testcase>
+    <testcase name="05 · Assertions — implicit, explicit, retry-ability TC-AS-004 | TDD assert style" time="0.064" classname="TC-AS-004 | TDD assert style">
+    </testcase>
+    <testcase name="05 · Assertions — implicit, explicit, retry-ability TC-AS-005 | Callback .should() checks all three paragraphs in one retried assertion" time="0.066" classname="TC-AS-005 | Callback .should() checks all three paragraphs in one retried assertion">
+    </testcase>
+    <testcase name="05 · Assertions — implicit, explicit, retry-ability TC-AS-006 | Class name matched with a regular expression" time="0.066" classname="TC-AS-006 | Class name matched with a regular expression">
+    </testcase>
+    <testcase name="05 · Assertions — implicit, explicit, retry-ability TC-AS-007 | Retry-ability: random number replaces the 🎁 placeholder within the timeout" time="1.569" classname="TC-AS-007 | Retry-ability: random number replaces the 🎁 placeholder within the timeout">
+    </testcase>
+    <testcase name="05 · Assertions — implicit, explicit, retry-ability TC-AS-008 | Case-insensitive, whitespace-insensitive text comparison" time="0.071" classname="TC-AS-008 | Case-insensitive, whitespace-insensitive text comparison">
+    </testcase>
+    <testcase name="05 · Assertions — implicit, explicit, retry-ability TC-AS-009 | Custom Chai assertion textTrimmed" time="0.065" classname="TC-AS-009 | Custom Chai assertion textTrimmed">
+    </testcase>
+    <testcase name="05 · Assertions — implicit, explicit, retry-ability TC-AS-010 | Negative assertions: absent element, missing class, not visible" time="0.072" classname="TC-AS-010 | Negative assertions: absent element, missing class, not visible">
+    </testcase>
+    <testcase name="05 · Assertions — implicit, explicit, retry-ability TC-AS-011 | CSS assertions on computed style" time="0.068" classname="TC-AS-011 | CSS assertions on computed style">
+    </testcase>
+    <testcase name="05 · Assertions — implicit, explicit, retry-ability TC-AS-012 | Length assertions on table rows" time="0.067" classname="TC-AS-012 | Length assertions on table rows">
+    </testcase>
+    <testcase name="05 · Assertions — implicit, explicit, retry-ability TC-AS-013 | Row 1: number cell is &quot;1&quot; and both content cells say &quot;Column content&quot;" time="0.072" classname="TC-AS-013 | Row 1: number cell is &quot;1&quot; and both content cells say &quot;Column content&quot;">
+    </testcase>
+    <testcase name="05 · Assertions — implicit, explicit, retry-ability TC-AS-014 | Row 2: number cell is &quot;2&quot; and both content cells say &quot;Column content&quot;" time="0.071" classname="TC-AS-014 | Row 2: number cell is &quot;2&quot; and both content cells say &quot;Column content&quot;">
+    </testcase>
+    <testcase name="05 · Assertions — implicit, explicit, retry-ability TC-AS-015 | Row 3: number cell is &quot;3&quot; and both content cells say &quot;Column content&quot;" time="0.068" classname="TC-AS-015 | Row 3: number cell is &quot;3&quot; and both content cells say &quot;Column content&quot;">
+    </testcase>
+    <testcase name="05 · Assertions — implicit, explicit, retry-ability TC-AS-016 | An assertion that can never pass fails within the configured timeout (assertion of the assertion)" time="0.459" classname="TC-AS-016 | An assertion that can never pass fails within the configured timeout (assertion of the assertion)">
+    </testcase>
+  </testsuite>
+</testsuites>
