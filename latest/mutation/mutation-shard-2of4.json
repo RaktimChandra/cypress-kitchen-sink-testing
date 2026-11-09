@@ -1,0 +1,177 @@
+{
+ "summary": {
+  "total": 8,
+  "killed": 8,
+  "survived": 0,
+  "equivalent": 0,
+  "errors": 0,
+  "score": 100
+ },
+ "results": [
+  {
+   "id": "M02",
+   "file": "assets/js/scripts.js",
+   "op": "String literal",
+   "desc": "confirmation text changed",
+   "specs": [
+    "03-form-controls/submit"
+   ],
+   "status": "KILLED",
+   "testsRun": 11,
+   "failed": 8,
+   "killers": [
+    "TC-FC-060",
+    "TC-FC-061",
+    "TC-FC-062",
+    "TC-FC-063",
+    "TC-FC-064",
+    "TC-FC-065",
+    "TC-FC-066",
+    "TC-FC-067"
+   ],
+   "seconds": 63
+  },
+  {
+   "id": "M06",
+   "file": "assets/js/scripts.js",
+   "op": "Method call removal",
+   "desc": "dblclick editor not focused",
+   "specs": [
+    "03-form-controls/other-forms"
+   ],
+   "status": "KILLED",
+   "testsRun": 12,
+   "failed": 1,
+   "killers": [
+    "TC-FC-170"
+   ],
+   "seconds": 14
+  },
+  {
+   "id": "M10",
+   "file": "assets/js/scripts.js",
+   "op": "Variable swap",
+   "desc": "canvas x coordinate uses top offset",
+   "specs": [
+    "04-ui-interactions/click"
+   ],
+   "status": "KILLED",
+   "testsRun": 21,
+   "failed": 14,
+   "killers": [
+    "TC-UI-002",
+    "TC-UI-003",
+    "TC-UI-004",
+    "TC-UI-005",
+    "TC-UI-006",
+    "TC-UI-007",
+    "TC-UI-008",
+    "TC-UI-009",
+    "TC-UI-010",
+    "TC-UI-011",
+    "TC-UI-012",
+    "TC-UI-013",
+    "TC-UI-014",
+    "TC-UI-015"
+   ],
+   "seconds": 95
+  },
+  {
+   "id": "M14",
+   "file": "assets/js/scripts.js",
+   "op": "Statement deletion",
+   "desc": "one storage key not written",
+   "specs": [
+    "09-storage-cookies-window/storage-cookies"
+   ],
+   "status": "KILLED",
+   "testsRun": 13,
+   "failed": 5,
+   "killers": [
+    "TC-ST-001",
+    "TC-ST-003",
+    "TC-ST-004",
+    "TC-ST-005",
+    "TC-ST-006"
+   ],
+   "seconds": 37
+  },
+  {
+   "id": "M18",
+   "file": "assets/js/scripts.js",
+   "op": "String literal",
+   "desc": "table button label unchanged",
+   "specs": [
+    "04-ui-interactions/page-widgets"
+   ],
+   "status": "KILLED",
+   "testsRun": 8,
+   "failed": 2,
+   "killers": [
+    "TC-UI-063",
+    "TC-UI-064"
+   ],
+   "seconds": 18
+  },
+  {
+   "id": "M22",
+   "file": "assets/js/todo/model.js",
+   "op": "Method call removal",
+   "desc": "titles not trimmed on create",
+   "specs": [
+    "07-todo-app/todo-ecp-bva"
+   ],
+   "status": "KILLED",
+   "testsRun": 21,
+   "failed": 1,
+   "killers": [
+    "TC-TD-032"
+   ],
+   "seconds": 16
+  },
+  {
+   "id": "M26",
+   "file": "assets/js/todo/controller.js",
+   "op": "Boolean literal",
+   "desc": "Completed filter shows active items",
+   "specs": [
+    "07-todo-app/todo-functional"
+   ],
+   "status": "KILLED",
+   "testsRun": 16,
+   "failed": 3,
+   "killers": [
+    "TC-TD-003",
+    "TC-TD-014",
+    "TC-TD-016"
+   ],
+   "seconds": 20
+  },
+  {
+   "id": "M30",
+   "file": "commands/actions.html",
+   "op": "Attribute change (HTML)",
+   "desc": "email field loses type=email validation",
+   "specs": [
+    "03-form-controls/email-validation"
+   ],
+   "status": "KILLED",
+   "testsRun": 17,
+   "failed": 11,
+   "killers": [
+    "TC-FC-046",
+    "TC-FC-047",
+    "TC-FC-048",
+    "TC-FC-049",
+    "TC-FC-050",
+    "TC-FC-051",
+    "TC-FC-052",
+    "TC-FC-053",
+    "TC-FC-054",
+    "TC-FC-055",
+    "TC-FC-056"
+   ],
+   "seconds": 9
+  }
+ ]
+}

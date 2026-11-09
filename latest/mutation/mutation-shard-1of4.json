@@ -1,0 +1,174 @@
+{
+ "summary": {
+  "total": 8,
+  "killed": 8,
+  "survived": 0,
+  "equivalent": 0,
+  "errors": 0,
+  "score": 100
+ },
+ "results": [
+  {
+   "id": "M01",
+   "file": "assets/js/scripts.js",
+   "op": "Statement deletion",
+   "desc": "submit handler no longer prevents the page reload",
+   "specs": [
+    "03-form-controls/submit"
+   ],
+   "status": "KILLED",
+   "testsRun": 11,
+   "failed": 11,
+   "killers": [
+    "TC-FC-060",
+    "TC-FC-061",
+    "TC-FC-062",
+    "TC-FC-063",
+    "TC-FC-064",
+    "TC-FC-065",
+    "TC-FC-066",
+    "TC-FC-067",
+    "TC-FC-068",
+    "TC-FC-069",
+    "TC-FC-070"
+   ],
+   "seconds": 84
+  },
+  {
+   "id": "M05",
+   "file": "assets/js/scripts.js",
+   "op": "String literal",
+   "desc": "blur label colour wrong",
+   "specs": [
+    "03-form-controls/text-inputs"
+   ],
+   "status": "KILLED",
+   "testsRun": 31,
+   "failed": 1,
+   "killers": [
+    "TC-FC-023"
+   ],
+   "seconds": 29
+  },
+  {
+   "id": "M09",
+   "file": "assets/js/scripts.js",
+   "op": "Constant change",
+   "desc": "canvas dot radius 0 (nothing drawn)",
+   "specs": [
+    "04-ui-interactions/click"
+   ],
+   "status": "KILLED",
+   "testsRun": 21,
+   "failed": 14,
+   "killers": [
+    "TC-UI-002",
+    "TC-UI-003",
+    "TC-UI-004",
+    "TC-UI-005",
+    "TC-UI-006",
+    "TC-UI-007",
+    "TC-UI-008",
+    "TC-UI-009",
+    "TC-UI-010",
+    "TC-UI-011",
+    "TC-UI-012",
+    "TC-UI-013",
+    "TC-UI-014",
+    "TC-UI-015"
+   ],
+   "seconds": 98
+  },
+  {
+   "id": "M13",
+   "file": "assets/js/scripts.js",
+   "op": "Constant change",
+   "desc": "404 handler bound to 500",
+   "specs": [
+    "08-network/network"
+   ],
+   "status": "KILLED",
+   "testsRun": 16,
+   "failed": 2,
+   "killers": [
+    "TC-NW-004",
+    "TC-NW-012"
+   ],
+   "seconds": 25
+  },
+  {
+   "id": "M17",
+   "file": "assets/js/scripts.js",
+   "op": "Arithmetic change",
+   "desc": "clock shows wrong unit",
+   "specs": [
+    "10-spies-stubs-clocks/spies-stubs-clocks"
+   ],
+   "status": "KILLED",
+   "testsRun": 9,
+   "failed": 2,
+   "killers": [
+    "TC-SP-001",
+    "TC-SP-005"
+   ],
+   "seconds": 14
+  },
+  {
+   "id": "M21",
+   "file": "assets/js/todo/controller.js",
+   "op": "Method call removal",
+   "desc": "whitespace-only titles accepted",
+   "specs": [
+    "07-todo-app/todo-ecp-bva"
+   ],
+   "status": "KILLED",
+   "testsRun": 21,
+   "failed": 2,
+   "killers": [
+    "TC-TD-040",
+    "TC-TD-041"
+   ],
+   "seconds": 32
+  },
+  {
+   "id": "M25",
+   "file": "assets/js/todo/template.js",
+   "op": "Function call removal (security)",
+   "desc": "HTML escaping removed → stored XSS",
+   "specs": [
+    "15-security/xss-and-headers"
+   ],
+   "status": "KILLED",
+   "testsRun": 19,
+   "failed": 6,
+   "killers": [
+    "TC-SEC-001",
+    "TC-SEC-002",
+    "TC-SEC-003",
+    "TC-SEC-004",
+    "TC-SEC-007",
+    "TC-SEC-008"
+   ],
+   "seconds": 49
+  },
+  {
+   "id": "M29",
+   "file": "assets/js/todo/store.js",
+   "op": "Statement deletion",
+   "desc": "new todos not persisted",
+   "specs": [
+    "07-todo-app/todo-persistence"
+   ],
+   "status": "KILLED",
+   "testsRun": 7,
+   "failed": 4,
+   "killers": [
+    "TC-TD-130",
+    "TC-TD-131",
+    "TC-TD-132",
+    "TC-TD-135"
+   ],
+   "seconds": 39
+  }
+ ]
+}

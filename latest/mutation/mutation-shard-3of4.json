@@ -1,0 +1,145 @@
+{
+ "summary": {
+  "total": 8,
+  "killed": 6,
+  "survived": 2,
+  "equivalent": 0,
+  "errors": 0,
+  "score": 75
+ },
+ "results": [
+  {
+   "id": "M03",
+   "file": "assets/js/scripts.js",
+   "op": "String literal",
+   "desc": "focus adds wrong class",
+   "specs": [
+    "03-form-controls/text-inputs"
+   ],
+   "status": "KILLED",
+   "testsRun": 31,
+   "failed": 1,
+   "killers": [
+    "TC-FC-022"
+   ],
+   "seconds": 30
+  },
+  {
+   "id": "M07",
+   "file": "assets/js/scripts.js",
+   "op": "Event swap",
+   "desc": "right-click editor opens on left click",
+   "specs": [
+    "03-form-controls/other-forms"
+   ],
+   "status": "KILLED",
+   "testsRun": 12,
+   "failed": 2,
+   "killers": [
+    "TC-FC-173",
+    "TC-FC-174"
+   ],
+   "seconds": 23
+  },
+  {
+   "id": "M11",
+   "file": "assets/js/scripts.js",
+   "op": "Property swap",
+   "desc": "comment shows name instead of body",
+   "specs": [
+    "08-network/network"
+   ],
+   "status": "KILLED",
+   "testsRun": 16,
+   "failed": 5,
+   "killers": [
+    "TC-NW-001",
+    "TC-NW-002",
+    "TC-NW-010",
+    "TC-NW-012",
+    "TC-NW-021"
+   ],
+   "seconds": 43
+  },
+  {
+   "id": "M15",
+   "file": "assets/js/scripts.js",
+   "op": "String literal",
+   "desc": "wrong cookie value",
+   "specs": [
+    "09-storage-cookies-window/storage-cookies"
+   ],
+   "status": "KILLED",
+   "testsRun": 13,
+   "failed": 3,
+   "killers": [
+    "TC-ST-001",
+    "TC-CK-001",
+    "TC-CK-006"
+   ],
+   "seconds": 28
+  },
+  {
+   "id": "M19",
+   "file": "assets/js/todo/template.js",
+   "op": "Relational operator",
+   "desc": "pluralisation wrong at 0 (\"0 item left\")",
+   "specs": [
+    "07-todo-app/todo-ecp-bva"
+   ],
+   "status": "KILLED",
+   "testsRun": 21,
+   "failed": 1,
+   "killers": [
+    "TC-TD-050"
+   ],
+   "seconds": 26
+  },
+  {
+   "id": "M23",
+   "file": "assets/js/todo/controller.js",
+   "op": "Statement deletion",
+   "desc": "empty edit no longer deletes the item",
+   "specs": [
+    "07-todo-app/todo-cause-effect"
+   ],
+   "status": "KILLED",
+   "testsRun": 10,
+   "failed": 3,
+   "killers": [
+    "TC-TD-082",
+    "TC-TD-083",
+    "TC-TD-085"
+   ],
+   "seconds": 29
+  },
+  {
+   "id": "M27",
+   "file": "assets/js/todo/controller.js",
+   "op": "Relational operator",
+   "desc": "Clear completed always visible",
+   "specs": [
+    "07-todo-app/todo-decision-table"
+   ],
+   "status": "SURVIVED",
+   "testsRun": 5,
+   "failed": 0,
+   "killers": [],
+   "seconds": 8
+  },
+  {
+   "id": "M31",
+   "file": "commands/actions.html",
+   "op": "Attribute deletion (HTML)",
+   "desc": "disabled radio becomes selectable",
+   "specs": [
+    "03-form-controls/checkboxes-radios"
+   ],
+   "status": "SURVIVED",
+   "testsRun": 20,
+   "failed": 0,
+   "killers": [],
+   "seconds": 18
+  }
+ ]
+}

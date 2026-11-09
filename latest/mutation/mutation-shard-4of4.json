@@ -1,0 +1,157 @@
+{
+ "summary": {
+  "total": 8,
+  "killed": 7,
+  "survived": 0,
+  "equivalent": 1,
+  "errors": 0,
+  "score": 100
+ },
+ "results": [
+  {
+   "id": "M04",
+   "file": "assets/js/scripts.js",
+   "op": "String literal",
+   "desc": "focus label colour wrong",
+   "specs": [
+    "03-form-controls/text-inputs"
+   ],
+   "status": "KILLED",
+   "testsRun": 31,
+   "failed": 1,
+   "killers": [
+    "TC-FC-022"
+   ],
+   "seconds": 36
+  },
+  {
+   "id": "M08",
+   "file": "assets/js/scripts.js",
+   "op": "Arithmetic insertion",
+   "desc": "range echo off by one",
+   "specs": [
+    "03-form-controls/range-bva"
+   ],
+   "status": "KILLED",
+   "testsRun": 17,
+   "failed": 15,
+   "killers": [
+    "TC-FC-141",
+    "TC-FC-142",
+    "TC-FC-143",
+    "TC-FC-144",
+    "TC-FC-145",
+    "TC-FC-146",
+    "TC-FC-147",
+    "TC-FC-148",
+    "TC-FC-149",
+    "TC-FC-150",
+    "TC-FC-151",
+    "TC-FC-152",
+    "TC-FC-153",
+    "TC-FC-154",
+    "TC-FC-160"
+   ],
+   "seconds": 100
+  },
+  {
+   "id": "M12",
+   "file": "assets/js/scripts.js",
+   "op": "String literal",
+   "desc": "typo in success message",
+   "specs": [
+    "08-network/network"
+   ],
+   "status": "KILLED",
+   "testsRun": 16,
+   "failed": 2,
+   "killers": [
+    "TC-NW-003",
+    "TC-NW-012"
+   ],
+   "seconds": 24
+  },
+  {
+   "id": "M16",
+   "file": "assets/js/scripts.js",
+   "op": "String literal",
+   "desc": "utilities item gets wrong class",
+   "specs": [
+    "04-ui-interactions/page-widgets"
+   ],
+   "status": "KILLED",
+   "testsRun": 8,
+   "failed": 2,
+   "killers": [
+    "TC-UI-061",
+    "TC-UI-062"
+   ],
+   "seconds": 14
+  },
+  {
+   "id": "M20",
+   "file": "assets/js/todo/template.js",
+   "op": "Relational operator",
+   "desc": "pluralisation wrong at 0 (boundary shift)",
+   "specs": [
+    "07-todo-app/todo-ecp-bva"
+   ],
+   "status": "KILLED",
+   "testsRun": 21,
+   "failed": 1,
+   "killers": [
+    "TC-TD-050"
+   ],
+   "seconds": 25
+  },
+  {
+   "id": "M24",
+   "file": "assets/js/todo/view.js",
+   "op": "Constant change",
+   "desc": "Escape no longer cancels an edit",
+   "specs": [
+    "07-todo-app/todo-cause-effect"
+   ],
+   "status": "KILLED",
+   "testsRun": 10,
+   "failed": 2,
+   "killers": [
+    "TC-TD-086",
+    "TC-TD-087"
+   ],
+   "seconds": 22
+  },
+  {
+   "id": "M28",
+   "file": "assets/js/todo/controller.js",
+   "op": "Relational operator",
+   "desc": "toggle-all checked when any (not all) completed",
+   "specs": [
+    "07-todo-app/todo-decision-table"
+   ],
+   "status": "KILLED",
+   "testsRun": 5,
+   "failed": 2,
+   "killers": [
+    "TC-TD-072",
+    "TC-TD-074"
+   ],
+   "seconds": 19
+  },
+  {
+   "id": "M32",
+   "file": "assets/js/todo/template.js",
+   "op": "Declaration change",
+   "desc": "let → const (no observable difference)",
+   "specs": [
+    "07-todo-app/todo-ecp-bva"
+   ],
+   "equivalent": true,
+   "status": "EQUIVALENT",
+   "testsRun": 21,
+   "failed": 0,
+   "killers": [],
+   "seconds": 19
+  }
+ ]
+}
