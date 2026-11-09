@@ -1,0 +1,241 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-11-09T22:35:08.566Z",
+    "end": "2026-11-09T22:35:29.321Z",
+    "duration": 20755,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7556ebe9-fc7f-4340-b96a-20fb7d9a0e63",
+      "title": "",
+      "fullFile": "cypress/e2e/07-todo-app/todo-persistence.cy.js",
+      "file": "cypress/e2e/07-todo-app/todo-persistence.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cad06020-f45f-4928-8ee9-0adde6895e28",
+          "title": "07 · TodoMVC — persistence in localStorage",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC-TD-130 | Added items survive a reload",
+              "fullTitle": "07 · TodoMVC — persistence in localStorage TC-TD-130 | Added items survive a reload",
+              "timedOut": null,
+              "duration": 430,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visitPage('/todo');\ncy.addTodo('persist me');\ncy.reload();\ncy.get('.todo-list li').should('have.length', 3).last().should('contain', 'persist me');",
+              "err": {},
+              "uuid": "0b2e5e74-6697-4bf8-bbae-0358e39352f0",
+              "parentUUID": "cad06020-f45f-4928-8ee9-0adde6895e28",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-TD-131 | Completed state survives a reload",
+              "fullTitle": "07 · TodoMVC — persistence in localStorage TC-TD-131 | Completed state survives a reload",
+              "timedOut": null,
+              "duration": 315,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visitPage('/todo');\ncy.get('.todo-list li').first().find('.toggle').check();\ncy.reload();\ncy.get('.todo-list li').first().should('have.class', 'completed');",
+              "err": {},
+              "uuid": "41590b2e-95e9-4514-afd6-27f3b4fb907c",
+              "parentUUID": "cad06020-f45f-4928-8ee9-0adde6895e28",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-TD-132 | Storage record schema: {title, completed, id}",
+              "fullTitle": "07 · TodoMVC — persistence in localStorage TC-TD-132 | Storage record schema: {title, completed, id}",
+              "timedOut": null,
+              "duration": 273,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visitTodos(['first', 'second']);\ncy.addTodo('schema check');\ncy.storedTodos().should(list => {\n  expect(list).to.have.length(3);\n  list.forEach(t => {\n    expect(t).to.have.all.keys('title', 'completed', 'id');\n    expect(t.title).to.be.a('string');\n    expect(t.completed).to.be.a('boolean');\n    expect(t.id).to.be.a('number');\n  });\n  expect(new Set(list.map(t => t.id)).size).to.eq(3);\n});",
+              "err": {},
+              "uuid": "43961119-62f0-4662-8f83-6e65e3458894",
+              "parentUUID": "cad06020-f45f-4928-8ee9-0adde6895e28",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-TD-133 | Deleting all items keeps an empty list (seed items are not re-added)",
+              "fullTitle": "07 · TodoMVC — persistence in localStorage TC-TD-133 | Deleting all items keeps an empty list (seed items are not re-added)",
+              "timedOut": null,
+              "duration": 6335,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let reproduced = false;\ncy.on('uncaught:exception', () => {\n  reproduced = true;\n  return false;\n});\ncy.on('fail', err => {\n  if (err.__defectFixed) throw err;\n  Cypress.log({\n    name: 'known defect',\n    message: `${meta.defect} reproduced: ${err.message.split('\\n')[0]}`\n  });\n  return false;\n});\nfn.call(this);\ncy.then(() => {\n  if (reproduced) throw new Error(`${meta.defect}: page raised an uncaught exception`);\n  const e = new Error(`${meta.defect} no longer reproduces — the product was fixed; convert ${meta.id} to a normal tc()`);\n  e.__defectFixed = true;\n  throw e;\n});",
+              "err": {},
+              "uuid": "2338f976-0153-4a2b-993e-a55be65b26f7",
+              "parentUUID": "cad06020-f45f-4928-8ee9-0adde6895e28",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-TD-134 | Corrupt storage value is handled gracefully",
+              "fullTitle": "07 · TodoMVC — persistence in localStorage TC-TD-134 | Corrupt storage value is handled gracefully",
+              "timedOut": null,
+              "duration": 6259,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let reproduced = false;\ncy.on('uncaught:exception', () => {\n  reproduced = true;\n  return false;\n});\ncy.on('fail', err => {\n  if (err.__defectFixed) throw err;\n  Cypress.log({\n    name: 'known defect',\n    message: `${meta.defect} reproduced: ${err.message.split('\\n')[0]}`\n  });\n  return false;\n});\nfn.call(this);\ncy.then(() => {\n  if (reproduced) throw new Error(`${meta.defect}: page raised an uncaught exception`);\n  const e = new Error(`${meta.defect} no longer reproduces — the product was fixed; convert ${meta.id} to a normal tc()`);\n  e.__defectFixed = true;\n  throw e;\n});",
+              "err": {},
+              "uuid": "b927719d-c9d4-4098-9d5c-92d51fdd4fd7",
+              "parentUUID": "cad06020-f45f-4928-8ee9-0adde6895e28",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-TD-135 | Storage written for every mutation (add, toggle, edit, delete)",
+              "fullTitle": "07 · TodoMVC — persistence in localStorage TC-TD-135 | Storage written for every mutation (add, toggle, edit, delete)",
+              "timedOut": null,
+              "duration": 632,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visitTodos(['a']);\ncy.addTodo('b');\ncy.storedTodos().should(t => expect(t.map(x => x.title)).to.deep.equal(['a', 'b']));\ncy.get('.todo-list li').eq(1).find('.toggle').check();\ncy.storedTodos().its('1.completed').should('eq', true);\ncy.get('.todo-list li').eq(0).find('label').dblclick();\ncy.get('.todo-list li.editing .edit').clear().type('A{enter}');\ncy.storedTodos().its('0.title').should('eq', 'A');\ncy.get('.todo-list li').eq(0).find('.destroy').invoke('show').click();\ncy.storedTodos().should(t => expect(t.map(x => x.title)).to.deep.equal(['b']));",
+              "err": {},
+              "uuid": "42e5f9b4-9efe-405e-aa17-ea849582b926",
+              "parentUUID": "cad06020-f45f-4928-8ee9-0adde6895e28",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0b2e5e74-6697-4bf8-bbae-0358e39352f0",
+            "41590b2e-95e9-4514-afd6-27f3b4fb907c",
+            "43961119-62f0-4662-8f83-6e65e3458894",
+            "2338f976-0153-4a2b-993e-a55be65b26f7",
+            "b927719d-c9d4-4098-9d5c-92d51fdd4fd7",
+            "42e5f9b4-9efe-405e-aa17-ea849582b926"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 14244,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "4cf9e391-87cd-4fb0-9733-6deb024b14ea",
+          "title": "07 · TodoMVC — identity of items",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC-TD-136 | Two items created in the same millisecond can still be toggled independently",
+              "fullTitle": "07 · TodoMVC — identity of items TC-TD-136 | Two items created in the same millisecond can still be toggled independently",
+              "timedOut": null,
+              "duration": 6218,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let reproduced = false;\ncy.on('uncaught:exception', () => {\n  reproduced = true;\n  return false;\n});\ncy.on('fail', err => {\n  if (err.__defectFixed) throw err;\n  Cypress.log({\n    name: 'known defect',\n    message: `${meta.defect} reproduced: ${err.message.split('\\n')[0]}`\n  });\n  return false;\n});\nfn.call(this);\ncy.then(() => {\n  if (reproduced) throw new Error(`${meta.defect}: page raised an uncaught exception`);\n  const e = new Error(`${meta.defect} no longer reproduces — the product was fixed; convert ${meta.id} to a normal tc()`);\n  e.__defectFixed = true;\n  throw e;\n});",
+              "err": {},
+              "uuid": "7057ff4d-9100-4152-906a-f112eb922bee",
+              "parentUUID": "4cf9e391-87cd-4fb0-9733-6deb024b14ea",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7057ff4d-9100-4152-906a-f112eb922bee"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6218,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "8.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.3.2"
+    }
+  }
+}

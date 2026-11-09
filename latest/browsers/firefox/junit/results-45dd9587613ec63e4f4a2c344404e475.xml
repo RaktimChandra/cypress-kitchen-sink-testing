@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="5.059" tests="5" failures="0" skipped="1">
+  <testsuite name="Root Suite" timestamp="2026-11-09T22:36:13" tests="0" file="cypress/e2e/11-accessibility/keyboard-and-semantics.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="11 · Accessibility — keyboard and semantics" timestamp="2026-11-09T22:36:13" tests="5" time="5.054" failures="0">
+    <testcase name="11 · Accessibility — keyboard and semantics TC-A11Y-040 | Every page declares lang and a non-empty title" time="0.328" classname="TC-A11Y-040 | Every page declares lang and a non-empty title">
+    </testcase>
+    <testcase name="11 · Accessibility — keyboard and semantics TC-A11Y-041 | All form inputs on the Actions page have an accessible name" time="0.208" classname="TC-A11Y-041 | All form inputs on the Actions page have an accessible name">
+    </testcase>
+    <testcase name="11 · Accessibility — keyboard and semantics TC-A11Y-043 | Images have alternative text" time="2.374" classname="TC-A11Y-043 | Images have alternative text">
+    </testcase>
+    <testcase name="11 · Accessibility — keyboard and semantics TC-A11Y-044 | Heading structure: one h1 per page" time="2.030" classname="TC-A11Y-044 | Heading structure: one h1 per page">
+    </testcase>
+  </testsuite>
+</testsuites>

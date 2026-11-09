@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="3.430" tests="17" failures="0" skipped="1">
+  <testsuite name="Root Suite" timestamp="2026-11-09T22:32:51" tests="0" file="cypress/e2e/03-form-controls/range-bva.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="03 · Form controls — range slider boundary values" timestamp="2026-11-09T22:32:51" tests="17" time="3.424" failures="0">
+    <testcase name="03 · Form controls — range slider boundary values TC-FC-140 | Range starts at 0 and shows 0" time="0.233" classname="TC-FC-140 | Range starts at 0 and shows 0">
+    </testcase>
+    <testcase name="03 · Form controls — range slider boundary values TC-FC-141 | Range min − 1: set -1 → shows 0" time="0.208" classname="TC-FC-141 | Range min − 1: set -1 → shows 0">
+    </testcase>
+    <testcase name="03 · Form controls — range slider boundary values TC-FC-142 | Range min: set 0 → shows 0" time="0.167" classname="TC-FC-142 | Range min: set 0 → shows 0">
+    </testcase>
+    <testcase name="03 · Form controls — range slider boundary values TC-FC-143 | Range min + 1: set 1 → shows 1" time="0.161" classname="TC-FC-143 | Range min + 1: set 1 → shows 1">
+    </testcase>
+    <testcase name="03 · Form controls — range slider boundary values TC-FC-144 | Range nominal: set 50 → shows 50" time="0.159" classname="TC-FC-144 | Range nominal: set 50 → shows 50">
+    </testcase>
+    <testcase name="03 · Form controls — range slider boundary values TC-FC-145 | Range max − 1: set 99 → shows 99" time="0.143" classname="TC-FC-145 | Range max − 1: set 99 → shows 99">
+    </testcase>
+    <testcase name="03 · Form controls — range slider boundary values TC-FC-146 | Range max: set 100 → shows 100" time="0.158" classname="TC-FC-146 | Range max: set 100 → shows 100">
+    </testcase>
+    <testcase name="03 · Form controls — range slider boundary values TC-FC-147 | Range max + 1: set 101 → shows 100" time="0.136" classname="TC-FC-147 | Range max + 1: set 101 → shows 100">
+    </testcase>
+    <testcase name="03 · Form controls — range slider boundary values TC-FC-148 | Range far below (robustness): set -1000 → shows 0" time="0.255" classname="TC-FC-148 | Range far below (robustness): set -1000 → shows 0">
+    </testcase>
+    <testcase name="03 · Form controls — range slider boundary values TC-FC-149 | Range far above (robustness): set 1000000 → shows 100" time="0.174" classname="TC-FC-149 | Range far above (robustness): set 1000000 → shows 100">
+    </testcase>
+    <testcase name="03 · Form controls — range slider boundary values TC-FC-150 | Range between steps, below .5: set 49.4 → shows 49" time="0.167" classname="TC-FC-150 | Range between steps, below .5: set 49.4 → shows 49">
+    </testcase>
+    <testcase name="03 · Form controls — range slider boundary values TC-FC-151 | Range between steps, exactly .5 (tie rounds up): set 50.5 → shows 51" time="0.214" classname="TC-FC-151 | Range between steps, exactly .5 (tie rounds up): set 50.5 → shows 51">
+    </testcase>
+    <testcase name="03 · Form controls — range slider boundary values TC-FC-152 | Range exponent notation: set &quot;1e2&quot; → shows 100" time="0.201" classname="TC-FC-152 | Range exponent notation: set &quot;1e2&quot; → shows 100">
+    </testcase>
+    <testcase name="03 · Form controls — range slider boundary values TC-FC-153 | Range non-numeric text: set &quot;abc&quot; → shows 50" time="0.151" classname="TC-FC-153 | Range non-numeric text: set &quot;abc&quot; → shows 50">
+    </testcase>
+    <testcase name="03 · Form controls — range slider boundary values TC-FC-154 | Range empty string: set &quot;&quot; → shows 50" time="0.177" classname="TC-FC-154 | Range empty string: set &quot;&quot; → shows 50">
+    </testcase>
+    <testcase name="03 · Form controls — range slider boundary values TC-FC-160 | Echo updates only on &quot;change&quot;, not on &quot;input&quot;" time="0.227" classname="TC-FC-160 | Echo updates only on &quot;change&quot;, not on &quot;input&quot;">
+    </testcase>
+  </testsuite>
+</testsuites>

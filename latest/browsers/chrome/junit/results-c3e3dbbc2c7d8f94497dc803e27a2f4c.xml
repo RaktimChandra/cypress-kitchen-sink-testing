@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="1.234" tests="9" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-11-09T22:35:27" tests="0" file="cypress/e2e/10-spies-stubs-clocks/spies-stubs-clocks.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="10 · Spies, stubs and clocks" timestamp="2026-11-09T22:35:27" tests="9" time="1.233" failures="0">
+    <testcase name="10 · Spies, stubs and clocks TC-SP-001 | cy.clock freezes Date: clicking the clock div shows the frozen epoch" time="0.279" classname="TC-SP-001 | cy.clock freezes Date: clicking the clock div shows the frozen epoch">
+    </testcase>
+    <testcase name="10 · Spies, stubs and clocks TC-SP-002 | cy.tick(0) advances the clock by 0 ms" time="0.169" classname="TC-SP-002 | cy.tick(0) advances the clock by 0 ms">
+    </testcase>
+    <testcase name="10 · Spies, stubs and clocks TC-SP-003 | cy.tick(10000) advances the clock by 10000 ms" time="0.168" classname="TC-SP-003 | cy.tick(10000) advances the clock by 10000 ms">
+    </testcase>
+    <testcase name="10 · Spies, stubs and clocks TC-SP-004 | cy.tick(999) advances the clock by 999 ms" time="0.163" classname="TC-SP-004 | cy.tick(999) advances the clock by 999 ms">
+    </testcase>
+    <testcase name="10 · Spies, stubs and clocks TC-SP-005 | Without cy.clock the div shows the real current epoch (±60 s)" time="0.167" classname="TC-SP-005 | Without cy.clock the div shows the real current epoch (±60 s)">
+    </testcase>
+    <testcase name="10 · Spies, stubs and clocks TC-SP-006 | Spy observes calls without changing behaviour" time="0.020" classname="TC-SP-006 | Spy observes calls without changing behaviour">
+    </testcase>
+    <testcase name="10 · Spies, stubs and clocks TC-SP-007 | Stub replaces behaviour and can branch on arguments" time="0.017" classname="TC-SP-007 | Stub replaces behaviour and can branch on arguments">
+    </testcase>
+    <testcase name="10 · Spies, stubs and clocks TC-SP-008 | Sinon matchers check argument types" time="0.014" classname="TC-SP-008 | Sinon matchers check argument types">
+    </testcase>
+    <testcase name="10 · Spies, stubs and clocks TC-SP-009 | Stubbing window.alert and window.confirm (browser dialogs)" time="0.086" classname="TC-SP-009 | Stubbing window.alert and window.confirm (browser dialogs)">
+    </testcase>
+  </testsuite>
+</testsuites>

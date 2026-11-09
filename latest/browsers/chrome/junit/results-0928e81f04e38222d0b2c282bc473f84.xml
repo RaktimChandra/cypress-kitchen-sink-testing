@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="4.477" tests="5" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-11-09T22:35:51" tests="0" file="cypress/e2e/11-accessibility/keyboard-and-semantics.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="11 · Accessibility — keyboard and semantics" timestamp="2026-11-09T22:35:51" tests="5" time="4.474" failures="0">
+    <testcase name="11 · Accessibility — keyboard and semantics TC-A11Y-040 | Every page declares lang and a non-empty title" time="0.295" classname="TC-A11Y-040 | Every page declares lang and a non-empty title">
+    </testcase>
+    <testcase name="11 · Accessibility — keyboard and semantics TC-A11Y-041 | All form inputs on the Actions page have an accessible name" time="0.189" classname="TC-A11Y-041 | All form inputs on the Actions page have an accessible name">
+    </testcase>
+    <testcase name="11 · Accessibility — keyboard and semantics TC-A11Y-042 | Todo app is fully operable with the keyboard alone" time="0.893" classname="TC-A11Y-042 | Todo app is fully operable with the keyboard alone">
+    </testcase>
+    <testcase name="11 · Accessibility — keyboard and semantics TC-A11Y-043 | Images have alternative text" time="1.583" classname="TC-A11Y-043 | Images have alternative text">
+    </testcase>
+    <testcase name="11 · Accessibility — keyboard and semantics TC-A11Y-044 | Heading structure: one h1 per page" time="1.411" classname="TC-A11Y-044 | Heading structure: one h1 per page">
+    </testcase>
+  </testsuite>
+</testsuites>

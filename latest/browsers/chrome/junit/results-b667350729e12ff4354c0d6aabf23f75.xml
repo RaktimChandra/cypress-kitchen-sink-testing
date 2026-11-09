@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="5.362" tests="21" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-11-09T22:33:20" tests="0" file="cypress/e2e/04-ui-interactions/click.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="04 · UI interactions — click" timestamp="2026-11-09T22:33:20" tests="21" time="5.361" failures="0">
+    <testcase name="04 · UI interactions — click TC-UI-001 | Canvas is blank before any click" time="0.224" classname="TC-UI-001 | Canvas is blank before any click">
+    </testcase>
+    <testcase name="04 · UI interactions — click TC-UI-002 | Click canvas at &quot;topLeft&quot; paints a dot there" time="0.203" classname="TC-UI-002 | Click canvas at &quot;topLeft&quot; paints a dot there">
+    </testcase>
+    <testcase name="04 · UI interactions — click TC-UI-003 | Click canvas at &quot;top&quot; paints a dot there" time="0.176" classname="TC-UI-003 | Click canvas at &quot;top&quot; paints a dot there">
+    </testcase>
+    <testcase name="04 · UI interactions — click TC-UI-004 | Click canvas at &quot;topRight&quot; paints a dot there" time="0.178" classname="TC-UI-004 | Click canvas at &quot;topRight&quot; paints a dot there">
+    </testcase>
+    <testcase name="04 · UI interactions — click TC-UI-005 | Click canvas at &quot;left&quot; paints a dot there" time="0.177" classname="TC-UI-005 | Click canvas at &quot;left&quot; paints a dot there">
+    </testcase>
+    <testcase name="04 · UI interactions — click TC-UI-006 | Click canvas at &quot;center&quot; paints a dot there" time="0.179" classname="TC-UI-006 | Click canvas at &quot;center&quot; paints a dot there">
+    </testcase>
+    <testcase name="04 · UI interactions — click TC-UI-007 | Click canvas at &quot;right&quot; paints a dot there" time="0.178" classname="TC-UI-007 | Click canvas at &quot;right&quot; paints a dot there">
+    </testcase>
+    <testcase name="04 · UI interactions — click TC-UI-008 | Click canvas at &quot;bottomLeft&quot; paints a dot there" time="0.185" classname="TC-UI-008 | Click canvas at &quot;bottomLeft&quot; paints a dot there">
+    </testcase>
+    <testcase name="04 · UI interactions — click TC-UI-009 | Click canvas at &quot;bottom&quot; paints a dot there" time="0.175" classname="TC-UI-009 | Click canvas at &quot;bottom&quot; paints a dot there">
+    </testcase>
+    <testcase name="04 · UI interactions — click TC-UI-010 | Click canvas at &quot;bottomRight&quot; paints a dot there" time="0.189" classname="TC-UI-010 | Click canvas at &quot;bottomRight&quot; paints a dot there">
+    </testcase>
+    <testcase name="04 · UI interactions — click TC-UI-011 | Click canvas at coordinates (80, 75)" time="0.176" classname="TC-UI-011 | Click canvas at coordinates (80, 75)">
+    </testcase>
+    <testcase name="04 · UI interactions — click TC-UI-012 | Click canvas at coordinates (170, 75)" time="0.175" classname="TC-UI-012 | Click canvas at coordinates (170, 75)">
+    </testcase>
+    <testcase name="04 · UI interactions — click TC-UI-013 | Click canvas at coordinates (80, 165)" time="0.178" classname="TC-UI-013 | Click canvas at coordinates (80, 165)">
+    </testcase>
+    <testcase name="04 · UI interactions — click TC-UI-014 | Click canvas at coordinates (170, 165)" time="0.178" classname="TC-UI-014 | Click canvas at coordinates (170, 165)">
+    </testcase>
+    <testcase name="04 · UI interactions — click TC-UI-015 | Four clicks draw four separate dots (smiley demo)" time="0.399" classname="TC-UI-015 | Four clicks draw four separate dots (smiley demo)">
+    </testcase>
+    <testcase name="04 · UI interactions — click TC-UI-016 | Click toggles the popover open and closed" time="0.285" classname="TC-UI-016 | Click toggles the popover open and closed">
+    </testcase>
+    <testcase name="04 · UI interactions — click TC-UI-017 | Click multiple labels with {multiple:true}" time="0.539" classname="TC-UI-017 | Click multiple labels with {multiple:true}">
+    </testcase>
+    <testcase name="04 · UI interactions — click TC-UI-018 | Covered button is not clickable by a user" time="0.602" classname="TC-UI-018 | Covered button is not clickable by a user">
+    </testcase>
+    <testcase name="04 · UI interactions — click TC-UI-019 | force:true clicks the covered button and opens its popover" time="0.156" classname="TC-UI-019 | force:true clicks the covered button and opens its popover">
+    </testcase>
+    <testcase name="04 · UI interactions — click TC-UI-020 | Opacity cover is semi-transparent red overlay" time="0.166" classname="TC-UI-020 | Opacity cover is semi-transparent red overlay">
+    </testcase>
+    <testcase name="04 · UI interactions — click TC-UI-021 | Click with modifier keys sets the event flags" time="0.193" classname="TC-UI-021 | Click with modifier keys sets the event flags">
+    </testcase>
+  </testsuite>
+</testsuites>

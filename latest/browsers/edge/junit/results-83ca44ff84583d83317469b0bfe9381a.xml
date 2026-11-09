@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.797" tests="6" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-11-09T22:34:15" tests="0" file="cypress/e2e/05-assertions/connectors-and-aliases.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="05 · Assertions — subjects, connectors and aliases" timestamp="2026-11-09T22:34:15" tests="6" time="0.795" failures="0">
+    <testcase name="05 · Assertions — subjects, connectors and aliases TC-AS-030 | .invoke() calls a function on the subject" time="0.240" classname="TC-AS-030 | .invoke() calls a function on the subject">
+    </testcase>
+    <testcase name="05 · Assertions — subjects, connectors and aliases TC-AS-031 | .spread() unpacks an array subject into arguments" time="0.034" classname="TC-AS-031 | .spread() unpacks an array subject into arguments">
+    </testcase>
+    <testcase name="05 · Assertions — subjects, connectors and aliases TC-AS-032 | .then() return value becomes the next subject; undefined keeps the old one" time="0.019" classname="TC-AS-032 | .then() return value becomes the next subject; undefined keeps the old one">
+    </testcase>
+    <testcase name="05 · Assertions — subjects, connectors and aliases TC-AS-033 | .its() reads nested properties" time="0.021" classname="TC-AS-033 | .its() reads nested properties">
+    </testcase>
+    <testcase name="05 · Assertions — subjects, connectors and aliases TC-AS-034 | Aliases of elements and of values (this.*)" time="0.217" classname="TC-AS-034 | Aliases of elements and of values (this.*)">
+    </testcase>
+    <testcase name="05 · Assertions — subjects, connectors and aliases TC-AS-035 | Snapshot of a structured object with deep equality" time="0.122" classname="TC-AS-035 | Snapshot of a structured object with deep equality">
+    </testcase>
+  </testsuite>
+</testsuites>

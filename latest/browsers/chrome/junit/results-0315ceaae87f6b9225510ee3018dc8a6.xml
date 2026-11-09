@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="3.482" tests="11" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-11-09T22:32:53" tests="0" file="cypress/e2e/03-form-controls/submit.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="03 · Form controls — form submission" timestamp="2026-11-09T22:32:53" tests="11" time="3.478" failures="0">
+    <testcase name="03 · Form controls — form submission TC-FC-060 | Submit the coupon form with .submit()" time="0.493" classname="TC-FC-060 | Submit the coupon form with .submit()">
+    </testcase>
+    <testcase name="03 · Form controls — form submission TC-FC-061 | Submit by clicking the Submit button" time="0.383" classname="TC-FC-061 | Submit by clicking the Submit button">
+    </testcase>
+    <testcase name="03 · Form controls — form submission TC-FC-062 | Submit by pressing Enter in the coupon field (implicit submission)" time="0.262" classname="TC-FC-062 | Submit by pressing Enter in the coupon field (implicit submission)">
+    </testcase>
+    <testcase name="03 · Form controls — form submission TC-FC-063 | Coupon code class &quot;empty&quot; is accepted (no client validation)" time="0.153" classname="TC-FC-063 | Coupon code class &quot;empty&quot; is accepted (no client validation)">
+    </testcase>
+    <testcase name="03 · Form controls — form submission TC-FC-064 | Coupon code class &quot;whitespace&quot; is accepted (no client validation)" time="0.289" classname="TC-FC-064 | Coupon code class &quot;whitespace&quot; is accepted (no client validation)">
+    </testcase>
+    <testcase name="03 · Form controls — form submission TC-FC-065 | Coupon code class &quot;lowercase&quot; is accepted (no client validation)" time="0.285" classname="TC-FC-065 | Coupon code class &quot;lowercase&quot; is accepted (no client validation)">
+    </testcase>
+    <testcase name="03 · Form controls — form submission TC-FC-066 | Coupon code class &quot;very long&quot; is accepted (no client validation)" time="0.391" classname="TC-FC-066 | Coupon code class &quot;very long&quot; is accepted (no client validation)">
+    </testcase>
+    <testcase name="03 · Form controls — form submission TC-FC-067 | Coupon code class &quot;script-like&quot; is accepted (no client validation)" time="0.293" classname="TC-FC-067 | Coupon code class &quot;script-like&quot; is accepted (no client validation)">
+    </testcase>
+    <testcase name="03 · Form controls — form submission TC-FC-068 | Submitting 1 time(s) appends 1 confirmation(s)" time="0.155" classname="TC-FC-068 | Submitting 1 time(s) appends 1 confirmation(s)">
+    </testcase>
+    <testcase name="03 · Form controls — form submission TC-FC-069 | Submitting 2 time(s) appends 2 confirmation(s)" time="0.206" classname="TC-FC-069 | Submitting 2 time(s) appends 2 confirmation(s)">
+    </testcase>
+    <testcase name="03 · Form controls — form submission TC-FC-070 | Submitting 5 time(s) appends 5 confirmation(s)" time="0.357" classname="TC-FC-070 | Submitting 5 time(s) appends 5 confirmation(s)">
+    </testcase>
+  </testsuite>
+</testsuites>

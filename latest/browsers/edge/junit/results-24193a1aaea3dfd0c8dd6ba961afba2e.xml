@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="11.907" tests="15" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-11-09T22:37:06" tests="0" file="cypress/e2e/16-responsive/devices.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="16 · Responsive / compatibility — devices" timestamp="2026-11-09T22:37:06" tests="15" time="11.900" failures="0">
+    <testcase name="16 · Responsive / compatibility — devices TC-RSP-001 | iphone-se2 (375×667): no horizontal overflow and correct navbar mode" time="0.527" classname="TC-RSP-001 | iphone-se2 (375×667): no horizontal overflow and correct navbar mode">
+    </testcase>
+    <testcase name="16 · Responsive / compatibility — devices TC-RSP-002 | iphone-x (375×812): no horizontal overflow and correct navbar mode" time="0.340" classname="TC-RSP-002 | iphone-x (375×812): no horizontal overflow and correct navbar mode">
+    </testcase>
+    <testcase name="16 · Responsive / compatibility — devices TC-RSP-003 | samsung-s10 (360×760): no horizontal overflow and correct navbar mode" time="0.352" classname="TC-RSP-003 | samsung-s10 (360×760): no horizontal overflow and correct navbar mode">
+    </testcase>
+    <testcase name="16 · Responsive / compatibility — devices TC-RSP-004 | ipad-mini (768×1024): no horizontal overflow and correct navbar mode" time="0.361" classname="TC-RSP-004 | ipad-mini (768×1024): no horizontal overflow and correct navbar mode">
+    </testcase>
+    <testcase name="16 · Responsive / compatibility — devices TC-RSP-005 | ipad-2 (768×1024): no horizontal overflow and correct navbar mode" time="0.369" classname="TC-RSP-005 | ipad-2 (768×1024): no horizontal overflow and correct navbar mode">
+    </testcase>
+    <testcase name="16 · Responsive / compatibility — devices TC-RSP-006 | macbook-13 (1280×800): no horizontal overflow and correct navbar mode" time="0.397" classname="TC-RSP-006 | macbook-13 (1280×800): no horizontal overflow and correct navbar mode">
+    </testcase>
+    <testcase name="16 · Responsive / compatibility — devices TC-RSP-007 | macbook-16 (1536×960): no horizontal overflow and correct navbar mode" time="0.373" classname="TC-RSP-007 | macbook-16 (1536×960): no horizontal overflow and correct navbar mode">
+    </testcase>
+    <testcase name="16 · Responsive / compatibility — devices TC-RSP-008 | custom 320 (smallest) (320×568): no horizontal overflow and correct navbar mode" time="0.358" classname="TC-RSP-008 | custom 320 (smallest) (320×568): no horizontal overflow and correct navbar mode">
+    </testcase>
+    <testcase name="16 · Responsive / compatibility — devices TC-RSP-009 | custom 1920 (full HD) (1920×1080): no horizontal overflow and correct navbar mode" time="0.435" classname="TC-RSP-009 | custom 1920 (full HD) (1920×1080): no horizontal overflow and correct navbar mode">
+    </testcase>
+    <testcase name="16 · Responsive / compatibility — devices TC-RSP-010 | custom 2560 (QHD) (2560×1440): no horizontal overflow and correct navbar mode" time="0.420" classname="TC-RSP-010 | custom 2560 (QHD) (2560×1440): no horizontal overflow and correct navbar mode">
+    </testcase>
+    <testcase name="16 · Responsive / compatibility — devices TC-RSP-030 | All 21 pages fit a phone viewport (375 px) without horizontal scrolling" time="2.536" classname="TC-RSP-030 | All 21 pages fit a phone viewport (375 px) without horizontal scrolling">
+    </testcase>
+    <testcase name="16 · Responsive / compatibility — devices TC-RSP-031 | All 21 pages fit a tablet viewport (768 px) without horizontal scrolling" time="2.147" classname="TC-RSP-031 | All 21 pages fit a tablet viewport (768 px) without horizontal scrolling">
+    </testcase>
+    <testcase name="16 · Responsive / compatibility — devices TC-RSP-032 | All 21 pages fit a laptop viewport (1280 px) without horizontal scrolling" time="2.293" classname="TC-RSP-032 | All 21 pages fit a laptop viewport (1280 px) without horizontal scrolling">
+    </testcase>
+    <testcase name="16 · Responsive / compatibility — devices TC-RSP-020 | Todo app stays usable on the smallest phone" time="0.475" classname="TC-RSP-020 | Todo app stays usable on the smallest phone">
+    </testcase>
+    <testcase name="16 · Responsive / compatibility — devices TC-RSP-021 | Browser identity is recorded for the compatibility matrix" time="0.116" classname="TC-RSP-021 | Browser identity is recorded for the compatibility matrix">
+    </testcase>
+  </testsuite>
+</testsuites>
