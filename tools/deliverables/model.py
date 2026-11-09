@@ -85,7 +85,7 @@ def load():
 
     status = {}  # id -> {browser: status}
     for b, j in results.items():
-        for r in j.get("rows", []):
+        for r in (j.get("results") or j.get("rows") or []):
             status.setdefault(r["id"], {})[b] = r["status"]
 
     return {

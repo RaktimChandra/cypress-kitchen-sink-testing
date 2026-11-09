@@ -320,7 +320,7 @@ function detail (c) {
     ['Test case ID', c.id], ['Title', c.title], ['Requirement', c.req || ''], ['Technique / type', `${c.technique} · ${c.type}`],
     ['Priority / level', `${c.priority} · ${c.level}`], ['Test data', c.data == null || c.data === '' ? '—' : String(c.data)],
     ['Expected result', c.expected || ''], ['Spec', c.spec],
-    ['Status', haveResults ? Object.entries(results).map(([b, j]) => `${b}: ${(j.rows.find((r) => r.id === c.id) || {}).status || '-'}`).join(' · ') : 'Pending CI run'],
+    ['Status', haveResults ? Object.entries(results).map(([b, j]) => `${b}: ${((j.results || j.rows || []).find((r) => r.id === c.id) || {}).status || '-'}`).join(' · ') : 'Pending CI run'],
   ], 2200), gap()]
 }
 add(
