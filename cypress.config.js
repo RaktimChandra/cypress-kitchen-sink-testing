@@ -26,6 +26,10 @@ module.exports = defineConfig({
         require('@cypress/code-coverage/task')(on, config)
       }
       const reports = path.join(config.projectRoot, 'reports')
+      // config.browser is not populated inside setupNodeEvents, so learn the browser from the run itself
+      let browserName = (config.browser && config.browser.name) || 'unknown'
+      on('before:run', (details) => { if (details && details.browser) browserName = details.browser.name })
+      on('before:browser:launch', (browser, launchOptions) => { browserName = browser.name; return launchOptions })
       on('task', {
         log (msg) { console.log(msg); return null },
         // test-case catalogue: IEEE 829 metadata written by every spec
@@ -37,17 +41,17 @@ module.exports = defineConfig({
         },
         // evidence collectors (accessibility findings, performance timings, security findings)
         evidence ({ kind, record }) {
-          appendJson(path.join(reports, 'evidence', `${kind}-${config.browser ? config.browser.name : 'unknown'}.json`), record)
+          appendJson(path.join(reports, 'evidence', `${kind}-${browserName}.json`), record)
           return null
         },
-        compareSnapshot: (args) => compareSnapshot({ ...args, root: config.projectRoot, browser: config.browser && config.browser.name }),
+        compareSnapshot: (args) => compareSnapshot({ ...args, root: config.projectRoot, browser: browserName }),
         readFileMaybe (p) { return fs.existsSync(p) ? fs.readFileSync(p, 'utf8') : null },
       })
       // flaky-test detection: record every test that needed a retry
       on('after:spec', (spec, results) => {
         if (!results || !results.tests) return
         const flaky = results.tests.filter((t) => t.attempts && t.attempts.length > 1 && t.state === 'passed')
-        flaky.forEach((t) => appendJson(path.join(reports, 'evidence', `flaky-${config.browser ? config.browser.name : 'unknown'}.json`),
+        flaky.forEach((t) => appendJson(path.join(reports, 'evidence', `flaky-${browserName}.json`),
           { spec: spec.relative, title: t.title.join(' › '), attempts: t.attempts.length }))
       })
       return config
