@@ -17,7 +17,7 @@ import os
 from collections import Counter, OrderedDict
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
-EVIDENCE = os.environ.get("EVIDENCE_DIR", os.path.join(ROOT, "evidence"))
+EVIDENCE = os.environ.get("EVIDENCE_DIR", os.path.join(ROOT, "deliverables", "build", "evidence", "latest"))
 
 AREA_NAMES = OrderedDict([
     ("SMK", "Smoke"), ("NAV", "Navigation"), ("FC", "Form controls"), ("UI", "UI interactions"),

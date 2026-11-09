@@ -31,7 +31,7 @@ else
     if [ "$b" = "chrome" ]; then
       mkdir -p "$DEST/browsers/chrome/screenshots" "$DEST/browsers/chrome/videos"
       cp -r "$d/cypress/screenshots/." "$DEST/browsers/chrome/screenshots/" 2>/dev/null || true
-      find "$d/cypress/videos" -name '*.mp4' \( -path '*17-acceptance*' -o -path '*03-form-controls*' -o -path '*04-ui-interactions*' -o -path '*07-todo-app*' -o -path '*02-navigation*' \) -exec cp --parents {} "$DEST/browsers/chrome/videos/" \; 2>/dev/null || true
+      find "$d/cypress/videos" -name '*.mp4' \( -path '*17-acceptance*' -o -path '*03-form-controls*' -o -path '*04-ui-interactions*' -o -path '*07-todo-app*' -o -path '*02-navigation*' -o -path '*05-assertions*' \) -exec cp --parents {} "$DEST/browsers/chrome/videos/" \; 2>/dev/null || true
     fi
     if [ -d "$d/cypress/snapshots" ]; then mkdir -p "$DEST/snapshots" && cp -r "$d/cypress/snapshots/." "$DEST/snapshots/"; fi
   done

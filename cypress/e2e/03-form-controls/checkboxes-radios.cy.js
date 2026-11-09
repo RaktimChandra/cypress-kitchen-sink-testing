@@ -10,9 +10,9 @@ describe('03 · Form controls — checkboxes and radios', { tags: ['@forms'] }, 
   })
 
   tc({ id: 'TC-FC-081', title: 'Disabled checkbox cannot be checked by a user', technique: 'ECP (invalid)', req: 'REQ-FC-07', priority: 'P1',
-    expected: 'check() on a disabled box is refused' }, () => {
-    cy.on('fail', (e) => { expect(e.message).to.include('disabled'); return false })
-    cy.get('.action-checkboxes [value="checkbox2"]').check({ timeout: 500 })
+    expected: 'checkbox2 is disabled; a native click on it leaves it unchecked' }, () => {
+    cy.get('.action-checkboxes [value="checkbox2"]').should('be.disabled').then(($c) => $c[0].click())
+    cy.get('.action-checkboxes [value="checkbox2"]').should('not.be.checked')
   })
 
   tc({ id: 'TC-FC-082', title: 'force:true checks the disabled checkbox (test escape hatch)', technique: 'Error guessing', req: 'REQ-FC-07',
@@ -73,10 +73,10 @@ describe('03 · Form controls — checkboxes and radios', { tags: ['@forms'] }, 
   })
 
   tc({ id: 'TC-FC-097', title: 'Disabled radio3 cannot be selected', technique: 'ECP (invalid)', req: 'REQ-FC-08',
-    expected: 'check("radio3") is refused; radio3 unchecked' }, () => {
-    cy.get('#optionsRadios3').should('be.disabled')
-    cy.on('fail', (e) => { expect(e.message).to.include('disabled'); return false })
-    cy.get('#optionsRadios3').check({ timeout: 500 })
+    expected: 'radio3 is disabled; a native click on it changes nothing; radio3 unchecked' }, () => {
+    // no cy.on('fail') here: a swallowed failure would also hide a missing "disabled" (mutant M31)
+    cy.get('#optionsRadios3').should('be.disabled').then(($r) => $r[0].click()) // native click, as a user would
+    cy.get('#optionsRadios3').should('not.be.checked')
   })
 
   tc({ id: 'TC-FC-098', title: 'Re-checking the selected radio keeps it selected', technique: 'State transition', req: 'REQ-FC-08',

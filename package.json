@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "Interactive web components testing of the Cypress Kitchen Sink with Cypress: form controls, navigation, assertions and UI interactions, plus black-box, white-box, accessibility, visual, performance, security and mutation testing.",
-  "author": "Raktim Chandra",
+  "author": "Team 6 (Raktim Chandra, Juhi Hai, Rijit Ghosh, Shaurya Rathi)",
   "license": "MIT",
   "engines": {
     "node": ">=22"

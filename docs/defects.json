@@ -167,5 +167,18 @@
     "actual": "The overflow boxes used by the scrollTo demos are not focusable.",
     "technique": "Checklist (WCAG 2.1 AA, axe-core)",
     "fix": "Add tabindex=\"0\" and an accessible name to the scroll containers."
+  },
+  {
+    "id": "DEF-KS-014",
+    "title": "The \"cy.fixture or require\" section has no documentation link",
+    "area": "Content / navigation",
+    "severity": "Trivial",
+    "priority": "P4",
+    "test": "TC-NAV-086",
+    "steps": "Open /commands/files#require and look for an on.cypress.io link in the heading or its paragraph.",
+    "expected": "Like every other documented section, a link to the command's documentation.",
+    "actual": "Neither the heading nor the paragraph links anywhere; every other h4 section on the 13 documented pages does.",
+    "technique": "Error guessing (consistency check across all sections)",
+    "fix": "Link the heading to https://on.cypress.io/fixture."
   }
 ]

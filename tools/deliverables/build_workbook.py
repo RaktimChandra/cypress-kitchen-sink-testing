@@ -9,7 +9,7 @@ from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import get_column_letter
 from openpyxl.worksheet.table import Table, TableStyleInfo
 from openpyxl.formatting.rule import CellIsRule
-from model import load, AREA_NAMES, BROWSERS, ROOT
+from model import load, AREA_NAMES, BROWSERS, ROOT, EVIDENCE
 
 INK, GREEN, AMBER, RED, GREY = "1B1E2E", "2E9E6E", "D98E04", "C23B3B", "8A90A2"
 HEAD = PatternFill("solid", fgColor=INK)
@@ -43,6 +43,9 @@ def status_colours(ws, rng):
 
 def main(out):
     m = load()
+    global TEAM
+    import json
+    TEAM = json.load(open(os.path.join(ROOT, 'docs', 'team.json'), encoding='utf-8'))
     wb = Workbook()
 
     # ---- Cover ------------------------------------------------------------------
@@ -61,7 +64,8 @@ def main(out):
         ("Institution", "SRM Institute of Science and Technology - B.Tech CSE (Software Engineering)"),
         ("Year / semester", "4th year, semester 7, 2026-27 - section AI2, Dept. of CINTEL"),
         ("Faculty", "Mr. Kaviyaraj R."),
-        ("Author", "Raktim Chandra (RA2311033010038)"),
+        ("Team", TEAM["team"]),
+        *[("Member", f"{x['name']} ({x['reg']})") for x in TEAM["members"]],
         ("System under test", "Cypress Kitchen Sink (cypress-io/cypress-example-kitchensink @ f2cb767)"),
         ("Tool", "Cypress 16.2.1 - Chrome, Firefox, Edge, Electron"),
         ("Designed cases", f"{len(m['cases'])} in {m['spec_count']} spec files"),
@@ -72,14 +76,15 @@ def main(out):
     for i, (k, v) in enumerate(info, 5):
         ws.cell(row=i, column=2, value=k).font = BOLD
         ws.cell(row=i, column=3, value=v).font = BASE
-    ws.cell(row=18, column=2, value="Sheets").font = BOLD
+    top = 5 + len(info) + 1
+    ws.cell(row=top, column=2, value="Sheets").font = BOLD
     for i, (k, v) in enumerate([
         ("Summary", "Counts by area, technique, type and priority (live formulas over Test Cases)"),
         ("Test Cases", "Every designed case with ID, technique, requirement, expected result and per-browser status"),
         ("Traceability", "Requirement -> test case matrix (RTM)"),
         ("Requirements", "The 53 requirements derived from the Kitchen Sink pages"),
         ("Defects", "Defect log with steps, expected/actual, severity and the test that reproduces each"),
-    ], 19):
+    ], top + 1):
         ws.cell(row=i, column=2, value=k).font = BASE
         ws.cell(row=i, column=3, value=v).font = BASE
 
@@ -178,6 +183,76 @@ def main(out):
             c = df.cell(row=r, column=i, value=d.get(k))
             c.font, c.alignment = BASE, WRAP
     table(df, "Defects", f"A1:K{len(m['defects']) + 1}")
+
+    # ---- Results per browser (real CI evidence) ------------------------------------------
+    import json as _json
+    rs = wb.create_sheet("CI Results")
+    header(rs, 1, ["Browser", "Total", "Pass", "Known defect", "Fail", "Skipped", "Duration (s)", "Generated"], [14, 9, 9, 13, 9, 10, 13, 26])
+    for r, b in enumerate([x for x in BROWSERS if x in m["results"]], 2):
+        sm = m["results"][b]["summary"]
+        for i, v in enumerate([b, sm.get("total"), sm.get("pass"), sm.get("knownDefect"), sm.get("fail"), sm.get("skipped"), sm.get("durationSec"), sm.get("generatedAt")], 1):
+            rs.cell(row=r, column=i, value=v).font = BASE
+    hist = _json.load(open(os.path.join(ROOT, "docs", "ci-history.json"), encoding="utf-8"))
+    row = len(m["results"]) + 4
+    rs.cell(row=row, column=1, value="CI history (Chrome)").font = BOLD
+    for i, h in enumerate(["Run", "GitHub run id", "Commit", "Cases", "Pass", "Known defect", "Fail"], 1):
+        c = rs.cell(row=row + 1, column=i, value=h); c.fill, c.font = HEAD, WHITE
+    for k, run in enumerate(hist["runs"], row + 2):
+        cb = run["browsers"]["chrome"]
+        for i, v in enumerate([run["label"], run["run"], run["commit"], run["cases"], cb["pass"], cb["knownDefect"], cb["fail"]], 1):
+            rs.cell(row=k, column=i, value=v).font = BASE
+    row = row + 3 + len(hist["runs"])
+    rs.cell(row=row, column=1, value="Triage of first-run failures").font = BOLD
+    for k, t in enumerate(hist["triage"], row + 1):
+        rs.cell(row=k, column=1, value=t["category"]).font = BASE
+        rs.cell(row=k, column=2, value=t["count"]).font = BASE
+        rs.cell(row=k, column=3, value=t["examples"]).font = BASE
+
+    # ---- Mutation ----------------------------------------------------------------------------
+    mt = wb.create_sheet("Mutation")
+    muts = []
+    import glob as _glob
+    for f in _glob.glob(os.path.join(EVIDENCE, "mutation", "*.json")):
+        muts += _json.load(open(f)).get("results", [])
+    header(mt, 1, ["Mutant", "File", "Operator", "Change", "Status", "Tests run", "Failed", "Killed by"], [9, 26, 22, 48, 13, 10, 9, 60])
+    for r, x in enumerate(sorted(muts, key=lambda y: y["id"]), 2):
+        for i, v in enumerate([x["id"], x.get("file"), x.get("op"), x.get("desc"), x.get("status"), x.get("testsRun"), x.get("failed"), ", ".join(x.get("killers") or [])], 1):
+            c = mt.cell(row=r, column=i, value=v); c.font, c.alignment = BASE, WRAP
+    if muts:
+        n = len(muts) + 1
+        mt.cell(row=n + 2, column=1, value="Score").font = BOLD
+        mt.cell(row=n + 2, column=2, value=f'=COUNTIF(E2:E{n},"KILLED")/(COUNTIF(E2:E{n},"KILLED")+COUNTIF(E2:E{n},"SURVIVED"))').number_format = "0.0%"
+        status_colours(mt, f"E2:E{n}")
+
+    # ---- Coverage & performance ------------------------------------------------------------
+    cv = wb.create_sheet("Coverage & Perf")
+    cov = None
+    try:
+        cov = _json.load(open(os.path.join(EVIDENCE, "coverage", "coverage-summary.json")))
+    except Exception:
+        pass
+    header(cv, 1, ["Coverage metric", "Covered", "Total", "%"], [22, 12, 12, 10])
+    if cov:
+        for r, k in enumerate(["lines", "statements", "functions", "branches"], 2):
+            t = cov["total"][k]
+            cv.cell(row=r, column=1, value=k.capitalize()).font = BASE
+            cv.cell(row=r, column=2, value=t["covered"]).font = BASE
+            cv.cell(row=r, column=3, value=t["total"]).font = BASE
+            cv.cell(row=r, column=4, value=f"=B{r}/C{r}").number_format = "0.0%"
+    perf = []
+    try:
+        perf = [p for p in _json.load(open(os.path.join(EVIDENCE, "browsers", "chrome", "evidence", "perf-chrome.json"))) if str(p.get("page", "")).startswith("/") and " " not in p["page"] and isinstance(p.get("domContentLoaded"), (int, float))]
+    except Exception:
+        pass
+    seen = set()
+    perf = [p for p in perf if not (p["page"] in seen or seen.add(p["page"]))]
+    for i, h in enumerate(["Page (Chrome, CI)", "TTFB ms", "DCL ms", "Load ms", "Requests", "KB", "DOM nodes", "DCL budget met"], 1):
+        c = cv.cell(row=8, column=i, value=h); c.fill, c.font = HEAD, WHITE
+        cv.column_dimensions[get_column_letter(i)].width = max(cv.column_dimensions[get_column_letter(i)].width or 0, 14)
+    for r, p in enumerate(perf, 9):
+        for i, v in enumerate([p["page"], round(p["ttfb"], 1), round(p["domContentLoaded"], 1), round(p["load"], 1), p["resources"], p["transferKB"], p["domNodes"]], 1):
+            cv.cell(row=r, column=i, value=v).font = BASE
+        cv.cell(row=r, column=8, value=f'=IF(C{r}<1500,"Yes","No")').font = BASE
 
     wb.save(out)
     print("workbook ->", out)

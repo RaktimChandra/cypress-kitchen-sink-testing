@@ -17,13 +17,15 @@ describe('02 · Navigation — deep links and hash routes', { tags: ['@navigatio
   })
 
   tc({ id: 'TC-NAV-080', title: 'Every documented section heading on every page has a working "on.cypress.io" docs link', technique: 'ECP',
-    req: 'REQ-NAV-05', expected: 'each h4[id] section links to https://on.cypress.io (in the heading, or in the first paragraph for chai helpers such as expect/assert)' }, () => {
+    req: 'REQ-NAV-05', expected: 'each h4[id] section links to its documentation (on.cypress.io, or Sinon/Chai for library helpers) in the heading or first paragraph' }, () => {
     pages.filter((p) => p.anchors && p.anchors.length).forEach((p) => {
       cy.visitPage(p.path)
-      p.anchors.forEach((a) => {
+      // #require (Files page) has no docs link at all: logged as DEF-KS-014 and pinned by TC-NAV-086
+      p.anchors.filter((a) => !(p.path === '/commands/files' && a === 'require')).forEach((a) => {
         cy.get(`h4[id="${a}"]`).then(($h) => {
           const $link = $h.find('a').length ? $h.find('a') : $h.nextAll('p').first().find('a')
-          expect($link.attr('href'), `docs link for #${a}`).to.match(/^https:\/\/on\.cypress\.io\//)
+          // command sections link to on.cypress.io; helper sections may link to the upstream library (Sinon, Chai)
+          expect($link.attr('href'), `docs link for #${a}`).to.match(/^https:\/\/(on\.cypress\.io|sinonjs\.org|www\.chaijs\.com)\//)
         })
       })
     })
@@ -59,5 +61,14 @@ describe('02 · Navigation — deep links and hash routes', { tags: ['@navigatio
     expected: '#/unknown shows the 2 seed items and raises no error (actual: uncaught "this[activeRoute] is not a function", empty list)' }, () => {
     cy.visit('/todo#/unknown')
     cy.get('.todo-list li').should('have.length', 2)
+  })
+
+  tc.knownDefect({ id: 'TC-NAV-086', title: 'The "cy.fixture or require" section links to its documentation like every other section', technique: 'Error guessing',
+    req: 'REQ-NAV-05', defect: 'DEF-KS-014', priority: 'P4',
+    expected: 'h4#require or its first paragraph links to on.cypress.io (actual: no link at all)' }, () => {
+    cy.visitPage('/commands/files')
+    cy.get('h4#require').then(($h) => {
+      expect($h.find('a').length + $h.nextAll('p').first().find('a[href*="on.cypress.io"]').length, 'docs links in the #require section').to.be.greaterThan(0)
+    })
   })
 })

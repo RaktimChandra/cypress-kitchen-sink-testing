@@ -17,11 +17,10 @@ describe('07 · TodoMVC — functional behaviour', { tags: ['@todo'] }, () => {
     cy.get('.todo-count').should('have.text', '3 items left')
   })
 
-  tc({ id: 'TC-TD-003', title: 'New-todo input has autofocus on load', technique: 'Use-case', req: 'REQ-TD-01',
-    expected: 'focused element is .new-todo' }, () => {
+  tc({ id: 'TC-TD-003', title: 'New-todo input requests autofocus on load', technique: 'Use-case', req: 'REQ-TD-01',
+    expected: 'the input carries the autofocus attribute and is the only autofocus element (browsers suppress autofocus inside the test runner iframe, so the focus itself is verified top-level in the exploratory probe)' }, () => {
     cy.visitPage('/todo')
-    cy.get('.new-todo').should('have.attr', 'autofocus')
-    cy.document().its('activeElement').should('have.class', 'new-todo')
+    cy.get('[autofocus]').should('have.length', 1).and('have.class', 'new-todo')
   })
 
   tc({ id: 'TC-TD-004', title: 'Items keep insertion order', technique: 'Use-case', req: 'REQ-TD-01',

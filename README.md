@@ -77,6 +77,15 @@ See also [TEST_STRATEGY.md](TEST_STRATEGY.md), [DEFECTS.md](DEFECTS.md) and [CON
 
 CI publishes every run (results per browser, JUnit, mochawesome, coverage, accessibility/performance/security evidence, screenshots and demo videos) to the [`results`](../../tree/results) branch.
 
-## Author
+## Team
 
-**Raktim Chandra** (RA2311033010038) — B.Tech CSE (Software Engineering), SRM Institute of Science and Technology. Software Verification & Validation, automated-testing component, 2026–27. Built with AI pair-programming assistance (Claude); all numbers come from the automated runs.
+**Team 6**, Software Verification & Validation (FT3: Automated Testing). B.Tech CSE (Software Engineering), Year 4, Semester 7, Section AI2, CINTEL, SRM Institute of Science and Technology, 2026–27. Faculty: **Mr. Kaviyaraj R.**
+
+| Member | Register number |
+|---|---|
+| Raktim Chandra | RA2311033010038 |
+| Juhi Hai | RA2311033010027 |
+| Rijit Ghosh | RA2311033010017 |
+| Shaurya Rathi | RA2311033010034 |
+
+Built with AI pair-programming assistance (Claude). Every number in the documents comes from the automated runs.

@@ -29,7 +29,8 @@ describe('07 · TodoMVC — decision table: footer controls', { tags: ['@todo', 
       expected: `A1=${footer ? 'Y' : 'N'} A2=${clear ? 'Y' : 'N'} A3=${all === null ? '– (hidden)' : all ? 'Y' : 'N'}` }, () => {
       cy.visitTodos(list)
       cy.get('.footer').should(footer ? 'be.visible' : 'not.be.visible')
-      if (footer) cy.get('.clear-completed').should(clear ? 'be.visible' : 'not.be.visible')
+      // check the rendered display too: an empty but displayed button is invisible yet still wrong (mutant M27)
+      if (footer) cy.get('.clear-completed').should(clear ? 'be.visible' : 'not.be.visible').and('have.css', 'display', clear ? 'block' : 'none')
       if (all === null) cy.get('.main').should('not.be.visible')
       else cy.get('#toggle-all').should(all ? 'be.checked' : 'not.be.checked')
     })
