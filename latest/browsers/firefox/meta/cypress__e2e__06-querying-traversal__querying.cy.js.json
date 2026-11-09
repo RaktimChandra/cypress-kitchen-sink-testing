@@ -1,1 +1,146 @@
-[]
+[
+ {
+  "level": "System",
+  "priority": "P2",
+  "type": "Functional",
+  "technique": "ECP",
+  "tags": [],
+  "id": "TC-QT-001",
+  "title": "cy.get by id: #query-btn",
+  "req": "REQ-QT-01",
+  "expected": "one element containing \"Button\"",
+  "spec": "cypress/e2e/06-querying-traversal/querying.cy.js"
+ },
+ {
+  "level": "System",
+  "priority": "P2",
+  "type": "Functional",
+  "technique": "ECP",
+  "tags": [],
+  "id": "TC-QT-002",
+  "title": "cy.get by class: .query-btn",
+  "req": "REQ-QT-01",
+  "expected": "one element containing \"Button\"",
+  "spec": "cypress/e2e/06-querying-traversal/querying.cy.js"
+ },
+ {
+  "level": "System",
+  "priority": "P2",
+  "type": "Functional",
+  "technique": "ECP",
+  "tags": [],
+  "id": "TC-QT-003",
+  "title": "cy.get by element + attribute: button[id=\"query-btn\"]",
+  "req": "REQ-QT-01",
+  "expected": "one element containing \"Button\"",
+  "spec": "cypress/e2e/06-querying-traversal/querying.cy.js"
+ },
+ {
+  "level": "System",
+  "priority": "P2",
+  "type": "Functional",
+  "technique": "ECP",
+  "tags": [],
+  "id": "TC-QT-004",
+  "title": "cy.get by data-cy (best practice): [data-cy=submit]",
+  "req": "REQ-QT-01",
+  "expected": "one element containing \"Submit\"",
+  "spec": "cypress/e2e/06-querying-traversal/querying.cy.js"
+ },
+ {
+  "level": "System",
+  "priority": "P2",
+  "type": "Functional",
+  "technique": "ECP",
+  "tags": [],
+  "id": "TC-QT-005",
+  "title": "cy.get by descendant combinator: #querying .well>button:first",
+  "req": "REQ-QT-01",
+  "expected": "one element containing \"Button\"",
+  "spec": "cypress/e2e/06-querying-traversal/querying.cy.js"
+ },
+ {
+  "level": "System",
+  "priority": "P2",
+  "type": "Functional",
+  "technique": "ECP",
+  "tags": [],
+  "id": "TC-QT-010",
+  "title": "cy.contains with plain text",
+  "req": "REQ-QT-01",
+  "expected": "yields element with class third",
+  "spec": "cypress/e2e/06-querying-traversal/querying.cy.js"
+ },
+ {
+  "level": "System",
+  "priority": "P2",
+  "type": "Functional",
+  "technique": "ECP",
+  "tags": [],
+  "id": "TC-QT-011",
+  "title": "cy.contains with regular expression",
+  "req": "REQ-QT-01",
+  "expected": "yields element with class third",
+  "spec": "cypress/e2e/06-querying-traversal/querying.cy.js"
+ },
+ {
+  "level": "System",
+  "priority": "P2",
+  "type": "Functional",
+  "technique": "ECP",
+  "tags": [],
+  "id": "TC-QT-012",
+  "title": "cy.contains with selector + text",
+  "req": "REQ-QT-01",
+  "expected": "yields element with class query-list",
+  "spec": "cypress/e2e/06-querying-traversal/querying.cy.js"
+ },
+ {
+  "level": "System",
+  "priority": "P2",
+  "type": "Functional",
+  "technique": "ECP",
+  "tags": [],
+  "id": "TC-QT-013",
+  "title": "cy.contains with prefers the deepest/first match",
+  "req": "REQ-QT-01",
+  "expected": "yields element with class first",
+  "spec": "cypress/e2e/06-querying-traversal/querying.cy.js"
+ },
+ {
+  "level": "System",
+  "priority": "P2",
+  "type": "Functional",
+  "technique": "ECP",
+  "tags": [],
+  "id": "TC-QT-014",
+  "title": "contains() is case-sensitive unless matchCase:false",
+  "req": "REQ-QT-01",
+  "expected": "\"capital sentence\" not found by default; found with matchCase false",
+  "spec": "cypress/e2e/06-querying-traversal/querying.cy.js"
+ },
+ {
+  "level": "System",
+  "priority": "P2",
+  "type": "Functional",
+  "technique": "Use-case",
+  "tags": [],
+  "id": "TC-QT-015",
+  "title": "cy.root() inside .within() is the scoped element",
+  "req": "REQ-QT-01",
+  "expected": "root matches .query-ul",
+  "spec": "cypress/e2e/06-querying-traversal/querying.cy.js"
+ },
+ {
+  "level": "System",
+  "priority": "P2",
+  "type": "Functional",
+  "technique": "Error guessing",
+  "tags": [],
+  "id": "TC-QT-016",
+  "title": "Selector best practice: data-cy is stable when classes change",
+  "req": "REQ-QT-01",
+  "expected": "after removing classes, data-cy still finds the button",
+  "spec": "cypress/e2e/06-querying-traversal/querying.cy.js"
+ }
+]

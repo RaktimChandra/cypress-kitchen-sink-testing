@@ -1,0 +1,12 @@
+[
+ {
+  "page": "/commands/actions",
+  "unlabelled": [
+   "<textarea class=\"form-control action-disabled\" disabled=\"disabled\"></textarea>",
+   "<select class=\"form-control action-select\">\n                <option>--Select a f",
+   "<select class=\"form-control action-select-multiple\" multiple=\"true\">\n           ",
+   "<input class=\"trigger-input-range\" name=\"range-input\" type=\"range\" value=\"0\">"
+  ],
+  "at": "2026-11-09T21:20:10.068Z"
+ }
+]

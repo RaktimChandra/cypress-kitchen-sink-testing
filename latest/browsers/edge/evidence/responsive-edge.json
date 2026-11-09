@@ -1,0 +1,187 @@
+[
+ {
+  "device": "iphone-se2",
+  "page": "/",
+  "overflow": 0,
+  "at": "2026-11-09T21:20:54.161Z"
+ },
+ {
+  "device": "iphone-se2",
+  "page": "/commands/navigation",
+  "overflow": 0,
+  "at": "2026-11-09T21:20:54.315Z"
+ },
+ {
+  "device": "iphone-se2",
+  "page": "/todo",
+  "overflow": 0,
+  "at": "2026-11-09T21:20:54.479Z"
+ },
+ {
+  "device": "iphone-x",
+  "page": "/",
+  "overflow": 0,
+  "at": "2026-11-09T21:20:54.660Z"
+ },
+ {
+  "device": "iphone-x",
+  "page": "/commands/navigation",
+  "overflow": 0,
+  "at": "2026-11-09T21:20:54.773Z"
+ },
+ {
+  "device": "iphone-x",
+  "page": "/todo",
+  "overflow": 0,
+  "at": "2026-11-09T21:20:54.899Z"
+ },
+ {
+  "device": "samsung-s10",
+  "page": "/",
+  "overflow": 0,
+  "at": "2026-11-09T21:20:55.071Z"
+ },
+ {
+  "device": "samsung-s10",
+  "page": "/commands/navigation",
+  "overflow": 0,
+  "at": "2026-11-09T21:20:55.185Z"
+ },
+ {
+  "device": "samsung-s10",
+  "page": "/todo",
+  "overflow": 0,
+  "at": "2026-11-09T21:20:55.319Z"
+ },
+ {
+  "device": "ipad-mini",
+  "page": "/",
+  "overflow": 0,
+  "at": "2026-11-09T21:20:55.487Z"
+ },
+ {
+  "device": "ipad-mini",
+  "page": "/commands/navigation",
+  "overflow": 0,
+  "at": "2026-11-09T21:20:55.600Z"
+ },
+ {
+  "device": "ipad-mini",
+  "page": "/todo",
+  "overflow": 0,
+  "at": "2026-11-09T21:20:55.733Z"
+ },
+ {
+  "device": "ipad-2",
+  "page": "/",
+  "overflow": 0,
+  "at": "2026-11-09T21:20:55.915Z"
+ },
+ {
+  "device": "ipad-2",
+  "page": "/commands/navigation",
+  "overflow": 0,
+  "at": "2026-11-09T21:20:56.028Z"
+ },
+ {
+  "device": "ipad-2",
+  "page": "/todo",
+  "overflow": 0,
+  "at": "2026-11-09T21:20:56.172Z"
+ },
+ {
+  "device": "macbook-13",
+  "page": "/",
+  "overflow": 0,
+  "at": "2026-11-09T21:20:56.346Z"
+ },
+ {
+  "device": "macbook-13",
+  "page": "/commands/navigation",
+  "overflow": 0,
+  "at": "2026-11-09T21:20:56.459Z"
+ },
+ {
+  "device": "macbook-13",
+  "page": "/todo",
+  "overflow": 0,
+  "at": "2026-11-09T21:20:56.580Z"
+ },
+ {
+  "device": "macbook-16",
+  "page": "/",
+  "overflow": 0,
+  "at": "2026-11-09T21:20:56.747Z"
+ },
+ {
+  "device": "macbook-16",
+  "page": "/commands/navigation",
+  "overflow": 0,
+  "at": "2026-11-09T21:20:56.849Z"
+ },
+ {
+  "device": "macbook-16",
+  "page": "/todo",
+  "overflow": 0,
+  "at": "2026-11-09T21:20:56.981Z"
+ },
+ {
+  "device": "custom 320 (smallest)",
+  "page": "/",
+  "overflow": 0,
+  "at": "2026-11-09T21:20:57.147Z"
+ },
+ {
+  "device": "custom 320 (smallest)",
+  "page": "/commands/navigation",
+  "overflow": 0,
+  "at": "2026-11-09T21:20:57.243Z"
+ },
+ {
+  "device": "custom 320 (smallest)",
+  "page": "/todo",
+  "overflow": 0,
+  "at": "2026-11-09T21:20:57.373Z"
+ },
+ {
+  "device": "custom 1920 (full HD)",
+  "page": "/",
+  "overflow": 0,
+  "at": "2026-11-09T21:20:57.544Z"
+ },
+ {
+  "device": "custom 1920 (full HD)",
+  "page": "/commands/navigation",
+  "overflow": 0,
+  "at": "2026-11-09T21:20:57.659Z"
+ },
+ {
+  "device": "custom 1920 (full HD)",
+  "page": "/todo",
+  "overflow": 0,
+  "at": "2026-11-09T21:20:57.797Z"
+ },
+ {
+  "device": "custom 2560 (QHD)",
+  "page": "/",
+  "overflow": 0,
+  "at": "2026-11-09T21:20:58.000Z"
+ },
+ {
+  "device": "custom 2560 (QHD)",
+  "page": "/commands/navigation",
+  "overflow": 0,
+  "at": "2026-11-09T21:20:58.106Z"
+ },
+ {
+  "device": "custom 2560 (QHD)",
+  "page": "/todo",
+  "overflow": 0,
+  "at": "2026-11-09T21:20:58.244Z"
+ },
+ {
+  "scan": "1280px",
+  "offenders": [],
+  "at": "2026-11-09T21:21:05.904Z"
+ }
+]

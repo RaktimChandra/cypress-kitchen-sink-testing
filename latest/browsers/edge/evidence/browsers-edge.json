@@ -1,0 +1,9 @@
+[
+ {
+  "name": "edge",
+  "version": "156.0.4314.58",
+  "family": "chromium",
+  "isHeadless": true,
+  "at": "2026-11-09T21:21:06.597Z"
+ }
+]

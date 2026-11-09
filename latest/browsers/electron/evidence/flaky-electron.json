@@ -1,0 +1,8 @@
+[
+ {
+  "spec": "cypress/e2e/12-visual/visual.cy.js",
+  "title": "12 · Visual regression › TC-VIS-003 | actions-type-form matches its baseline",
+  "attempts": 2,
+  "at": "2026-11-09T21:19:02.939Z"
+ }
+]

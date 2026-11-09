@@ -1,1 +1,158 @@
-[]
+[
+ {
+  "level": "System",
+  "priority": "P1",
+  "type": "Functional",
+  "technique": "State transition",
+  "tags": [],
+  "id": "TC-FC-170",
+  "title": "Double-click turns the label into a focused input",
+  "req": "REQ-UI-04",
+  "expected": "div hidden, input visible and focused with value \"Double click to edit\"",
+  "spec": "cypress/e2e/03-form-controls/other-forms.cy.js"
+ },
+ {
+  "level": "System",
+  "priority": "P2",
+  "type": "Functional",
+  "technique": "Use-case",
+  "tags": [],
+  "id": "TC-FC-171",
+  "title": "Edited value can be typed after double-click",
+  "req": "REQ-UI-04",
+  "expected": "value replaced with \"edited\"",
+  "spec": "cypress/e2e/03-form-controls/other-forms.cy.js"
+ },
+ {
+  "level": "System",
+  "priority": "P2",
+  "type": "Functional",
+  "technique": "ECP (invalid)",
+  "tags": [],
+  "id": "TC-FC-172",
+  "title": "Single click does NOT open the editor (only dblclick)",
+  "req": "REQ-UI-04",
+  "expected": "input stays hidden after one click",
+  "spec": "cypress/e2e/03-form-controls/other-forms.cy.js"
+ },
+ {
+  "level": "System",
+  "priority": "P1",
+  "type": "Functional",
+  "technique": "State transition",
+  "tags": [],
+  "id": "TC-FC-173",
+  "title": "Right-click turns the label into a focused input",
+  "req": "REQ-UI-05",
+  "expected": "input visible, focused, value \"Right click to edit\"",
+  "spec": "cypress/e2e/03-form-controls/other-forms.cy.js"
+ },
+ {
+  "level": "System",
+  "priority": "P2",
+  "type": "Functional",
+  "technique": "ECP (invalid)",
+  "tags": [],
+  "id": "TC-FC-174",
+  "title": "Left click on the right-click region does nothing",
+  "req": "REQ-UI-05",
+  "expected": "input stays hidden",
+  "spec": "cypress/e2e/03-form-controls/other-forms.cy.js"
+ },
+ {
+  "level": "System",
+  "priority": "P2",
+  "type": "Functional",
+  "technique": "Use-case",
+  "tags": [],
+  "id": "TC-FC-175",
+  "title": "Querying page: .within() scopes typing to the query form",
+  "req": "REQ-FC-13",
+  "expected": "email/password typed inside .query-form only",
+  "spec": "cypress/e2e/03-form-controls/other-forms.cy.js"
+ },
+ {
+  "level": "System",
+  "priority": "P2",
+  "type": "Functional",
+  "technique": "Use-case",
+  "tags": [],
+  "id": "TC-FC-176",
+  "title": "Misc page: name and description fields accept input and report focus",
+  "req": "REQ-FC-13",
+  "expected": "focused element follows clicks",
+  "spec": "cypress/e2e/03-form-controls/other-forms.cy.js"
+ },
+ {
+  "level": "System",
+  "priority": "P2",
+  "type": "Functional",
+  "technique": "ECP",
+  "tags": [],
+  "id": "TC-FC-177",
+  "title": "Waiting page: input 1 accepts text",
+  "req": "REQ-FC-13",
+  "expected": "wait-input1 value \"Wait 1\"",
+  "spec": "cypress/e2e/03-form-controls/other-forms.cy.js"
+ },
+ {
+  "level": "System",
+  "priority": "P2",
+  "type": "Functional",
+  "technique": "ECP",
+  "tags": [],
+  "id": "TC-FC-178",
+  "title": "Waiting page: input 2 accepts text",
+  "req": "REQ-FC-13",
+  "expected": "wait-input2 value \"Wait 2\"",
+  "spec": "cypress/e2e/03-form-controls/other-forms.cy.js"
+ },
+ {
+  "level": "System",
+  "priority": "P2",
+  "type": "Functional",
+  "technique": "ECP",
+  "tags": [],
+  "id": "TC-FC-179",
+  "title": "Waiting page: input 3 accepts text",
+  "req": "REQ-FC-13",
+  "expected": "wait-input3 value \"Wait 3\"",
+  "spec": "cypress/e2e/03-form-controls/other-forms.cy.js"
+ },
+ {
+  "level": "System",
+  "priority": "P2",
+  "type": "Accessibility",
+  "technique": "Use-case",
+  "tags": [],
+  "id": "TC-FC-180",
+  "title": "Tab order through the Actions forms follows visual order",
+  "req": "REQ-NFR-A11Y",
+  "expected": "disabled textarea is skipped; password → .blur() heading link → paragraph link → name field",
+  "browser": [
+   "chrome",
+   "chromium",
+   "edge",
+   "electron"
+  ],
+  "spec": "cypress/e2e/03-form-controls/other-forms.cy.js"
+ },
+ {
+  "level": "System",
+  "priority": "P2",
+  "type": "Functional",
+  "technique": "Use-case",
+  "tags": [],
+  "id": "TC-FC-181",
+  "title": "Real keyboard typing (CDP) matches simulated typing",
+  "req": "REQ-FC-01",
+  "expected": "value \"real@keys.io\"",
+  "browser": [
+   "chrome",
+   "chromium",
+   "edge",
+   "electron"
+  ],
+  "spec": "cypress/e2e/03-form-controls/other-forms.cy.js"
+ }
+]

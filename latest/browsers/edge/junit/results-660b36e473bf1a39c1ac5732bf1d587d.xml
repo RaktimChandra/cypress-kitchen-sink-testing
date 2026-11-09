@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="3.001" tests="9" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-11-09T21:15:00" tests="0" file="cypress/e2e/02-navigation/history.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="02 · Navigation — history, reload, location" timestamp="2026-11-09T21:15:00" tests="9" time="2.999" failures="0">
+    <testcase name="02 · Navigation — history, reload, location TC-NAV-040 | Back and forward move through visited pages (cy.go)" time="1.021" classname="TC-NAV-040 | Back and forward move through visited pages (cy.go)">
+    </testcase>
+    <testcase name="02 · Navigation — history, reload, location TC-NAV-041 | Reload resets un-submitted form input (no state kept in page)" time="0.429" classname="TC-NAV-041 | Reload resets un-submitted form input (no state kept in page)">
+    </testcase>
+    <testcase name="02 · Navigation — history, reload, location TC-NAV-042 | Hard reload (forceReload) re-fetches the document" time="0.221" classname="TC-NAV-042 | Hard reload (forceReload) re-fetches the document">
+    </testcase>
+    <testcase name="02 · Navigation — history, reload, location TC-NAV-043 | cy.location exposes every URL component of the page" time="0.149" classname="TC-NAV-043 | cy.location exposes every URL component of the page">
+    </testcase>
+    <testcase name="02 · Navigation — history, reload, location TC-NAV-044 | Query string and hash are preserved on visit" time="0.180" classname="TC-NAV-044 | Query string and hash are preserved on visit">
+    </testcase>
+    <testcase name="02 · Navigation — history, reload, location TC-NAV-045 | .html URLs redirect to the clean URL (301)" time="0.182" classname="TC-NAV-045 | .html URLs redirect to the clean URL (301)">
+    </testcase>
+    <testcase name="02 · Navigation — history, reload, location TC-NAV-046 | Unknown URL is answered with 404, not the home page" time="0.072" classname="TC-NAV-046 | Unknown URL is answered with 404, not the home page">
+    </testcase>
+    <testcase name="02 · Navigation — history, reload, location TC-NAV-047 | visit() onBeforeLoad / onLoad callbacks fire in order" time="0.111" classname="TC-NAV-047 | visit() onBeforeLoad / onLoad callbacks fire in order">
+    </testcase>
+    <testcase name="02 · Navigation — history, reload, location TC-NAV-048 | History length grows by one per navigation" time="0.386" classname="TC-NAV-048 | History length grows by one per navigation">
+    </testcase>
+  </testsuite>
+</testsuites>

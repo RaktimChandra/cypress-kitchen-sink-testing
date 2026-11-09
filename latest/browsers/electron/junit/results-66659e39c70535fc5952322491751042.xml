@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="12.594" tests="20" failures="1">
+  <testsuite name="Root Suite" timestamp="2026-11-09T21:13:54" tests="0" file="cypress/e2e/02-navigation/anchors-and-routes.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="02 · Navigation — deep links and hash routes" timestamp="2026-11-09T21:13:54" tests="20" time="12.589" failures="1">
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-060 | Deep link /commands/actions#type scrolls its section into view" time="0.231" classname="TC-NAV-060 | Deep link /commands/actions#type scrolls its section into view">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-061 | Deep link /commands/actions#focus scrolls its section into view" time="0.123" classname="TC-NAV-061 | Deep link /commands/actions#focus scrolls its section into view">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-062 | Deep link /commands/actions#blur scrolls its section into view" time="0.116" classname="TC-NAV-062 | Deep link /commands/actions#blur scrolls its section into view">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-063 | Deep link /commands/actions#clear scrolls its section into view" time="0.103" classname="TC-NAV-063 | Deep link /commands/actions#clear scrolls its section into view">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-064 | Deep link /commands/actions#submit scrolls its section into view" time="0.105" classname="TC-NAV-064 | Deep link /commands/actions#submit scrolls its section into view">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-065 | Deep link /commands/actions#click scrolls its section into view" time="0.096" classname="TC-NAV-065 | Deep link /commands/actions#click scrolls its section into view">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-066 | Deep link /commands/actions#dblclick scrolls its section into view" time="0.097" classname="TC-NAV-066 | Deep link /commands/actions#dblclick scrolls its section into view">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-067 | Deep link /commands/actions#rightclick scrolls its section into view" time="0.102" classname="TC-NAV-067 | Deep link /commands/actions#rightclick scrolls its section into view">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-068 | Deep link /commands/actions#check scrolls its section into view" time="0.102" classname="TC-NAV-068 | Deep link /commands/actions#check scrolls its section into view">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-069 | Deep link /commands/actions#uncheck scrolls its section into view" time="0.101" classname="TC-NAV-069 | Deep link /commands/actions#uncheck scrolls its section into view">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-070 | Deep link /commands/actions#select scrolls its section into view" time="0.100" classname="TC-NAV-070 | Deep link /commands/actions#select scrolls its section into view">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-071 | Deep link /commands/actions#scrollIntoView scrolls its section into view" time="0.103" classname="TC-NAV-071 | Deep link /commands/actions#scrollIntoView scrolls its section into view">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-072 | Deep link /commands/actions#scrollTo scrolls its section into view" time="0.101" classname="TC-NAV-072 | Deep link /commands/actions#scrollTo scrolls its section into view">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-073 | Deep link /commands/actions#trigger scrolls its section into view" time="0.124" classname="TC-NAV-073 | Deep link /commands/actions#trigger scrolls its section into view">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-080 | Every documented section heading on every page has a working &quot;on.cypress.io&quot; docs link" time="1.522" classname="TC-NAV-080 | Every documented section heading on every page has a working &quot;on.cypress.io&quot; docs link">
+      <failure message="docs link for #require: expected undefined to match /^https:\/\/on\.cypress\.io\//" type="AssertionError"><![CDATA[AssertionError: docs link for #require: expected undefined to match /^https:\/\/on\.cypress\.io\//
+    at Context.eval (webpack://cypress-kitchen-sink-testing/./cypress/e2e/02-navigation/anchors-and-routes.cy.js:26:63)
+    at getRet (http://localhost:8080/__cypress/runner/cypress_runner.js:120892:20)]]></failure>
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-081 | Todo route #/ selects &quot;All&quot; and shows 3 item(s)" time="0.167" classname="TC-NAV-081 | Todo route #/ selects &quot;All&quot; and shows 3 item(s)">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-082 | Todo route #/active selects &quot;Active&quot; and shows 2 item(s)" time="0.132" classname="TC-NAV-082 | Todo route #/active selects &quot;Active&quot; and shows 2 item(s)">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-083 | Todo route #/completed selects &quot;Completed&quot; and shows 1 item(s)" time="0.164" classname="TC-NAV-083 | Todo route #/completed selects &quot;Completed&quot; and shows 1 item(s)">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-084 | Clicking filters updates the hash and the back button restores the previous filter" time="0.447" classname="TC-NAV-084 | Clicking filters updates the hash and the back button restores the previous filter">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-085 | Unknown todo route falls back to showing all items" time="6.120" classname="TC-NAV-085 | Unknown todo route falls back to showing all items">
+    </testcase>
+  </testsuite>
+</testsuites>

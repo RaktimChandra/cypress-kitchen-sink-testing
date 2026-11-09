@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="2.800" tests="23" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-11-09T21:18:29" tests="0" file="cypress/e2e/14-performance/budgets.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="14 · Performance — page budgets" timestamp="2026-11-09T21:18:29" tests="23" time="2.797" failures="0">
+    <testcase name="14 · Performance — page budgets TC-PERF-001 | / meets its load budgets" time="0.193" classname="TC-PERF-001 | / meets its load budgets">
+    </testcase>
+    <testcase name="14 · Performance — page budgets TC-PERF-002 | /commands/querying meets its load budgets" time="0.091" classname="TC-PERF-002 | /commands/querying meets its load budgets">
+    </testcase>
+    <testcase name="14 · Performance — page budgets TC-PERF-003 | /commands/traversal meets its load budgets" time="0.084" classname="TC-PERF-003 | /commands/traversal meets its load budgets">
+    </testcase>
+    <testcase name="14 · Performance — page budgets TC-PERF-004 | /commands/actions meets its load budgets" time="0.087" classname="TC-PERF-004 | /commands/actions meets its load budgets">
+    </testcase>
+    <testcase name="14 · Performance — page budgets TC-PERF-005 | /commands/window meets its load budgets" time="0.070" classname="TC-PERF-005 | /commands/window meets its load budgets">
+    </testcase>
+    <testcase name="14 · Performance — page budgets TC-PERF-006 | /commands/viewport meets its load budgets" time="0.068" classname="TC-PERF-006 | /commands/viewport meets its load budgets">
+    </testcase>
+    <testcase name="14 · Performance — page budgets TC-PERF-007 | /commands/location meets its load budgets" time="0.073" classname="TC-PERF-007 | /commands/location meets its load budgets">
+    </testcase>
+    <testcase name="14 · Performance — page budgets TC-PERF-008 | /commands/navigation meets its load budgets" time="0.072" classname="TC-PERF-008 | /commands/navigation meets its load budgets">
+    </testcase>
+    <testcase name="14 · Performance — page budgets TC-PERF-009 | /commands/assertions meets its load budgets" time="0.072" classname="TC-PERF-009 | /commands/assertions meets its load budgets">
+    </testcase>
+    <testcase name="14 · Performance — page budgets TC-PERF-010 | /commands/misc meets its load budgets" time="0.074" classname="TC-PERF-010 | /commands/misc meets its load budgets">
+    </testcase>
+    <testcase name="14 · Performance — page budgets TC-PERF-011 | /commands/connectors meets its load budgets" time="0.069" classname="TC-PERF-011 | /commands/connectors meets its load budgets">
+    </testcase>
+    <testcase name="14 · Performance — page budgets TC-PERF-012 | /commands/aliasing meets its load budgets" time="0.068" classname="TC-PERF-012 | /commands/aliasing meets its load budgets">
+    </testcase>
+    <testcase name="14 · Performance — page budgets TC-PERF-013 | /commands/waiting meets its load budgets" time="0.070" classname="TC-PERF-013 | /commands/waiting meets its load budgets">
+    </testcase>
+    <testcase name="14 · Performance — page budgets TC-PERF-014 | /commands/network-requests meets its load budgets" time="0.067" classname="TC-PERF-014 | /commands/network-requests meets its load budgets">
+    </testcase>
+    <testcase name="14 · Performance — page budgets TC-PERF-015 | /commands/files meets its load budgets" time="0.066" classname="TC-PERF-015 | /commands/files meets its load budgets">
+    </testcase>
+    <testcase name="14 · Performance — page budgets TC-PERF-016 | /commands/storage meets its load budgets" time="0.066" classname="TC-PERF-016 | /commands/storage meets its load budgets">
+    </testcase>
+    <testcase name="14 · Performance — page budgets TC-PERF-017 | /commands/cookies meets its load budgets" time="0.073" classname="TC-PERF-017 | /commands/cookies meets its load budgets">
+    </testcase>
+    <testcase name="14 · Performance — page budgets TC-PERF-018 | /commands/spies-stubs-clocks meets its load budgets" time="0.091" classname="TC-PERF-018 | /commands/spies-stubs-clocks meets its load budgets">
+    </testcase>
+    <testcase name="14 · Performance — page budgets TC-PERF-019 | /utilities meets its load budgets" time="0.079" classname="TC-PERF-019 | /utilities meets its load budgets">
+    </testcase>
+    <testcase name="14 · Performance — page budgets TC-PERF-020 | /cypress-api meets its load budgets" time="0.067" classname="TC-PERF-020 | /cypress-api meets its load budgets">
+    </testcase>
+    <testcase name="14 · Performance — page budgets TC-PERF-021 | /todo meets its load budgets" time="0.101" classname="TC-PERF-021 | /todo meets its load budgets">
+    </testcase>
+    <testcase name="14 · Performance — page budgets TC-PERF-030 | Interaction latency: adding a todo renders in under 100 ms" time="0.197" classname="TC-PERF-030 | Interaction latency: adding a todo renders in under 100 ms">
+    </testcase>
+    <testcase name="14 · Performance — page budgets TC-PERF-031 | No long tasks (&gt; 200 ms) while loading the heaviest page" time="0.584" classname="TC-PERF-031 | No long tasks (&gt; 200 ms) while loading the heaviest page">
+    </testcase>
+  </testsuite>
+</testsuites>

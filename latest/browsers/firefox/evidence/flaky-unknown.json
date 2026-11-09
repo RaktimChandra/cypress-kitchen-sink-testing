@@ -1,8 +1,0 @@
-[
- {
-  "spec": "cypress/e2e/07-todo-app/todo-persistence.cy.js",
-  "title": "07 · TodoMVC — persistence in localStorage › TC-TD-132 | Storage record schema: {title, completed, id}",
-  "attempts": 2,
-  "at": "2026-11-09T21:03:38.917Z"
- }
-]

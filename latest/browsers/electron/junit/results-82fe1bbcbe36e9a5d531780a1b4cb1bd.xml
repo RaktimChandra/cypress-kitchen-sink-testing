@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="16.140" tests="16" failures="1">
+  <testsuite name="Root Suite" timestamp="2026-11-09T21:15:45" tests="0" file="cypress/e2e/05-assertions/assertions.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="05 · Assertions — implicit, explicit, retry-ability" timestamp="2026-11-09T21:15:45" tests="16" time="16.138" failures="1">
+    <testcase name="05 · Assertions — implicit, explicit, retry-ability TC-AS-001 | Implicit .should(): row class, cell text, cell html" time="0.226" classname="TC-AS-001 | Implicit .should(): row class, cell text, cell html">
+    </testcase>
+    <testcase name="05 · Assertions — implicit, explicit, retry-ability TC-AS-002 | Chained .and() assertions on the docs link" time="0.087" classname="TC-AS-002 | Chained .and() assertions on the docs link">
+    </testcase>
+    <testcase name="05 · Assertions — implicit, explicit, retry-ability TC-AS-003 | BDD expect: equality, deep equality, regex, type" time="0.082" classname="TC-AS-003 | BDD expect: equality, deep equality, regex, type">
+    </testcase>
+    <testcase name="05 · Assertions — implicit, explicit, retry-ability TC-AS-004 | TDD assert style" time="0.073" classname="TC-AS-004 | TDD assert style">
+    </testcase>
+    <testcase name="05 · Assertions — implicit, explicit, retry-ability TC-AS-005 | Callback .should() checks all three paragraphs in one retried assertion" time="0.072" classname="TC-AS-005 | Callback .should() checks all three paragraphs in one retried assertion">
+    </testcase>
+    <testcase name="05 · Assertions — implicit, explicit, retry-ability TC-AS-006 | Class name matched with a regular expression" time="0.071" classname="TC-AS-006 | Class name matched with a regular expression">
+    </testcase>
+    <testcase name="05 · Assertions — implicit, explicit, retry-ability TC-AS-007 | Retry-ability: random number replaces the 🎁 placeholder within the timeout" time="1.581" classname="TC-AS-007 | Retry-ability: random number replaces the 🎁 placeholder within the timeout">
+    </testcase>
+    <testcase name="05 · Assertions — implicit, explicit, retry-ability TC-AS-008 | Case-insensitive, whitespace-insensitive text comparison" time="0.076" classname="TC-AS-008 | Case-insensitive, whitespace-insensitive text comparison">
+    </testcase>
+    <testcase name="05 · Assertions — implicit, explicit, retry-ability TC-AS-009 | Custom Chai assertion textTrimmed" time="0.075" classname="TC-AS-009 | Custom Chai assertion textTrimmed">
+    </testcase>
+    <testcase name="05 · Assertions — implicit, explicit, retry-ability TC-AS-010 | Negative assertions: absent element, missing class, not visible" time="6.219" classname="TC-AS-010 | Negative assertions: absent element, missing class, not visible">
+      <failure message="Timed out retrying after 6000ms: You attempted to make a chai-jQuery assertion on an object that is neither a DOM object or a jQuery object.
+
+The chai-jQuery assertion you used was:
+
+  &gt; class
+
+The invalid subject you asserted on was:
+
+  &gt; undefined
+
+To use chai-jQuery assertions your subject must be valid.
+
+This can sometimes happen if a previous assertion changed the subject." type="CypressError"><![CDATA[CypressError: Timed out retrying after 6000ms: You attempted to make a chai-jQuery assertion on an object that is neither a DOM object or a jQuery object.
+
+The chai-jQuery assertion you used was:
+
+  > class
+
+The invalid subject you asserted on was:
+
+  > undefined
+
+To use chai-jQuery assertions your subject must be valid.
+
+This can sometimes happen if a previous assertion changed the subject.
+    at Object.onInvalid (http://localhost:8080/__cypress/runner/cypress_runner.js:155723:68)
+    at assertDom (http://localhost:8080/__cypress/runner/cypress_runner.js:156534:24)
+    at assert (http://localhost:8080/__cypress/runner/cypress_runner.js:156539:3)
+    at Proxy.<anonymous> (http://localhost:8080/__cypress/runner/cypress_runner.js:156386:70)
+    at Proxy.methodWrapper (http://localhost:8080/__cypress/runner/cypress_runner.js:81218:25)
+    at applyChainer (http://localhost:8080/__cypress/runner/cypress_runner.js:120387:26)
+    at <unknown> (http://localhost:8080/__cypress/runner/cypress_runner.js:120440:16)
+    at arrayReduce (http://localhost:8080/__cypress/runner/cypress_runner.js:18684:21)
+    at lodash.reduce (http://localhost:8080/__cypress/runner/cypress_runner.js:27775:14)
+    at applyChainers (http://localhost:8080/__cypress/runner/cypress_runner.js:120418:68)
+    at tryCatcher (http://localhost:8080/__cypress/runner/cypress_runner.js:1780:23)
+    at Promise.attempt.Promise.try (http://localhost:8080/__cypress/runner/cypress_runner.js:4288:29)
+    at Context.shouldFn (http://localhost:8080/__cypress/runner/cypress_runner.js:120444:66)
+    at Context.and (http://localhost:8080/__cypress/runner/cypress_runner.js:120466:23)
+    at <unknown> (http://localhost:8080/__cypress/runner/cypress_runner.js:159995:39)
+    at assertions (http://localhost:8080/__cypress/runner/cypress_runner.js:160243:16)
+    at tryCatcher (http://localhost:8080/__cypress/runner/cypress_runner.js:1780:23)
+    at Object.gotValue (http://localhost:8080/__cypress/runner/cypress_runner.js:6451:18)
+    at Object.gotAccum (http://localhost:8080/__cypress/runner/cypress_runner.js:6438:25)
+    at Object.tryCatcher (http://localhost:8080/__cypress/runner/cypress_runner.js:1780:23)
+    at Promise._settlePromiseFromHandler (http://localhost:8080/__cypress/runner/cypress_runner.js:1492:31)
+    at Promise._settlePromise (http://localhost:8080/__cypress/runner/cypress_runner.js:1549:18)
+From Your Spec Code:
+    at Context.eval (webpack://cypress-kitchen-sink-testing/./cypress/e2e/05-assertions/assertions.cy.js:91:67)]]></failure>
+    </testcase>
+    <testcase name="05 · Assertions — implicit, explicit, retry-ability TC-AS-011 | CSS assertions on computed style" time="0.103" classname="TC-AS-011 | CSS assertions on computed style">
+    </testcase>
+    <testcase name="05 · Assertions — implicit, explicit, retry-ability TC-AS-012 | Length assertions on table rows" time="0.089" classname="TC-AS-012 | Length assertions on table rows">
+    </testcase>
+    <testcase name="05 · Assertions — implicit, explicit, retry-ability TC-AS-013 | Row 1: number cell is &quot;1&quot; and both content cells say &quot;Column content&quot;" time="0.083" classname="TC-AS-013 | Row 1: number cell is &quot;1&quot; and both content cells say &quot;Column content&quot;">
+    </testcase>
+    <testcase name="05 · Assertions — implicit, explicit, retry-ability TC-AS-014 | Row 2: number cell is &quot;2&quot; and both content cells say &quot;Column content&quot;" time="0.087" classname="TC-AS-014 | Row 2: number cell is &quot;2&quot; and both content cells say &quot;Column content&quot;">
+    </testcase>
+    <testcase name="05 · Assertions — implicit, explicit, retry-ability TC-AS-015 | Row 3: number cell is &quot;3&quot; and both content cells say &quot;Column content&quot;" time="0.083" classname="TC-AS-015 | Row 3: number cell is &quot;3&quot; and both content cells say &quot;Column content&quot;">
+    </testcase>
+    <testcase name="05 · Assertions — implicit, explicit, retry-ability TC-AS-016 | An assertion that can never pass fails within the configured timeout (assertion of the assertion)" time="0.483" classname="TC-AS-016 | An assertion that can never pass fails within the configured timeout (assertion of the assertion)">
+    </testcase>
+  </testsuite>
+</testsuites>

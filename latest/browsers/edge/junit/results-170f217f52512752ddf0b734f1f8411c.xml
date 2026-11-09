@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="3.506" tests="19" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-11-09T21:17:35" tests="0" file="cypress/e2e/06-querying-traversal/traversal.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="06 · Traversal" timestamp="2026-11-09T21:17:35" tests="19" time="3.503" failures="0">
+    <testcase name="06 · Traversal TC-QT-030 | .children() navigates to the documented element(s)" time="0.311" classname="TC-QT-030 | .children() navigates to the documented element(s)">
+    </testcase>
+    <testcase name="06 · Traversal TC-QT-031 | .closest() navigates to the documented element(s)" time="0.143" classname="TC-QT-031 | .closest() navigates to the documented element(s)">
+    </testcase>
+    <testcase name="06 · Traversal TC-QT-032 | .eq() navigates to the documented element(s)" time="0.133" classname="TC-QT-032 | .eq() navigates to the documented element(s)">
+    </testcase>
+    <testcase name="06 · Traversal TC-QT-033 | .filter() navigates to the documented element(s)" time="0.134" classname="TC-QT-033 | .filter() navigates to the documented element(s)">
+    </testcase>
+    <testcase name="06 · Traversal TC-QT-034 | .find() navigates to the documented element(s)" time="0.159" classname="TC-QT-034 | .find() navigates to the documented element(s)">
+    </testcase>
+    <testcase name="06 · Traversal TC-QT-035 | .first() navigates to the documented element(s)" time="0.143" classname="TC-QT-035 | .first() navigates to the documented element(s)">
+    </testcase>
+    <testcase name="06 · Traversal TC-QT-036 | .last() navigates to the documented element(s)" time="0.146" classname="TC-QT-036 | .last() navigates to the documented element(s)">
+    </testcase>
+    <testcase name="06 · Traversal TC-QT-037 | .next() navigates to the documented element(s)" time="0.140" classname="TC-QT-037 | .next() navigates to the documented element(s)">
+    </testcase>
+    <testcase name="06 · Traversal TC-QT-038 | .nextAll() navigates to the documented element(s)" time="0.151" classname="TC-QT-038 | .nextAll() navigates to the documented element(s)">
+    </testcase>
+    <testcase name="06 · Traversal TC-QT-039 | .nextUntil() navigates to the documented element(s)" time="0.132" classname="TC-QT-039 | .nextUntil() navigates to the documented element(s)">
+    </testcase>
+    <testcase name="06 · Traversal TC-QT-040 | .not() navigates to the documented element(s)" time="0.129" classname="TC-QT-040 | .not() navigates to the documented element(s)">
+    </testcase>
+    <testcase name="06 · Traversal TC-QT-041 | .parent() navigates to the documented element(s)" time="0.129" classname="TC-QT-041 | .parent() navigates to the documented element(s)">
+    </testcase>
+    <testcase name="06 · Traversal TC-QT-042 | .parents() navigates to the documented element(s)" time="0.143" classname="TC-QT-042 | .parents() navigates to the documented element(s)">
+    </testcase>
+    <testcase name="06 · Traversal TC-QT-043 | .parentsUntil() navigates to the documented element(s)" time="0.135" classname="TC-QT-043 | .parentsUntil() navigates to the documented element(s)">
+    </testcase>
+    <testcase name="06 · Traversal TC-QT-044 | .prev() navigates to the documented element(s)" time="0.141" classname="TC-QT-044 | .prev() navigates to the documented element(s)">
+    </testcase>
+    <testcase name="06 · Traversal TC-QT-045 | .prevAll() navigates to the documented element(s)" time="0.131" classname="TC-QT-045 | .prevAll() navigates to the documented element(s)">
+    </testcase>
+    <testcase name="06 · Traversal TC-QT-046 | .prevUntil() navigates to the documented element(s)" time="0.134" classname="TC-QT-046 | .prevUntil() navigates to the documented element(s)">
+    </testcase>
+    <testcase name="06 · Traversal TC-QT-047 | .siblings() navigates to the documented element(s)" time="0.193" classname="TC-QT-047 | .siblings() navigates to the documented element(s)">
+    </testcase>
+    <testcase name="06 · Traversal TC-QT-050 | Badge inside the list item shows 54" time="0.132" classname="TC-QT-050 | Badge inside the list item shows 54">
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,1 +1,62 @@
-[]
+[
+ {
+  "level": "Acceptance",
+  "priority": "P1",
+  "type": "Acceptance",
+  "technique": "Scenario",
+  "tags": [],
+  "id": "TC-UAT-001",
+  "title": "Given a visitor on the home page, When they use the menu to reach Actions and fill every form control, Then each control reflects the input",
+  "req": "REQ-FC-01..13, REQ-NAV-01",
+  "expected": "navigation via menu; email, focus/blur, clear, submit, checkbox, radio, select, range all verified",
+  "spec": "cypress/e2e/17-acceptance/demo-journeys.cy.js"
+ },
+ {
+  "level": "Acceptance",
+  "priority": "P1",
+  "type": "Acceptance",
+  "technique": "Scenario",
+  "tags": [],
+  "id": "TC-UAT-002",
+  "title": "Given the Actions page, When the user clicks, double-clicks, right-clicks and scrolls, Then every interaction gives visible feedback",
+  "req": "REQ-UI-01..06",
+  "expected": "popover, canvas dot, edit fields, scrolled buttons",
+  "spec": "cypress/e2e/17-acceptance/demo-journeys.cy.js"
+ },
+ {
+  "level": "Acceptance",
+  "priority": "P1",
+  "type": "Acceptance",
+  "technique": "Scenario",
+  "tags": [],
+  "id": "TC-UAT-003",
+  "title": "Given an empty todo list, When a user plans their day, Then the list, counter, filters and storage agree",
+  "req": "REQ-TD-01..10",
+  "expected": "3 added, 1 edited, 1 completed, filtered, cleared; storage matches",
+  "spec": "cypress/e2e/17-acceptance/demo-journeys.cy.js"
+ },
+ {
+  "level": "Acceptance",
+  "priority": "P1",
+  "type": "Acceptance",
+  "technique": "Scenario",
+  "tags": [],
+  "id": "TC-UAT-004",
+  "title": "Given any page, When the user browses with back/forward and reload, Then they always land on the expected page",
+  "req": "REQ-NAV-01..04",
+  "expected": "five-page tour, history and reload consistent",
+  "spec": "cypress/e2e/17-acceptance/demo-journeys.cy.js"
+ },
+ {
+  "level": "Acceptance",
+  "priority": "P2",
+  "type": "Acceptance",
+  "technique": "Scenario",
+  "tags": [],
+  "id": "TC-UAT-005",
+  "title": "Given a comments API, When the user triggers GET/POST/PUT, Then the page reports each outcome (API stubbed)",
+  "req": "REQ-NW-01..03",
+  "expected": "comment text, \"POST successful!\", 404 message",
+  "spec": "cypress/e2e/17-acceptance/demo-journeys.cy.js"
+ }
+]
