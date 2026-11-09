@@ -1,0 +1,424 @@
+{
+ "summary": {
+  "browser": "chrome",
+  "total": 41,
+  "pass": 40,
+  "fail": 1,
+  "knownDefect": 0,
+  "skipped": 0,
+  "durationSec": 19,
+  "generatedAt": "2026-11-09T20:56:23.825Z"
+ },
+ "results": [
+  {
+   "id": "TC-NAV-060",
+   "title": "Deep link /commands/actions#type scrolls its section into view",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 251,
+   "spec": "cypress/e2e/02-navigation/anchors-and-routes.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-NAV-061",
+   "title": "Deep link /commands/actions#focus scrolls its section into view",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 122,
+   "spec": "cypress/e2e/02-navigation/anchors-and-routes.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-NAV-062",
+   "title": "Deep link /commands/actions#blur scrolls its section into view",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 118,
+   "spec": "cypress/e2e/02-navigation/anchors-and-routes.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-NAV-063",
+   "title": "Deep link /commands/actions#clear scrolls its section into view",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 114,
+   "spec": "cypress/e2e/02-navigation/anchors-and-routes.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-NAV-064",
+   "title": "Deep link /commands/actions#submit scrolls its section into view",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 108,
+   "spec": "cypress/e2e/02-navigation/anchors-and-routes.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-NAV-065",
+   "title": "Deep link /commands/actions#click scrolls its section into view",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 109,
+   "spec": "cypress/e2e/02-navigation/anchors-and-routes.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-NAV-066",
+   "title": "Deep link /commands/actions#dblclick scrolls its section into view",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 118,
+   "spec": "cypress/e2e/02-navigation/anchors-and-routes.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-NAV-067",
+   "title": "Deep link /commands/actions#rightclick scrolls its section into view",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 113,
+   "spec": "cypress/e2e/02-navigation/anchors-and-routes.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-NAV-068",
+   "title": "Deep link /commands/actions#check scrolls its section into view",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 112,
+   "spec": "cypress/e2e/02-navigation/anchors-and-routes.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-NAV-069",
+   "title": "Deep link /commands/actions#uncheck scrolls its section into view",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 114,
+   "spec": "cypress/e2e/02-navigation/anchors-and-routes.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-NAV-070",
+   "title": "Deep link /commands/actions#select scrolls its section into view",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 159,
+   "spec": "cypress/e2e/02-navigation/anchors-and-routes.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-NAV-071",
+   "title": "Deep link /commands/actions#scrollIntoView scrolls its section into view",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 129,
+   "spec": "cypress/e2e/02-navigation/anchors-and-routes.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-NAV-072",
+   "title": "Deep link /commands/actions#scrollTo scrolls its section into view",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 108,
+   "spec": "cypress/e2e/02-navigation/anchors-and-routes.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-NAV-073",
+   "title": "Deep link /commands/actions#trigger scrolls its section into view",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 107,
+   "spec": "cypress/e2e/02-navigation/anchors-and-routes.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-NAV-080",
+   "title": "Every documented section heading on every page has a working \"on.cypress.io\" docs link",
+   "browser": "chrome",
+   "status": "FAIL",
+   "durationMs": 7373,
+   "spec": "cypress/e2e/02-navigation/anchors-and-routes.cy.js",
+   "defect": null,
+   "error": "AssertionError: Timed out retrying after 6000ms: Expected to find element: `h4[id=\"expect\"] a`, but never found it."
+  },
+  {
+   "id": "TC-NAV-081",
+   "title": "Todo route #/ selects \"All\" and shows 3 item(s)",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 194,
+   "spec": "cypress/e2e/02-navigation/anchors-and-routes.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-NAV-082",
+   "title": "Todo route #/active selects \"Active\" and shows 2 item(s)",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 143,
+   "spec": "cypress/e2e/02-navigation/anchors-and-routes.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-NAV-083",
+   "title": "Todo route #/completed selects \"Completed\" and shows 1 item(s)",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 148,
+   "spec": "cypress/e2e/02-navigation/anchors-and-routes.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-NAV-084",
+   "title": "Clicking filters updates the hash and the back button restores the previous filter",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 463,
+   "spec": "cypress/e2e/02-navigation/anchors-and-routes.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-NAV-085",
+   "title": "Unknown todo route falls back to showing all items",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 6119,
+   "spec": "cypress/e2e/02-navigation/anchors-and-routes.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-SMK-001",
+   "title": "/ loads with its heading and no errors",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 310,
+   "spec": "cypress/e2e/01-smoke/smoke.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-SMK-002",
+   "title": "/commands/querying loads with its heading and no errors",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 136,
+   "spec": "cypress/e2e/01-smoke/smoke.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-SMK-003",
+   "title": "/commands/traversal loads with its heading and no errors",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 110,
+   "spec": "cypress/e2e/01-smoke/smoke.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-SMK-004",
+   "title": "/commands/actions loads with its heading and no errors",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 113,
+   "spec": "cypress/e2e/01-smoke/smoke.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-SMK-005",
+   "title": "/commands/window loads with its heading and no errors",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 97,
+   "spec": "cypress/e2e/01-smoke/smoke.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-SMK-006",
+   "title": "/commands/viewport loads with its heading and no errors",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 106,
+   "spec": "cypress/e2e/01-smoke/smoke.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-SMK-007",
+   "title": "/commands/location loads with its heading and no errors",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 94,
+   "spec": "cypress/e2e/01-smoke/smoke.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-SMK-008",
+   "title": "/commands/navigation loads with its heading and no errors",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 136,
+   "spec": "cypress/e2e/01-smoke/smoke.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-SMK-009",
+   "title": "/commands/assertions loads with its heading and no errors",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 122,
+   "spec": "cypress/e2e/01-smoke/smoke.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-SMK-010",
+   "title": "/commands/misc loads with its heading and no errors",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 97,
+   "spec": "cypress/e2e/01-smoke/smoke.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-SMK-011",
+   "title": "/commands/connectors loads with its heading and no errors",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 94,
+   "spec": "cypress/e2e/01-smoke/smoke.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-SMK-012",
+   "title": "/commands/aliasing loads with its heading and no errors",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 94,
+   "spec": "cypress/e2e/01-smoke/smoke.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-SMK-013",
+   "title": "/commands/waiting loads with its heading and no errors",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 94,
+   "spec": "cypress/e2e/01-smoke/smoke.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-SMK-014",
+   "title": "/commands/network-requests loads with its heading and no errors",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 95,
+   "spec": "cypress/e2e/01-smoke/smoke.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-SMK-015",
+   "title": "/commands/files loads with its heading and no errors",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 94,
+   "spec": "cypress/e2e/01-smoke/smoke.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-SMK-016",
+   "title": "/commands/storage loads with its heading and no errors",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 88,
+   "spec": "cypress/e2e/01-smoke/smoke.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-SMK-017",
+   "title": "/commands/cookies loads with its heading and no errors",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 89,
+   "spec": "cypress/e2e/01-smoke/smoke.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-SMK-018",
+   "title": "/commands/spies-stubs-clocks loads with its heading and no errors",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 172,
+   "spec": "cypress/e2e/01-smoke/smoke.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-SMK-019",
+   "title": "/utilities loads with its heading and no errors",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 94,
+   "spec": "cypress/e2e/01-smoke/smoke.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-SMK-020",
+   "title": "/cypress-api loads with its heading and no errors",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 86,
+   "spec": "cypress/e2e/01-smoke/smoke.cy.js",
+   "defect": null,
+   "error": null
+  },
+  {
+   "id": "TC-SMK-021",
+   "title": "/todo loads with its heading and no errors",
+   "browser": "chrome",
+   "status": "PASS",
+   "durationMs": 114,
+   "spec": "cypress/e2e/01-smoke/smoke.cy.js",
+   "defect": null,
+   "error": null
+  }
+ ]
+}
