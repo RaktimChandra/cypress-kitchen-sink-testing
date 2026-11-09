@@ -7,6 +7,6 @@ coverage/
 cypress/videos/
 cypress/screenshots/
 cypress/downloads/
-deliverables/
+/deliverables/
 *.zip
 .DS_Store
