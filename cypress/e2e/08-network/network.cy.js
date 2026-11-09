@@ -94,7 +94,9 @@ describe('08 · Network — stubbing and observing requests', { tags: ['@network
       req.url = `${Cypress.config('baseUrl')}/todo`
       req.continue((res) => {
         expect(res.statusCode, 'real upstream status').to.eq(200)
+        // the browser still sees a cross-origin call to jsonplaceholder, so the rewritten response needs CORS
         res.headers['content-type'] = 'application/json; charset=utf-8'
+        res.headers['access-control-allow-origin'] = '*'
         res.send({ body: 'rewritten by test' })
       })
     }).as('mod')
