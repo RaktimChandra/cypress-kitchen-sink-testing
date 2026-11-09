@@ -1,0 +1,65 @@
+name: Release
+
+# A release is cut when CHANGELOG.md records a new version on main.
+on:
+  push:
+    branches: [main]
+    paths: ['CHANGELOG.md']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+        with: { fetch-depth: 0 }
+
+      - name: Read the top version from the changelog
+        id: v
+        run: |
+          version=$(grep -m1 -oP '^## \[\K[0-9]+\.[0-9]+\.[0-9]+' CHANGELOG.md)
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          if git rev-parse "v$version" >/dev/null 2>&1; then
+            echo "exists=yes" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=no" >> "$GITHUB_OUTPUT"
+          fi
+          awk -v v="$version" '
+            $0 ~ "^## \\["v"\\]" {take=1; next}
+            take && /^## \[/ {exit}
+            take {print}
+          ' CHANGELOG.md > RELEASE_NOTES.md
+          echo "--- notes ---"; cat RELEASE_NOTES.md
+
+      - name: Collect the test-case catalogue and the latest evidence
+        if: steps.v.outputs.exists == 'no'
+        run: |
+          npm ci --ignore-scripts
+          node tools/catalogue.js
+          mkdir -p release
+          cp reports/catalogue.json release/test-case-catalogue.json
+          cp docs/requirements.json docs/defects.json docs/ci-history.json release/
+          if git ls-remote --exit-code --heads origin results >/dev/null 2>&1; then
+            git fetch --depth 1 origin results
+            git archive FETCH_HEAD latest | tar -x -C release || true
+            find release/latest -name '*.mp4' -delete || true
+            tar -czf release/ci-evidence.tar.gz -C release latest && rm -rf release/latest
+          fi
+          ls -la release
+        env:
+          CYPRESS_INSTALL_BINARY: '0'
+
+      - name: Tag and publish
+        if: steps.v.outputs.exists == 'no'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git tag -a "v${{ steps.v.outputs.version }}" -m "v${{ steps.v.outputs.version }}"
+          git push origin "v${{ steps.v.outputs.version }}"
+          gh release create "v${{ steps.v.outputs.version }}" \
+            --title "v${{ steps.v.outputs.version }}" \
+            --notes-file RELEASE_NOTES.md \
+            release/*
