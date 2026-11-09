@@ -1,6 +1,6 @@
 # Defect log
 
-Defects found in the Cypress Kitchen Sink (commit `f2cb767`). Each one is reproduced on every CI run by a *known-defect* test (`tc.knownDefect`). That test passes while the defect is present and fails once it is fixed.
+Defects found in the Cypress Kitchen Sink (commit `f2cb767`). Each one is reproduced on every CI run by a *known-defect* test (`tc.knownDefect`). That test passes while the defect is present and fails once the defect is fixed.
 
 | ID | Title | Severity | Priority | Test |
 |---|---|---|---|---|
@@ -12,6 +12,11 @@ Defects found in the Cypress Kitchen Sink (commit `f2cb767`). Each one is reprod
 | DEF-KS-006 | Directory listing exposed for /assets/js/ | Minor | P3 | `TC-SEC-033` |
 | DEF-KS-007 | target=_blank links without rel=noopener | Minor | P3 | `TC-SEC-032` |
 | DEF-KS-008 | Horizontal overflow on phone and tablet widths | Minor | P3 | `TC-RSP-030, TC-RSP-031` |
+| DEF-KS-009 | Todo IDs are millisecond timestamps, so items can share an ID and toggle the wrong item | Major | P2 | `TC-TD-136` |
+| DEF-KS-010 | Text colour contrast below 4.5:1 on every page | Minor | P3 | `TC-A11Y-050 (and the axe audit of all 21 pages)` |
+| DEF-KS-011 | Form fields without an accessible name | Major | P2 | `TC-A11Y-051` |
+| DEF-KS-012 | Links inside text are distinguished by colour alone | Minor | P3 | `TC-A11Y-052` |
+| DEF-KS-013 | Scrollable demo boxes cannot be reached with the keyboard | Minor | P3 | `TC-A11Y-053` |
 
 ## DEF-KS-001 — Unknown todo route throws and blanks the list
 
@@ -84,3 +89,48 @@ Defects found in the Cypress Kitchen Sink (commit `f2cb767`). Each one is reprod
 - **Expected:** No horizontal scrolling (scrollWidth <= clientWidth).
 - **Actual:** Actions overflows by about 178-201 px at 320-375 px and 13 px at 768 px; storage, misc, aliasing, assertions and traversal pages also overflow.
 - **Suggested fix:** Wrap long <pre> code samples (overflow-x:auto on the block) and constrain fixed-width tables.
+
+## DEF-KS-009 — Todo IDs are millisecond timestamps, so items can share an ID and toggle the wrong item
+
+- **Area:** Todo app / data model
+- **Found by:** Error guessing + white-box review (found while debugging TC-TD-132 in CI)
+- **Steps:** 1. Open /todo with empty storage (the two demo items are created in the same millisecond). 2. Inspect localStorage. 3. Tick the second item.
+- **Expected:** Every item has a unique id; ticking the second item completes only the second item.
+- **Actual:** Both demo items get the same id (store.js line 103: id = new Date().getTime()). Ticking 'Walk the dog' marks 'Pay electric bill' as completed instead, and the wrong state is persisted.
+- **Suggested fix:** Generate ids with a counter or crypto.randomUUID() instead of the current timestamp.
+
+## DEF-KS-010 — Text colour contrast below 4.5:1 on every page
+
+- **Area:** Accessibility (WCAG 1.4.3)
+- **Found by:** Checklist (WCAG 2.1 AA, axe-core)
+- **Steps:** Run axe-core 4.11 with WCAG 2.1 AA rules on any page, e.g. /commands/actions.
+- **Expected:** 0 color-contrast violations.
+- **Actual:** Serious color-contrast violations on 20 of 21 pages (113 nodes on /commands/actions alone), mostly grey code comments and muted text.
+- **Suggested fix:** Darken the muted text and syntax-highlighting colours to reach 4.5:1.
+
+## DEF-KS-011 — Form fields without an accessible name
+
+- **Area:** Accessibility (WCAG 4.1.2, 1.3.1)
+- **Found by:** Checklist (WCAG 2.1 AA, axe-core)
+- **Steps:** Run axe rules label and select-name on /commands/actions, /commands/waiting and /todo.
+- **Expected:** Every input, textarea and select has a label or aria-label.
+- **Actual:** Critical violations: inputs and selects on Actions and Waiting, and the new-todo/edit inputs on the Todo app, rely on placeholders only. Screen readers announce them as unlabeled fields.
+- **Suggested fix:** Add <label for> or aria-label to each control.
+
+## DEF-KS-012 — Links inside text are distinguished by colour alone
+
+- **Area:** Accessibility (WCAG 1.4.1)
+- **Found by:** Checklist (WCAG 2.1 AA, axe-core)
+- **Steps:** Run axe rule link-in-text-block on /commands/assertions (also querying, waiting, spies-stubs-clocks).
+- **Expected:** Inline links have a non-colour cue such as an underline.
+- **Actual:** Inline links have no underline and too little contrast with the surrounding text.
+- **Suggested fix:** Underline links in body text.
+
+## DEF-KS-013 — Scrollable demo boxes cannot be reached with the keyboard
+
+- **Area:** Accessibility (WCAG 2.1.1)
+- **Found by:** Checklist (WCAG 2.1 AA, axe-core)
+- **Steps:** Run axe rule scrollable-region-focusable on /commands/actions; try to scroll #scrollable-horizontal with the keyboard.
+- **Expected:** Scrollable regions are focusable (tabindex=0) so keyboard users can scroll them.
+- **Actual:** The overflow boxes used by the scrollTo demos are not focusable.
+- **Suggested fix:** Add tabindex="0" and an accessible name to the scroll containers.

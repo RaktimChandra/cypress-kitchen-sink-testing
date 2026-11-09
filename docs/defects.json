@@ -102,5 +102,70 @@
     "actual": "Actions overflows by about 178-201 px at 320-375 px and 13 px at 768 px; storage, misc, aliasing, assertions and traversal pages also overflow.",
     "technique": "BVA (breakpoints)",
     "fix": "Wrap long <pre> code samples (overflow-x:auto on the block) and constrain fixed-width tables."
+  },
+  {
+    "id": "DEF-KS-009",
+    "title": "Todo IDs are millisecond timestamps, so items can share an ID and toggle the wrong item",
+    "area": "Todo app / data model",
+    "severity": "Major",
+    "priority": "P2",
+    "test": "TC-TD-136",
+    "steps": "1. Open /todo with empty storage (the two demo items are created in the same millisecond). 2. Inspect localStorage. 3. Tick the second item.",
+    "expected": "Every item has a unique id; ticking the second item completes only the second item.",
+    "actual": "Both demo items get the same id (store.js line 103: id = new Date().getTime()). Ticking 'Walk the dog' marks 'Pay electric bill' as completed instead, and the wrong state is persisted.",
+    "technique": "Error guessing + white-box review (found while debugging TC-TD-132 in CI)",
+    "fix": "Generate ids with a counter or crypto.randomUUID() instead of the current timestamp."
+  },
+  {
+    "id": "DEF-KS-010",
+    "title": "Text colour contrast below 4.5:1 on every page",
+    "area": "Accessibility (WCAG 1.4.3)",
+    "severity": "Minor",
+    "priority": "P3",
+    "test": "TC-A11Y-050 (and the axe audit of all 21 pages)",
+    "steps": "Run axe-core 4.11 with WCAG 2.1 AA rules on any page, e.g. /commands/actions.",
+    "expected": "0 color-contrast violations.",
+    "actual": "Serious color-contrast violations on 20 of 21 pages (113 nodes on /commands/actions alone), mostly grey code comments and muted text.",
+    "technique": "Checklist (WCAG 2.1 AA, axe-core)",
+    "fix": "Darken the muted text and syntax-highlighting colours to reach 4.5:1."
+  },
+  {
+    "id": "DEF-KS-011",
+    "title": "Form fields without an accessible name",
+    "area": "Accessibility (WCAG 4.1.2, 1.3.1)",
+    "severity": "Major",
+    "priority": "P2",
+    "test": "TC-A11Y-051",
+    "steps": "Run axe rules label and select-name on /commands/actions, /commands/waiting and /todo.",
+    "expected": "Every input, textarea and select has a label or aria-label.",
+    "actual": "Critical violations: inputs and selects on Actions and Waiting, and the new-todo/edit inputs on the Todo app, rely on placeholders only. Screen readers announce them as unlabeled fields.",
+    "technique": "Checklist (WCAG 2.1 AA, axe-core)",
+    "fix": "Add <label for> or aria-label to each control."
+  },
+  {
+    "id": "DEF-KS-012",
+    "title": "Links inside text are distinguished by colour alone",
+    "area": "Accessibility (WCAG 1.4.1)",
+    "severity": "Minor",
+    "priority": "P3",
+    "test": "TC-A11Y-052",
+    "steps": "Run axe rule link-in-text-block on /commands/assertions (also querying, waiting, spies-stubs-clocks).",
+    "expected": "Inline links have a non-colour cue such as an underline.",
+    "actual": "Inline links have no underline and too little contrast with the surrounding text.",
+    "technique": "Checklist (WCAG 2.1 AA, axe-core)",
+    "fix": "Underline links in body text."
+  },
+  {
+    "id": "DEF-KS-013",
+    "title": "Scrollable demo boxes cannot be reached with the keyboard",
+    "area": "Accessibility (WCAG 2.1.1)",
+    "severity": "Minor",
+    "priority": "P3",
+    "test": "TC-A11Y-053",
+    "steps": "Run axe rule scrollable-region-focusable on /commands/actions; try to scroll #scrollable-horizontal with the keyboard.",
+    "expected": "Scrollable regions are focusable (tabindex=0) so keyboard users can scroll them.",
+    "actual": "The overflow boxes used by the scrollTo demos are not focusable.",
+    "technique": "Checklist (WCAG 2.1 AA, axe-core)",
+    "fix": "Add tabindex=\"0\" and an accessible name to the scroll containers."
   }
 ]
