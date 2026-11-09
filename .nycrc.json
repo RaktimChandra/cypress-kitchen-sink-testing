@@ -1,0 +1,6 @@
+{
+  "reporter": ["json-summary", "json", "html", "text", "lcov"],
+  "report-dir": "reports/coverage",
+  "temp-dir": ".nyc_output",
+  "exclude": ["**/vendor/**", "cypress/**", "tools/**"]
+}
