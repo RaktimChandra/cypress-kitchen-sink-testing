@@ -57,8 +57,10 @@ Cypress.Commands.add('checkA11y', ({ page, context = 'html', failOn = ['critical
         id: v.id, impact: v.impact, help: v.help, nodes: v.nodes.length,
         targets: v.nodes.slice(0, 5).map((n) => n.target.join(' ')),
       }))
-      cy.task('evidence', { kind: 'a11y', record: { page, violations } }, { log: false })
       violations.forEach((v) => cy.log(`a11y ${v.impact}: ${v.id} (${v.nodes})`))
+      // record the evidence first, and only then assert, so findings are kept even when the test fails
+      return cy.task('evidence', { kind: 'a11y', record: { page, browser: Cypress.browser.name, violations } }, { log: false }).then(() => violations)
+    }).then((violations) => {
       const blocking = violations.filter((v) => failOn.includes(v.impact) && !known.includes(v.id))
       expect(blocking.map((v) => `${v.id} [${v.impact}] ×${v.nodes}`), `new ${failOn.join('/')} accessibility violations on ${page}`).to.deep.equal([])
     })
