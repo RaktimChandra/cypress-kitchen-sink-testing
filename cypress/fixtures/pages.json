@@ -1,0 +1,266 @@
+[
+ {
+  "path": "/",
+  "file": "index.html",
+  "banner": "Kitchen Sink",
+  "menu": null,
+  "group": "home"
+ },
+ {
+  "path": "/commands/querying",
+  "file": "commands/querying.html",
+  "banner": "Querying",
+  "menu": "Querying",
+  "group": "commands",
+  "anchors": [
+   "get",
+   "contains",
+   "within",
+   "root",
+   "best-practices"
+  ]
+ },
+ {
+  "path": "/commands/traversal",
+  "file": "commands/traversal.html",
+  "banner": "Traversal",
+  "menu": "Traversal",
+  "group": "commands",
+  "anchors": [
+   "children",
+   "closest",
+   "eq",
+   "filter",
+   "find",
+   "first",
+   "last",
+   "next",
+   "nextAll",
+   "nextUntil",
+   "not",
+   "parent",
+   "parents",
+   "parentsUntil",
+   "prev",
+   "prevAll",
+   "prevUntil",
+   "siblings"
+  ]
+ },
+ {
+  "path": "/commands/actions",
+  "file": "commands/actions.html",
+  "banner": "Actions",
+  "menu": "Actions",
+  "group": "commands",
+  "anchors": [
+   "type",
+   "focus",
+   "blur",
+   "clear",
+   "submit",
+   "click",
+   "dblclick",
+   "rightclick",
+   "check",
+   "uncheck",
+   "select",
+   "scrollIntoView",
+   "scrollTo",
+   "trigger"
+  ]
+ },
+ {
+  "path": "/commands/window",
+  "file": "commands/window.html",
+  "banner": "Window",
+  "menu": "Window",
+  "group": "commands",
+  "anchors": [
+   "document",
+   "title"
+  ]
+ },
+ {
+  "path": "/commands/viewport",
+  "file": "commands/viewport.html",
+  "banner": "Viewport",
+  "menu": "Viewport",
+  "group": "commands",
+  "anchors": []
+ },
+ {
+  "path": "/commands/location",
+  "file": "commands/location.html",
+  "banner": "Location",
+  "menu": "Location",
+  "group": "commands",
+  "anchors": [
+   "hash",
+   "location",
+   "url"
+  ]
+ },
+ {
+  "path": "/commands/navigation",
+  "file": "commands/navigation.html",
+  "banner": "Navigation",
+  "menu": "Navigation",
+  "group": "commands",
+  "anchors": [
+   "go",
+   "reload",
+   "visit"
+  ]
+ },
+ {
+  "path": "/commands/assertions",
+  "file": "commands/assertions.html",
+  "banner": "Assertions",
+  "menu": "Assertions",
+  "group": "commands",
+  "anchors": [
+   "should",
+   "and",
+   "expect",
+   "assert"
+  ]
+ },
+ {
+  "path": "/commands/misc",
+  "file": "commands/misc.html",
+  "banner": "Misc",
+  "menu": "Misc",
+  "group": "commands",
+  "anchors": [
+   "focused",
+   "screenshot",
+   "wrap"
+  ]
+ },
+ {
+  "path": "/commands/connectors",
+  "file": "commands/connectors.html",
+  "banner": "Connectors",
+  "menu": "Connectors",
+  "group": "commands",
+  "anchors": [
+   "each",
+   "its",
+   "invoke",
+   "spread",
+   "then"
+  ]
+ },
+ {
+  "path": "/commands/aliasing",
+  "file": "commands/aliasing.html",
+  "banner": "Aliasing",
+  "menu": "Aliasing",
+  "group": "commands",
+  "anchors": []
+ },
+ {
+  "path": "/commands/waiting",
+  "file": "commands/waiting.html",
+  "banner": "Waiting",
+  "menu": "Waiting",
+  "group": "commands",
+  "anchors": []
+ },
+ {
+  "path": "/commands/network-requests",
+  "file": "commands/network-requests.html",
+  "banner": "Network Requests",
+  "menu": "Network Requests",
+  "group": "commands",
+  "anchors": [
+   "request",
+   "http"
+  ]
+ },
+ {
+  "path": "/commands/files",
+  "file": "commands/files.html",
+  "banner": "Files",
+  "menu": "Files",
+  "group": "commands",
+  "anchors": [
+   "fixture",
+   "require",
+   "readFile",
+   "writeFile"
+  ]
+ },
+ {
+  "path": "/commands/storage",
+  "file": "commands/storage.html",
+  "banner": "Storage",
+  "menu": "Storage",
+  "group": "commands",
+  "anchors": []
+ },
+ {
+  "path": "/commands/cookies",
+  "file": "commands/cookies.html",
+  "banner": "Cookies",
+  "menu": "Cookies",
+  "group": "commands",
+  "anchors": []
+ },
+ {
+  "path": "/commands/spies-stubs-clocks",
+  "file": "commands/spies-stubs-clocks.html",
+  "banner": "Spies, Stubs & Clocks",
+  "menu": "Spies, Stubs & Clocks",
+  "group": "commands",
+  "anchors": [
+   "spy",
+   "stub",
+   "clock",
+   "tick",
+   "stub-arguments",
+   "matchers"
+  ]
+ },
+ {
+  "path": "/utilities",
+  "file": "utilities.html",
+  "banner": "Utilities",
+  "menu": "Utilities",
+  "group": "top",
+  "anchors": [
+   "_",
+   "$",
+   "Blob",
+   "minimatch",
+   "Promise"
+  ]
+ },
+ {
+  "path": "/cypress-api",
+  "file": "cypress-api.html",
+  "banner": "Cypress API",
+  "menu": "Cypress API",
+  "group": "top",
+  "anchors": [
+   "Commands.add",
+   "Cookies.debug",
+   "arch",
+   "config",
+   "dom.isHidden",
+   "env",
+   "log",
+   "platform",
+   "version"
+  ]
+ },
+ {
+  "path": "/todo",
+  "file": "todo.html",
+  "banner": null,
+  "menu": null,
+  "group": "app",
+  "anchors": []
+ }
+]

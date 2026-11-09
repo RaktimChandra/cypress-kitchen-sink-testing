@@ -1,0 +1,7 @@
+{
+  "postId": 1,
+  "id": 1,
+  "name": "Fixture comment",
+  "email": "fixture@example.com",
+  "body": "This comment body comes from cypress/fixtures/comment.json"
+}

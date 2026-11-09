@@ -1,0 +1,4 @@
+{
+  "_comment": "Known accessibility issues of the Kitchen Sink, each logged as a defect (docs/DEFECTS.md). A known rule is reported but does not fail the build; any NEW serious/critical violation does.",
+  "global": []
+}
