@@ -1,0 +1,320 @@
+[
+ {
+  "id": "REQ-NAV-01",
+  "area": "Navigation",
+  "text": "Navbar Commands dropdown lists the 17 command pages in order and each entry opens its page",
+  "priority": "P1"
+ },
+ {
+  "id": "REQ-NAV-02",
+  "area": "Navigation",
+  "text": "Top-level links (brand, Utilities, Cypress API, GitHub) navigate to the right destination",
+  "priority": "P1"
+ },
+ {
+  "id": "REQ-NAV-03",
+  "area": "Navigation",
+  "text": "Browser history back/forward and reload behave correctly across pages",
+  "priority": "P1"
+ },
+ {
+  "id": "REQ-NAV-04",
+  "area": "Navigation",
+  "text": "Every page is reachable directly by URL (HTTP 200, clean URLs, .html redirects); unknown URLs return 404",
+  "priority": "P1"
+ },
+ {
+  "id": "REQ-NAV-05",
+  "area": "Navigation",
+  "text": "Section headings are deep-linkable anchors with documentation links",
+  "priority": "P2"
+ },
+ {
+  "id": "REQ-NAV-06",
+  "area": "Navigation",
+  "text": "Navbar collapses into a hamburger toggle below the 768 px breakpoint and stays operable",
+  "priority": "P1"
+ },
+ {
+  "id": "REQ-NAV-07",
+  "area": "Navigation",
+  "text": "Todo filters are routed through the URL hash (#/, #/active, #/completed)",
+  "priority": "P1"
+ },
+ {
+  "id": "REQ-FC-01",
+  "area": "Form controls",
+  "text": "Text, email and password inputs accept typed text including special keys, Unicode and long values",
+  "priority": "P1"
+ },
+ {
+  "id": "REQ-FC-02",
+  "area": "Form controls",
+  "text": "The email field applies HTML5 e-mail syntax validation",
+  "priority": "P1"
+ },
+ {
+  "id": "REQ-FC-03",
+  "area": "Form controls",
+  "text": "Focusing the password field highlights it (class focus, label orange)",
+  "priority": "P1"
+ },
+ {
+  "id": "REQ-FC-04",
+  "area": "Form controls",
+  "text": "Leaving the full-name field marks it (class error, label red)",
+  "priority": "P1"
+ },
+ {
+  "id": "REQ-FC-05",
+  "area": "Form controls",
+  "text": "Clearing the description field empties it",
+  "priority": "P2"
+ },
+ {
+  "id": "REQ-FC-06",
+  "area": "Form controls",
+  "text": "Submitting the coupon form shows a green confirmation without reloading the page",
+  "priority": "P1"
+ },
+ {
+  "id": "REQ-FC-07",
+  "area": "Form controls",
+  "text": "Enabled checkboxes can be checked/unchecked individually or together; disabled ones cannot",
+  "priority": "P1"
+ },
+ {
+  "id": "REQ-FC-08",
+  "area": "Form controls",
+  "text": "Radio buttons are mutually exclusive; the disabled radio cannot be selected",
+  "priority": "P1"
+ },
+ {
+  "id": "REQ-FC-09",
+  "area": "Form controls",
+  "text": "Single select offers a placeholder plus three fruits and selects exactly one",
+  "priority": "P1"
+ },
+ {
+  "id": "REQ-FC-10",
+  "area": "Form controls",
+  "text": "Multi-select allows any subset of the three fruits",
+  "priority": "P2"
+ },
+ {
+  "id": "REQ-FC-11",
+  "area": "Form controls",
+  "text": "Range slider (0–100, step 1) echoes its value when changed",
+  "priority": "P1"
+ },
+ {
+  "id": "REQ-FC-12",
+  "area": "Form controls",
+  "text": "The disabled textarea cannot be edited by a user",
+  "priority": "P1"
+ },
+ {
+  "id": "REQ-FC-13",
+  "area": "Form controls",
+  "text": "Forms on the Querying, Misc and Waiting pages accept input",
+  "priority": "P2"
+ },
+ {
+  "id": "REQ-UI-01",
+  "area": "UI interactions",
+  "text": "Clicking the canvas draws a red dot at the pointer position",
+  "priority": "P1"
+ },
+ {
+  "id": "REQ-UI-02",
+  "area": "UI interactions",
+  "text": "Buttons and labels toggle Bootstrap popovers; mouse events reach handlers",
+  "priority": "P1"
+ },
+ {
+  "id": "REQ-UI-03",
+  "area": "UI interactions",
+  "text": "A button covered by an overlay is not clickable by a user",
+  "priority": "P2"
+ },
+ {
+  "id": "REQ-UI-04",
+  "area": "UI interactions",
+  "text": "Double-clicking the editable label reveals a focused input",
+  "priority": "P1"
+ },
+ {
+  "id": "REQ-UI-05",
+  "area": "UI interactions",
+  "text": "Right-clicking the editable label reveals a focused input",
+  "priority": "P1"
+ },
+ {
+  "id": "REQ-UI-06",
+  "area": "UI interactions",
+  "text": "Scroll containers can bring hidden buttons into view and scroll to named positions",
+  "priority": "P2"
+ },
+ {
+  "id": "REQ-UI-07",
+  "area": "UI interactions",
+  "text": "Clickable list items and table buttons change state when clicked",
+  "priority": "P2"
+ },
+ {
+  "id": "REQ-UI-08",
+  "area": "UI interactions",
+  "text": "Clock and tick widgets show the current epoch time in seconds",
+  "priority": "P2"
+ },
+ {
+  "id": "REQ-UI-09",
+  "area": "UI interactions",
+  "text": "Pages render without horizontal scrolling on phone, tablet and desktop viewports",
+  "priority": "P2"
+ },
+ {
+  "id": "REQ-AS-01",
+  "area": "Assertions",
+  "text": "Assertions page content, classes, attributes and the delayed random number are as documented",
+  "priority": "P1"
+ },
+ {
+  "id": "REQ-QT-01",
+  "area": "Querying",
+  "text": "Querying and traversal pages expose the documented DOM structure",
+  "priority": "P2"
+ },
+ {
+  "id": "REQ-TD-01",
+  "area": "Todo app",
+  "text": "A todo is added with Enter; titles are trimmed; empty/whitespace titles are ignored",
+  "priority": "P1"
+ },
+ {
+  "id": "REQ-TD-02",
+  "area": "Todo app",
+  "text": "The counter reads 'N item left' for N=1 and 'N items left' otherwise",
+  "priority": "P1"
+ },
+ {
+  "id": "REQ-TD-03",
+  "area": "Todo app",
+  "text": "Items can be completed and re-activated individually and all at once",
+  "priority": "P1"
+ },
+ {
+  "id": "REQ-TD-04",
+  "area": "Todo app",
+  "text": "Double-click edits: Enter/blur saves (trimmed), Escape cancels, empty deletes",
+  "priority": "P1"
+ },
+ {
+  "id": "REQ-TD-05",
+  "area": "Todo app",
+  "text": "An item can be deleted with its × button",
+  "priority": "P1"
+ },
+ {
+  "id": "REQ-TD-06",
+  "area": "Todo app",
+  "text": "'Clear completed' appears only when completed items exist and removes them",
+  "priority": "P1"
+ },
+ {
+  "id": "REQ-TD-07",
+  "area": "Todo app",
+  "text": "All / Active / Completed filters show the right subset",
+  "priority": "P1"
+ },
+ {
+  "id": "REQ-TD-08",
+  "area": "Todo app",
+  "text": "The list persists in localStorage across reloads",
+  "priority": "P1"
+ },
+ {
+  "id": "REQ-TD-09",
+  "area": "Todo app",
+  "text": "Titles are rendered as text (HTML-escaped) on create and edit",
+  "priority": "P1"
+ },
+ {
+  "id": "REQ-TD-10",
+  "area": "Todo app",
+  "text": "List and footer are hidden when there are no todos",
+  "priority": "P2"
+ },
+ {
+  "id": "REQ-NW-01",
+  "area": "Network",
+  "text": "Get Comment shows the comment body returned by the API",
+  "priority": "P1"
+ },
+ {
+  "id": "REQ-NW-02",
+  "area": "Network",
+  "text": "Post Comment shows 'POST successful!'",
+  "priority": "P1"
+ },
+ {
+  "id": "REQ-NW-03",
+  "area": "Network",
+  "text": "Update Comment shows the API error message on 404",
+  "priority": "P1"
+ },
+ {
+  "id": "REQ-NW-04",
+  "area": "Network",
+  "text": "Fixtures and files can be loaded, read and written",
+  "priority": "P2"
+ },
+ {
+  "id": "REQ-ST-01",
+  "area": "Storage",
+  "text": "Storage button writes 3 localStorage and 3 sessionStorage keys",
+  "priority": "P2"
+ },
+ {
+  "id": "REQ-ST-02",
+  "area": "Cookies",
+  "text": "Cookie buttons set token=123ABC; cookies can be read and cleared",
+  "priority": "P2"
+ },
+ {
+  "id": "REQ-NFR-A11Y",
+  "area": "Non-functional",
+  "text": "Pages meet WCAG 2.1 AA (axe-core) and are keyboard operable",
+  "priority": "P2"
+ },
+ {
+  "id": "REQ-NFR-PERF",
+  "area": "Non-functional",
+  "text": "Pages load within budget (DCL < 1.5 s, load < 3 s, ≤ 30 requests, ≤ 1.5 MB); interactions < 100 ms",
+  "priority": "P2"
+ },
+ {
+  "id": "REQ-NFR-SEC",
+  "area": "Non-functional",
+  "text": "No stored XSS; secure headers and server hygiene audited",
+  "priority": "P1"
+ },
+ {
+  "id": "REQ-NFR-COMPAT",
+  "area": "Non-functional",
+  "text": "Works in Chrome, Firefox, Edge and Electron",
+  "priority": "P1"
+ },
+ {
+  "id": "REQ-NFR-VIS",
+  "area": "Non-functional",
+  "text": "Key components are visually stable against committed baselines",
+  "priority": "P3"
+ },
+ {
+  "id": "REQ-NFR-REL",
+  "area": "Non-functional",
+  "text": "No console errors, uncaught exceptions or broken assets on any page",
+  "priority": "P1"
+ }
+]
