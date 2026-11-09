@@ -17,7 +17,7 @@ describe('15 · Security — stored XSS through todo titles', { tags: ['@securit
       type: 'Security', req: 'REQ-TD-09', priority: 'P1', data: payload,
       expected: 'label textContent equals the payload; no element injected; window.__xss undefined (also after reload from storage)' }, () => {
       cy.visitTodos([])
-      cy.get('.new-todo').type(`${payload}{enter}`, { parseSpecialCharSequences: false, delay: 0 })
+      cy.get('.new-todo').type(payload, { parseSpecialCharSequences: false, delay: 0 })
       cy.get('.new-todo').type('{enter}')
       cy.get('.todo-list li label').should('have.text', payload)
       cy.get('.todo-list li label').children().should('have.length', 0)

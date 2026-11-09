@@ -29,6 +29,8 @@ describe('11 · Accessibility — keyboard and semantics', { tags: ['@a11y'] }, 
   tc.chromium({ id: 'TC-A11Y-042', title: 'Todo app is fully operable with the keyboard alone', technique: 'Use-case', type: 'Accessibility', req: 'REQ-NFR-A11Y', priority: 'P1',
     expected: 'type + Enter adds; Tab reaches a toggle; Space completes it' }, () => {
     cy.visitTodos([])
+    // setup deleted the demo items with clicks, so put keyboard focus back on the input first
+    cy.get('.new-todo').focus()
     cy.realType('keyboard only')
     cy.realPress('Enter')
     cy.get('.todo-list li').should('have.length', 1)
