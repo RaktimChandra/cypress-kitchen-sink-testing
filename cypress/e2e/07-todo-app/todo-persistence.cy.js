@@ -19,7 +19,7 @@ describe('07 · TodoMVC — persistence in localStorage', { tags: ['@todo'] }, (
 
   tc({ id: 'TC-TD-132', title: 'Storage record schema: {title, completed, id}', technique: 'Use-case', req: 'REQ-TD-08',
     expected: 'every record has a string title, boolean completed, numeric id; ids unique' }, () => {
-    cy.visitPage('/todo')
+    cy.visitTodos(['first', 'second'])
     cy.addTodo('schema check')
     cy.storedTodos().should((list) => {
       expect(list).to.have.length(3)
@@ -60,5 +60,19 @@ describe('07 · TodoMVC — persistence in localStorage', { tags: ['@todo'] }, (
     cy.storedTodos().its('0.title').should('eq', 'A')
     cy.get('.todo-list li').eq(0).find('.destroy').invoke('show').click()
     cy.storedTodos().should((t) => expect(t.map((x) => x.title)).to.deep.equal(['b']))
+  })
+})
+
+describe('07 · TodoMVC — identity of items', { tags: ['@todo', '@known-defect'] }, () => {
+  tc.knownDefect({ id: 'TC-TD-136', title: 'Two items created in the same millisecond can still be toggled independently', technique: 'Error guessing',
+    req: 'REQ-TD-08', defect: 'DEF-KS-009', priority: 'P2',
+    expected: 'ids are unique; toggling the 2nd item completes only the 2nd (actual: ids are millisecond timestamps, so both share one id and the 1st item is toggled)' }, () => {
+    // freeze only Date so both demo items are created in the same millisecond, deterministically
+    cy.clock(Date.UTC(2026, 0, 1), ['Date'])
+    cy.visitPage('/todo')
+    cy.get('.todo-list li').should('have.length', 2)
+    cy.get('.todo-list li').eq(1).find('.toggle').click()
+    cy.get('.todo-list li').eq(0).should('not.have.class', 'completed')
+    cy.get('.todo-list li').eq(1).should('have.class', 'completed')
   })
 })

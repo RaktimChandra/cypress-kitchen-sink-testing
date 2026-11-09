@@ -20,7 +20,8 @@ describe('07 · TodoMVC — functional behaviour', { tags: ['@todo'] }, () => {
   tc({ id: 'TC-TD-003', title: 'New-todo input has autofocus on load', technique: 'Use-case', req: 'REQ-TD-01',
     expected: 'focused element is .new-todo' }, () => {
     cy.visitPage('/todo')
-    cy.focused().should('have.class', 'new-todo')
+    cy.get('.new-todo').should('have.attr', 'autofocus')
+    cy.document().its('activeElement').should('have.class', 'new-todo')
   })
 
   tc({ id: 'TC-TD-004', title: 'Items keep insertion order', technique: 'Use-case', req: 'REQ-TD-01',
