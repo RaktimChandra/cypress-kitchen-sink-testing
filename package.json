@@ -5,7 +5,9 @@
   "description": "Interactive web components testing of the Cypress Kitchen Sink with Cypress: form controls, navigation, assertions and UI interactions, plus black-box, white-box, accessibility, visual, performance, security and mutation testing.",
   "author": "Raktim Chandra",
   "license": "MIT",
-  "engines": { "node": ">=22" },
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "start": "serve --listen 8080 --no-request-logging --no-clipboard",
     "start:coverage": "node tools/instrument.js && serve instrumented --listen 8080 --no-request-logging --no-clipboard",
@@ -20,7 +22,8 @@
     "test:coverage": "start-server-and-test start:coverage http://localhost:8080 \"cypress run --expose coverage=true\"",
     "mutation": "node tools/mutation.js",
     "report": "node tools/aggregate.js",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "deliverables": "make deliverables"
   },
   "devDependencies": {
     "@cypress/code-coverage": "4.1.3",
