@@ -87,23 +87,21 @@ describe('08 · Network — stubbing and observing requests', { tags: ['@network
     cy.get('@get.all').should('have.length', 3)
   })
 
-  tc({ id: 'TC-NW-012', title: 'Response can be modified in flight (req.continue)', technique: 'Use-case', req: 'REQ-NW-01',
-    expected: 'server body passed through a handler that rewrites it' }, () => {
-    // keep the test offline: route the call to the local server, then rewrite the real response in flight
-    cy.intercept('GET', '**/comments/1', (req) => {
-      req.url = `${Cypress.config('baseUrl')}/todo`
+  tc({ id: 'TC-NW-012', title: 'A real server response can be modified in flight (req.continue)', technique: 'Use-case', req: 'REQ-NW-01',
+    expected: 'the local server\'s HTML for this page passes through a handler that rewrites its heading before the browser sees it' }, () => {
+    // offline on purpose: the upstream is the local SUT server, not the third-party API
+    cy.intercept('GET', '/commands/network-requests', (req) => {
+      delete req.headers['if-none-match']
+      delete req.headers['if-modified-since']
       req.continue((res) => {
-        expect(res.statusCode, 'real upstream status (304 when the browser revalidates)').to.be.oneOf([200, 304])
-        res.statusCode = 200
-        // the browser still sees a cross-origin call to jsonplaceholder, so the rewritten response needs CORS
-        res.headers['content-type'] = 'application/json; charset=utf-8'
-        res.headers['access-control-allow-origin'] = '*'
-        res.send({ body: 'rewritten by test' })
+        expect(res.statusCode, 'real upstream status').to.eq(200)
+        expect(res.body, 'real upstream body').to.include('<h1>Network Requests</h1>')
+        res.body = res.body.replace('<h1>Network Requests</h1>', '<h1>Rewritten by test</h1>')
       })
-    }).as('mod')
-    cy.get('.network-btn').click()
-    cy.wait('@mod')
-    cy.get('.network-comment').should('have.text', 'rewritten by test')
+    }).as('page')
+    cy.visit('/commands/network-requests')
+    cy.wait('@page')
+    cy.get('h1').should('have.text', 'Rewritten by test')
   })
 
   tc({ id: 'TC-NW-013', title: 'No un-stubbed third-party call is made on page load', technique: 'Error guessing', req: 'REQ-NFR-REL',

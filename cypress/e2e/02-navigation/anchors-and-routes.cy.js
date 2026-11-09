@@ -17,14 +17,15 @@ describe('02 · Navigation — deep links and hash routes', { tags: ['@navigatio
   })
 
   tc({ id: 'TC-NAV-080', title: 'Every documented section heading on every page has a working "on.cypress.io" docs link', technique: 'ECP',
-    req: 'REQ-NAV-05', expected: 'each h4[id] section links to https://on.cypress.io (in the heading, or in the first paragraph for chai helpers such as expect/assert)' }, () => {
+    req: 'REQ-NAV-05', expected: 'each h4[id] section links to its documentation (on.cypress.io, or Sinon/Chai for library helpers) in the heading or first paragraph' }, () => {
     pages.filter((p) => p.anchors && p.anchors.length).forEach((p) => {
       cy.visitPage(p.path)
       // #require (Files page) has no docs link at all: logged as DEF-KS-014 and pinned by TC-NAV-086
       p.anchors.filter((a) => !(p.path === '/commands/files' && a === 'require')).forEach((a) => {
         cy.get(`h4[id="${a}"]`).then(($h) => {
           const $link = $h.find('a').length ? $h.find('a') : $h.nextAll('p').first().find('a')
-          expect($link.attr('href'), `docs link for #${a}`).to.match(/^https:\/\/on\.cypress\.io\//)
+          // command sections link to on.cypress.io; helper sections may link to the upstream library (Sinon, Chai)
+          expect($link.attr('href'), `docs link for #${a}`).to.match(/^https:\/\/(on\.cypress\.io|sinonjs\.org|www\.chaijs\.com)\//)
         })
       })
     })
