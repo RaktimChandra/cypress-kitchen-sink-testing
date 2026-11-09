@@ -1,0 +1,255 @@
+[
+ {
+  "page": "/",
+  "domContentLoaded": 128.29999999998836,
+  "load": 129.90000000002328,
+  "ttfb": 15.299999999988358,
+  "firstContentfulPaint": null,
+  "resources": 9,
+  "transferKB": 447,
+  "domNodes": 348,
+  "at": "2026-11-09T21:04:33.066Z"
+ },
+ {
+  "page": "/commands/querying",
+  "domContentLoaded": 73.70000000001164,
+  "load": 74.39999999996508,
+  "ttfb": 7.7000000000116415,
+  "firstContentfulPaint": null,
+  "resources": 9,
+  "transferKB": 363,
+  "domNodes": 272,
+  "at": "2026-11-09T21:04:33.219Z"
+ },
+ {
+  "page": "/commands/traversal",
+  "domContentLoaded": 58,
+  "load": 58.5,
+  "ttfb": 8.299999999988358,
+  "firstContentfulPaint": null,
+  "resources": 7,
+  "transferKB": 2,
+  "domNodes": 500,
+  "at": "2026-11-09T21:04:33.347Z"
+ },
+ {
+  "page": "/commands/actions",
+  "domContentLoaded": 74.29999999998836,
+  "load": 78.70000000001164,
+  "ttfb": 8.600000000034925,
+  "firstContentfulPaint": null,
+  "resources": 9,
+  "transferKB": 363,
+  "domNodes": 744,
+  "at": "2026-11-09T21:04:33.501Z"
+ },
+ {
+  "page": "/commands/window",
+  "domContentLoaded": 55.59999999997672,
+  "load": 56,
+  "ttfb": 7.099999999976717,
+  "firstContentfulPaint": null,
+  "resources": 7,
+  "transferKB": 2,
+  "domNodes": 119,
+  "at": "2026-11-09T21:04:33.628Z"
+ },
+ {
+  "page": "/commands/viewport",
+  "domContentLoaded": 57.5,
+  "load": 57.79999999998836,
+  "ttfb": 7.099999999976717,
+  "firstContentfulPaint": null,
+  "resources": 9,
+  "transferKB": 363,
+  "domNodes": 138,
+  "at": "2026-11-09T21:04:33.748Z"
+ },
+ {
+  "page": "/commands/location",
+  "domContentLoaded": 52.70000000001164,
+  "load": 53.29999999998836,
+  "ttfb": 8.099999999976717,
+  "firstContentfulPaint": null,
+  "resources": 7,
+  "transferKB": 2,
+  "domNodes": 122,
+  "at": "2026-11-09T21:04:33.870Z"
+ },
+ {
+  "page": "/commands/navigation",
+  "domContentLoaded": 52,
+  "load": 52.5,
+  "ttfb": 7.100000000034925,
+  "firstContentfulPaint": null,
+  "resources": 7,
+  "transferKB": 2,
+  "domNodes": 145,
+  "at": "2026-11-09T21:04:33.995Z"
+ },
+ {
+  "page": "/commands/assertions",
+  "domContentLoaded": 61.70000000001164,
+  "load": 62.40000000002328,
+  "ttfb": 7.2000000000116415,
+  "firstContentfulPaint": null,
+  "resources": 7,
+  "transferKB": 2,
+  "domNodes": 322,
+  "at": "2026-11-09T21:04:34.122Z"
+ },
+ {
+  "page": "/commands/misc",
+  "domContentLoaded": 49.600000000034925,
+  "load": 50,
+  "ttfb": 6.7000000000116415,
+  "firstContentfulPaint": null,
+  "resources": 7,
+  "transferKB": 2,
+  "domNodes": 140,
+  "at": "2026-11-09T21:04:34.238Z"
+ },
+ {
+  "page": "/commands/connectors",
+  "domContentLoaded": 60.29999999998836,
+  "load": 60.79999999998836,
+  "ttfb": 6.900000000023283,
+  "firstContentfulPaint": null,
+  "resources": 9,
+  "transferKB": 363,
+  "domNodes": 218,
+  "at": "2026-11-09T21:04:34.366Z"
+ },
+ {
+  "page": "/commands/aliasing",
+  "domContentLoaded": 57.20000000001164,
+  "load": 57.70000000001164,
+  "ttfb": 7.5,
+  "firstContentfulPaint": null,
+  "resources": 9,
+  "transferKB": 363,
+  "domNodes": 138,
+  "at": "2026-11-09T21:04:34.484Z"
+ },
+ {
+  "page": "/commands/waiting",
+  "domContentLoaded": 54.20000000001164,
+  "load": 54.59999999997672,
+  "ttfb": 10,
+  "firstContentfulPaint": null,
+  "resources": 9,
+  "transferKB": 363,
+  "domNodes": 133,
+  "at": "2026-11-09T21:04:34.596Z"
+ },
+ {
+  "page": "/commands/network-requests",
+  "domContentLoaded": 56.5,
+  "load": 57.20000000001164,
+  "ttfb": 6.900000000023283,
+  "firstContentfulPaint": null,
+  "resources": 9,
+  "transferKB": 363,
+  "domNodes": 222,
+  "at": "2026-11-09T21:04:34.717Z"
+ },
+ {
+  "page": "/commands/files",
+  "domContentLoaded": 53.800000000046566,
+  "load": 54.300000000046566,
+  "ttfb": 7.900000000023283,
+  "firstContentfulPaint": null,
+  "resources": 9,
+  "transferKB": 363,
+  "domNodes": 186,
+  "at": "2026-11-09T21:04:34.830Z"
+ },
+ {
+  "page": "/commands/storage",
+  "domContentLoaded": 58.100000000034925,
+  "load": 58.79999999998836,
+  "ttfb": 7.2999999999883585,
+  "firstContentfulPaint": null,
+  "resources": 7,
+  "transferKB": 2,
+  "domNodes": 210,
+  "at": "2026-11-09T21:04:34.949Z"
+ },
+ {
+  "page": "/commands/cookies",
+  "domContentLoaded": 57.70000000001164,
+  "load": 58.40000000002328,
+  "ttfb": 7.7000000000116415,
+  "firstContentfulPaint": null,
+  "resources": 9,
+  "transferKB": 363,
+  "domNodes": 275,
+  "at": "2026-11-09T21:04:35.068Z"
+ },
+ {
+  "page": "/commands/spies-stubs-clocks",
+  "domContentLoaded": 55.59999999997672,
+  "load": 56.399999999965075,
+  "ttfb": 7.899999999965075,
+  "firstContentfulPaint": null,
+  "resources": 7,
+  "transferKB": 2,
+  "domNodes": 267,
+  "at": "2026-11-09T21:04:35.188Z"
+ },
+ {
+  "page": "/utilities",
+  "domContentLoaded": 47.90000000002328,
+  "load": 48.5,
+  "ttfb": 6.7999999999883585,
+  "firstContentfulPaint": null,
+  "resources": 7,
+  "transferKB": 2,
+  "domNodes": 192,
+  "at": "2026-11-09T21:04:35.303Z"
+ },
+ {
+  "page": "/cypress-api",
+  "domContentLoaded": 73.70000000001164,
+  "load": 74.29999999998836,
+  "ttfb": 6.7000000000116415,
+  "firstContentfulPaint": null,
+  "resources": 9,
+  "transferKB": 363,
+  "domNodes": 243,
+  "at": "2026-11-09T21:04:35.442Z"
+ },
+ {
+  "page": "/todo",
+  "domContentLoaded": 97.40000000002328,
+  "load": 98.70000000001164,
+  "ttfb": 7.400000000023283,
+  "firstContentfulPaint": null,
+  "resources": 17,
+  "transferKB": 378,
+  "domNodes": 115,
+  "at": "2026-11-09T21:04:35.633Z"
+ },
+ {
+  "page": "/todo add-latency",
+  "samplesMs": [
+   0.5,
+   0.20000000001164153,
+   0.09999999997671694,
+   0.19999999995343387,
+   0.20000000001164153,
+   0.1000000000349246,
+   0.20000000001164153,
+   0.09999999997671694,
+   0.1000000000349246,
+   0
+  ],
+  "medianMs": 0.19999999995343387,
+  "at": "2026-11-09T21:04:35.894Z"
+ },
+ {
+  "page": "/commands/actions longtasks",
+  "durations": [],
+  "at": "2026-11-09T21:04:36.504Z"
+ }
+]

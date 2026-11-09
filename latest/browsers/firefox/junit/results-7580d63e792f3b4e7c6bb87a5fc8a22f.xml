@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="44.288" tests="22" failures="22">
+  <testsuite name="Root Suite" timestamp="2026-11-09T21:04:37" tests="0" file="cypress/e2e/11-accessibility/axe-pages.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page" timestamp="2026-11-09T21:04:37" tests="22" time="44.266" failures="22">
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-001 | / has no new serious/critical WCAG 2.1 AA violations" time="0.889" classname="TC-A11Y-001 | / has no new serious/critical WCAG 2.1 AA violations">
+      <failure message="new critical/serious accessibility violations on /: expected [ &apos;color-contrast [serious] ×7&apos; ] to deeply equal []" type="AssertionError"><![CDATA[AssertionError: new critical/serious accessibility violations on /: expected [ 'color-contrast [serious] ×7' ] to deeply equal []
+    at ./cypress/support/commands.js/</ (webpack://cypress-kitchen-sink-testing/./cypress/support/commands.js:63:142)
+    at getRet (http://localhost:8080/__cypress/runner/cypress_runner.js:120892:20)
+    at tryCatcher (http://localhost:8080/__cypress/runner/cypress_runner.js:1780:23)
+    at __webpack_modules__</module.exports/Promise.try (http://localhost:8080/__cypress/runner/cypress_runner.js:4288:29)
+    at thenFn (http://localhost:8080/__cypress/runner/cypress_runner.js:120904:60)
+    at then (http://localhost:8080/__cypress/runner/cypress_runner.js:121155:21)
+    at wrapped (http://localhost:8080/__cypress/runner/cypress_runner.js:155033:19)
+
+      + expected - actual
+
+      -[ 'color-contrast [serious] ×7' ]
+      +[]
+      ]]></failure>
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-002 | /commands/querying has no new serious/critical WCAG 2.1 AA violations" time="0.764" classname="TC-A11Y-002 | /commands/querying has no new serious/critical WCAG 2.1 AA violations">
+      <failure message="new critical/serious accessibility violations on /commands/querying: expected [ Array(2) ] to deeply equal []" type="AssertionError"><![CDATA[AssertionError: new critical/serious accessibility violations on /commands/querying: expected [ Array(2) ] to deeply equal []
+    at ./cypress/support/commands.js/</ (webpack://cypress-kitchen-sink-testing/./cypress/support/commands.js:63:142)
+    at getRet (http://localhost:8080/__cypress/runner/cypress_runner.js:120892:20)
+    at tryCatcher (http://localhost:8080/__cypress/runner/cypress_runner.js:1780:23)
+    at __webpack_modules__</module.exports/Promise.try (http://localhost:8080/__cypress/runner/cypress_runner.js:4288:29)
+    at thenFn (http://localhost:8080/__cypress/runner/cypress_runner.js:120904:60)
+    at then (http://localhost:8080/__cypress/runner/cypress_runner.js:121155:21)
+    at wrapped (http://localhost:8080/__cypress/runner/cypress_runner.js:155033:19)
+
+      + expected - actual
+
+      -[ 'color-contrast [serious] ×21',
+      -  'link-in-text-block [serious] ×2' ]
+      +[]
+      ]]></failure>
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-003 | /commands/traversal has no new serious/critical WCAG 2.1 AA violations" time="1.086" classname="TC-A11Y-003 | /commands/traversal has no new serious/critical WCAG 2.1 AA violations">
+      <failure message="new critical/serious accessibility violations on /commands/traversal: expected [ &apos;color-contrast [serious] ×17&apos; ] to deeply equal []" type="AssertionError"><![CDATA[AssertionError: new critical/serious accessibility violations on /commands/traversal: expected [ 'color-contrast [serious] ×17' ] to deeply equal []
+    at ./cypress/support/commands.js/</ (webpack://cypress-kitchen-sink-testing/./cypress/support/commands.js:63:142)
+    at getRet (http://localhost:8080/__cypress/runner/cypress_runner.js:120892:20)
+    at tryCatcher (http://localhost:8080/__cypress/runner/cypress_runner.js:1780:23)
+    at __webpack_modules__</module.exports/Promise.try (http://localhost:8080/__cypress/runner/cypress_runner.js:4288:29)
+    at thenFn (http://localhost:8080/__cypress/runner/cypress_runner.js:120904:60)
+    at then (http://localhost:8080/__cypress/runner/cypress_runner.js:121155:21)
+    at wrapped (http://localhost:8080/__cypress/runner/cypress_runner.js:155033:19)
+
+      + expected - actual
+
+      -[ 'color-contrast [serious] ×17' ]
+      +[]
+      ]]></failure>
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-004 | /commands/actions has no new serious/critical WCAG 2.1 AA violations" time="1.147" classname="TC-A11Y-004 | /commands/actions has no new serious/critical WCAG 2.1 AA violations">
+      <failure message="new critical/serious accessibility violations on /commands/actions: expected [ Array(4) ] to deeply equal []" type="AssertionError"><![CDATA[AssertionError: new critical/serious accessibility violations on /commands/actions: expected [ Array(4) ] to deeply equal []
+    at ./cypress/support/commands.js/</ (webpack://cypress-kitchen-sink-testing/./cypress/support/commands.js:63:142)
+    at getRet (http://localhost:8080/__cypress/runner/cypress_runner.js:120892:20)
+    at tryCatcher (http://localhost:8080/__cypress/runner/cypress_runner.js:1780:23)
+    at __webpack_modules__</module.exports/Promise.try (http://localhost:8080/__cypress/runner/cypress_runner.js:4288:29)
+    at thenFn (http://localhost:8080/__cypress/runner/cypress_runner.js:120904:60)
+    at then (http://localhost:8080/__cypress/runner/cypress_runner.js:121155:21)
+    at wrapped (http://localhost:8080/__cypress/runner/cypress_runner.js:155033:19)
+
+      + expected - actual
+
+      -[ 'color-contrast [serious] ×113',
+      -  'label [critical] ×2',
+      -  'scrollable-region-focusable [serious] ×2',
+      -  'select-name [critical] ×2' ]
+      +[]
+      ]]></failure>
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-005 | /commands/window has no new serious/critical WCAG 2.1 AA violations" time="0.654" classname="TC-A11Y-005 | /commands/window has no new serious/critical WCAG 2.1 AA violations">
+      <failure message="new critical/serious accessibility violations on /commands/window: expected [ &apos;color-contrast [serious] ×3&apos; ] to deeply equal []" type="AssertionError"><![CDATA[AssertionError: new critical/serious accessibility violations on /commands/window: expected [ 'color-contrast [serious] ×3' ] to deeply equal []
+    at ./cypress/support/commands.js/</ (webpack://cypress-kitchen-sink-testing/./cypress/support/commands.js:63:142)
+    at getRet (http://localhost:8080/__cypress/runner/cypress_runner.js:120892:20)
+    at tryCatcher (http://localhost:8080/__cypress/runner/cypress_runner.js:1780:23)
+    at __webpack_modules__</module.exports/Promise.try (http://localhost:8080/__cypress/runner/cypress_runner.js:4288:29)
+    at thenFn (http://localhost:8080/__cypress/runner/cypress_runner.js:120904:60)
+    at then (http://localhost:8080/__cypress/runner/cypress_runner.js:121155:21)
+    at wrapped (http://localhost:8080/__cypress/runner/cypress_runner.js:155033:19)
+
+      + expected - actual
+
+      -[ 'color-contrast [serious] ×3' ]
+      +[]
+      ]]></failure>
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-006 | /commands/viewport has no new serious/critical WCAG 2.1 AA violations" time="0.711" classname="TC-A11Y-006 | /commands/viewport has no new serious/critical WCAG 2.1 AA violations">
+      <failure message="new critical/serious accessibility violations on /commands/viewport: expected [ &apos;color-contrast [serious] ×29&apos; ] to deeply equal []" type="AssertionError"><![CDATA[AssertionError: new critical/serious accessibility violations on /commands/viewport: expected [ 'color-contrast [serious] ×29' ] to deeply equal []
+    at ./cypress/support/commands.js/</ (webpack://cypress-kitchen-sink-testing/./cypress/support/commands.js:63:142)
+    at getRet (http://localhost:8080/__cypress/runner/cypress_runner.js:120892:20)
+    at tryCatcher (http://localhost:8080/__cypress/runner/cypress_runner.js:1780:23)
+    at __webpack_modules__</module.exports/Promise.try (http://localhost:8080/__cypress/runner/cypress_runner.js:4288:29)
+    at thenFn (http://localhost:8080/__cypress/runner/cypress_runner.js:120904:60)
+    at then (http://localhost:8080/__cypress/runner/cypress_runner.js:121155:21)
+    at wrapped (http://localhost:8080/__cypress/runner/cypress_runner.js:155033:19)
+
+      + expected - actual
+
+      -[ 'color-contrast [serious] ×29' ]
+      +[]
+      ]]></failure>
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-007 | /commands/location has no new serious/critical WCAG 2.1 AA violations" time="0.728" classname="TC-A11Y-007 | /commands/location has no new serious/critical WCAG 2.1 AA violations">
+      <failure message="new critical/serious accessibility violations on /commands/location: expected [ &apos;color-contrast [serious] ×3&apos; ] to deeply equal []" type="AssertionError"><![CDATA[AssertionError: new critical/serious accessibility violations on /commands/location: expected [ 'color-contrast [serious] ×3' ] to deeply equal []
+    at ./cypress/support/commands.js/</ (webpack://cypress-kitchen-sink-testing/./cypress/support/commands.js:63:142)
+    at getRet (http://localhost:8080/__cypress/runner/cypress_runner.js:120892:20)
+    at tryCatcher (http://localhost:8080/__cypress/runner/cypress_runner.js:1780:23)
+    at __webpack_modules__</module.exports/Promise.try (http://localhost:8080/__cypress/runner/cypress_runner.js:4288:29)
+    at thenFn (http://localhost:8080/__cypress/runner/cypress_runner.js:120904:60)
+    at then (http://localhost:8080/__cypress/runner/cypress_runner.js:121155:21)
+    at wrapped (http://localhost:8080/__cypress/runner/cypress_runner.js:155033:19)
+
+      + expected - actual
+
+      -[ 'color-contrast [serious] ×3' ]
+      +[]
+      ]]></failure>
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-008 | /commands/navigation has no new serious/critical WCAG 2.1 AA violations" time="0.639" classname="TC-A11Y-008 | /commands/navigation has no new serious/critical WCAG 2.1 AA violations">
+      <failure message="new critical/serious accessibility violations on /commands/navigation: expected [ &apos;color-contrast [serious] ×12&apos; ] to deeply equal []" type="AssertionError"><![CDATA[AssertionError: new critical/serious accessibility violations on /commands/navigation: expected [ 'color-contrast [serious] ×12' ] to deeply equal []
+    at ./cypress/support/commands.js/</ (webpack://cypress-kitchen-sink-testing/./cypress/support/commands.js:63:142)
+    at getRet (http://localhost:8080/__cypress/runner/cypress_runner.js:120892:20)
+    at tryCatcher (http://localhost:8080/__cypress/runner/cypress_runner.js:1780:23)
+    at __webpack_modules__</module.exports/Promise.try (http://localhost:8080/__cypress/runner/cypress_runner.js:4288:29)
+    at thenFn (http://localhost:8080/__cypress/runner/cypress_runner.js:120904:60)
+    at then (http://localhost:8080/__cypress/runner/cypress_runner.js:121155:21)
+    at wrapped (http://localhost:8080/__cypress/runner/cypress_runner.js:155033:19)
+
+      + expected - actual
+
+      -[ 'color-contrast [serious] ×12' ]
+      +[]
+      ]]></failure>
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-009 | /commands/assertions has no new serious/critical WCAG 2.1 AA violations" time="0.930" classname="TC-A11Y-009 | /commands/assertions has no new serious/critical WCAG 2.1 AA violations">
+      <failure message="new critical/serious accessibility violations on /commands/assertions: expected [ Array(2) ] to deeply equal []" type="AssertionError"><![CDATA[AssertionError: new critical/serious accessibility violations on /commands/assertions: expected [ Array(2) ] to deeply equal []
+    at ./cypress/support/commands.js/</ (webpack://cypress-kitchen-sink-testing/./cypress/support/commands.js:63:142)
+    at getRet (http://localhost:8080/__cypress/runner/cypress_runner.js:120892:20)
+    at tryCatcher (http://localhost:8080/__cypress/runner/cypress_runner.js:1780:23)
+    at __webpack_modules__</module.exports/Promise.try (http://localhost:8080/__cypress/runner/cypress_runner.js:4288:29)
+    at thenFn (http://localhost:8080/__cypress/runner/cypress_runner.js:120904:60)
+    at then (http://localhost:8080/__cypress/runner/cypress_runner.js:121155:21)
+    at wrapped (http://localhost:8080/__cypress/runner/cypress_runner.js:155033:19)
+
+      + expected - actual
+
+      -[ 'color-contrast [serious] ×43',
+      -  'link-in-text-block [serious] ×3' ]
+      +[]
+      ]]></failure>
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-010 | /commands/misc has no new serious/critical WCAG 2.1 AA violations" time="0.760" classname="TC-A11Y-010 | /commands/misc has no new serious/critical WCAG 2.1 AA violations">
+      <failure message="new critical/serious accessibility violations on /commands/misc: expected [ &apos;color-contrast [serious] ×3&apos; ] to deeply equal []" type="AssertionError"><![CDATA[AssertionError: new critical/serious accessibility violations on /commands/misc: expected [ 'color-contrast [serious] ×3' ] to deeply equal []
+    at ./cypress/support/commands.js/</ (webpack://cypress-kitchen-sink-testing/./cypress/support/commands.js:63:142)
+    at getRet (http://localhost:8080/__cypress/runner/cypress_runner.js:120892:20)
+    at tryCatcher (http://localhost:8080/__cypress/runner/cypress_runner.js:1780:23)
+    at __webpack_modules__</module.exports/Promise.try (http://localhost:8080/__cypress/runner/cypress_runner.js:4288:29)
+    at thenFn (http://localhost:8080/__cypress/runner/cypress_runner.js:120904:60)
+    at then (http://localhost:8080/__cypress/runner/cypress_runner.js:121155:21)
+    at wrapped (http://localhost:8080/__cypress/runner/cypress_runner.js:155033:19)
+
+      + expected - actual
+
+      -[ 'color-contrast [serious] ×3' ]
+      +[]
+      ]]></failure>
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-011 | /commands/connectors has no new serious/critical WCAG 2.1 AA violations" time="0.775" classname="TC-A11Y-011 | /commands/connectors has no new serious/critical WCAG 2.1 AA violations">
+      <failure message="new critical/serious accessibility violations on /commands/connectors: expected [ &apos;color-contrast [serious] ×12&apos; ] to deeply equal []" type="AssertionError"><![CDATA[AssertionError: new critical/serious accessibility violations on /commands/connectors: expected [ 'color-contrast [serious] ×12' ] to deeply equal []
+    at ./cypress/support/commands.js/</ (webpack://cypress-kitchen-sink-testing/./cypress/support/commands.js:63:142)
+    at getRet (http://localhost:8080/__cypress/runner/cypress_runner.js:120892:20)
+    at tryCatcher (http://localhost:8080/__cypress/runner/cypress_runner.js:1780:23)
+    at __webpack_modules__</module.exports/Promise.try (http://localhost:8080/__cypress/runner/cypress_runner.js:4288:29)
+    at thenFn (http://localhost:8080/__cypress/runner/cypress_runner.js:120904:60)
+    at then (http://localhost:8080/__cypress/runner/cypress_runner.js:121155:21)
+    at wrapped (http://localhost:8080/__cypress/runner/cypress_runner.js:155033:19)
+
+      + expected - actual
+
+      -[ 'color-contrast [serious] ×12' ]
+      +[]
+      ]]></failure>
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-012 | /commands/aliasing has no new serious/critical WCAG 2.1 AA violations" time="0.851" classname="TC-A11Y-012 | /commands/aliasing has no new serious/critical WCAG 2.1 AA violations">
+      <failure message="new critical/serious accessibility violations on /commands/aliasing: expected [ &apos;color-contrast [serious] ×12&apos; ] to deeply equal []" type="AssertionError"><![CDATA[AssertionError: new critical/serious accessibility violations on /commands/aliasing: expected [ 'color-contrast [serious] ×12' ] to deeply equal []
+    at ./cypress/support/commands.js/</ (webpack://cypress-kitchen-sink-testing/./cypress/support/commands.js:63:142)
+    at getRet (http://localhost:8080/__cypress/runner/cypress_runner.js:120892:20)
+    at tryCatcher (http://localhost:8080/__cypress/runner/cypress_runner.js:1780:23)
+    at __webpack_modules__</module.exports/Promise.try (http://localhost:8080/__cypress/runner/cypress_runner.js:4288:29)
+    at thenFn (http://localhost:8080/__cypress/runner/cypress_runner.js:120904:60)
+    at then (http://localhost:8080/__cypress/runner/cypress_runner.js:121155:21)
+    at wrapped (http://localhost:8080/__cypress/runner/cypress_runner.js:155033:19)
+
+      + expected - actual
+
+      -[ 'color-contrast [serious] ×12' ]
+      +[]
+      ]]></failure>
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-013 | /commands/waiting has no new serious/critical WCAG 2.1 AA violations" time="0.824" classname="TC-A11Y-013 | /commands/waiting has no new serious/critical WCAG 2.1 AA violations">
+      <failure message="new critical/serious accessibility violations on /commands/waiting: expected [ Array(3) ] to deeply equal []" type="AssertionError"><![CDATA[AssertionError: new critical/serious accessibility violations on /commands/waiting: expected [ Array(3) ] to deeply equal []
+    at ./cypress/support/commands.js/</ (webpack://cypress-kitchen-sink-testing/./cypress/support/commands.js:63:142)
+    at getRet (http://localhost:8080/__cypress/runner/cypress_runner.js:120892:20)
+    at tryCatcher (http://localhost:8080/__cypress/runner/cypress_runner.js:1780:23)
+    at __webpack_modules__</module.exports/Promise.try (http://localhost:8080/__cypress/runner/cypress_runner.js:4288:29)
+    at thenFn (http://localhost:8080/__cypress/runner/cypress_runner.js:120904:60)
+    at then (http://localhost:8080/__cypress/runner/cypress_runner.js:121155:21)
+    at wrapped (http://localhost:8080/__cypress/runner/cypress_runner.js:155033:19)
+
+      + expected - actual
+
+      -[ 'color-contrast [serious] ×12',
+      -  'label [critical] ×3',
+      -  'link-in-text-block [serious] ×1' ]
+      +[]
+      ]]></failure>
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-014 | /commands/network-requests has no new serious/critical WCAG 2.1 AA violations" time="0.829" classname="TC-A11Y-014 | /commands/network-requests has no new serious/critical WCAG 2.1 AA violations">
+      <failure message="new critical/serious accessibility violations on /commands/network-requests: expected [ &apos;color-contrast [serious] ×46&apos; ] to deeply equal []" type="AssertionError"><![CDATA[AssertionError: new critical/serious accessibility violations on /commands/network-requests: expected [ 'color-contrast [serious] ×46' ] to deeply equal []
+    at ./cypress/support/commands.js/</ (webpack://cypress-kitchen-sink-testing/./cypress/support/commands.js:63:142)
+    at getRet (http://localhost:8080/__cypress/runner/cypress_runner.js:120892:20)
+    at tryCatcher (http://localhost:8080/__cypress/runner/cypress_runner.js:1780:23)
+    at __webpack_modules__</module.exports/Promise.try (http://localhost:8080/__cypress/runner/cypress_runner.js:4288:29)
+    at thenFn (http://localhost:8080/__cypress/runner/cypress_runner.js:120904:60)
+    at then (http://localhost:8080/__cypress/runner/cypress_runner.js:121155:21)
+    at wrapped (http://localhost:8080/__cypress/runner/cypress_runner.js:155033:19)
+
+      + expected - actual
+
+      -[ 'color-contrast [serious] ×46' ]
+      +[]
+      ]]></failure>
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-015 | /commands/files has no new serious/critical WCAG 2.1 AA violations" time="0.730" classname="TC-A11Y-015 | /commands/files has no new serious/critical WCAG 2.1 AA violations">
+      <failure message="new critical/serious accessibility violations on /commands/files: expected [ &apos;color-contrast [serious] ×26&apos; ] to deeply equal []" type="AssertionError"><![CDATA[AssertionError: new critical/serious accessibility violations on /commands/files: expected [ 'color-contrast [serious] ×26' ] to deeply equal []
+    at ./cypress/support/commands.js/</ (webpack://cypress-kitchen-sink-testing/./cypress/support/commands.js:63:142)
+    at getRet (http://localhost:8080/__cypress/runner/cypress_runner.js:120892:20)
+    at tryCatcher (http://localhost:8080/__cypress/runner/cypress_runner.js:1780:23)
+    at __webpack_modules__</module.exports/Promise.try (http://localhost:8080/__cypress/runner/cypress_runner.js:4288:29)
+    at thenFn (http://localhost:8080/__cypress/runner/cypress_runner.js:120904:60)
+    at then (http://localhost:8080/__cypress/runner/cypress_runner.js:121155:21)
+    at wrapped (http://localhost:8080/__cypress/runner/cypress_runner.js:155033:19)
+
+      + expected - actual
+
+      -[ 'color-contrast [serious] ×26' ]
+      +[]
+      ]]></failure>
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-016 | /commands/storage has no new serious/critical WCAG 2.1 AA violations" time="0.817" classname="TC-A11Y-016 | /commands/storage has no new serious/critical WCAG 2.1 AA violations">
+      <failure message="new critical/serious accessibility violations on /commands/storage: expected [ &apos;color-contrast [serious] ×13&apos; ] to deeply equal []" type="AssertionError"><![CDATA[AssertionError: new critical/serious accessibility violations on /commands/storage: expected [ 'color-contrast [serious] ×13' ] to deeply equal []
+    at ./cypress/support/commands.js/</ (webpack://cypress-kitchen-sink-testing/./cypress/support/commands.js:63:142)
+    at getRet (http://localhost:8080/__cypress/runner/cypress_runner.js:120892:20)
+    at tryCatcher (http://localhost:8080/__cypress/runner/cypress_runner.js:1780:23)
+    at __webpack_modules__</module.exports/Promise.try (http://localhost:8080/__cypress/runner/cypress_runner.js:4288:29)
+    at thenFn (http://localhost:8080/__cypress/runner/cypress_runner.js:120904:60)
+    at then (http://localhost:8080/__cypress/runner/cypress_runner.js:121155:21)
+    at wrapped (http://localhost:8080/__cypress/runner/cypress_runner.js:155033:19)
+
+      + expected - actual
+
+      -[ 'color-contrast [serious] ×13' ]
+      +[]
+      ]]></failure>
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-017 | /commands/cookies has no new serious/critical WCAG 2.1 AA violations" time="0.883" classname="TC-A11Y-017 | /commands/cookies has no new serious/critical WCAG 2.1 AA violations">
+      <failure message="new critical/serious accessibility violations on /commands/cookies: expected [ &apos;color-contrast [serious] ×22&apos; ] to deeply equal []" type="AssertionError"><![CDATA[AssertionError: new critical/serious accessibility violations on /commands/cookies: expected [ 'color-contrast [serious] ×22' ] to deeply equal []
+    at ./cypress/support/commands.js/</ (webpack://cypress-kitchen-sink-testing/./cypress/support/commands.js:63:142)
+    at getRet (http://localhost:8080/__cypress/runner/cypress_runner.js:120892:20)
+    at tryCatcher (http://localhost:8080/__cypress/runner/cypress_runner.js:1780:23)
+    at __webpack_modules__</module.exports/Promise.try (http://localhost:8080/__cypress/runner/cypress_runner.js:4288:29)
+    at thenFn (http://localhost:8080/__cypress/runner/cypress_runner.js:120904:60)
+    at then (http://localhost:8080/__cypress/runner/cypress_runner.js:121155:21)
+    at wrapped (http://localhost:8080/__cypress/runner/cypress_runner.js:155033:19)
+
+      + expected - actual
+
+      -[ 'color-contrast [serious] ×22' ]
+      +[]
+      ]]></failure>
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-018 | /commands/spies-stubs-clocks has no new serious/critical WCAG 2.1 AA violations" time="0.983" classname="TC-A11Y-018 | /commands/spies-stubs-clocks has no new serious/critical WCAG 2.1 AA violations">
+      <failure message="new critical/serious accessibility violations on /commands/spies-stubs-clocks: expected [ Array(2) ] to deeply equal []" type="AssertionError"><![CDATA[AssertionError: new critical/serious accessibility violations on /commands/spies-stubs-clocks: expected [ Array(2) ] to deeply equal []
+    at ./cypress/support/commands.js/</ (webpack://cypress-kitchen-sink-testing/./cypress/support/commands.js:63:142)
+    at getRet (http://localhost:8080/__cypress/runner/cypress_runner.js:120892:20)
+    at tryCatcher (http://localhost:8080/__cypress/runner/cypress_runner.js:1780:23)
+    at __webpack_modules__</module.exports/Promise.try (http://localhost:8080/__cypress/runner/cypress_runner.js:4288:29)
+    at thenFn (http://localhost:8080/__cypress/runner/cypress_runner.js:120904:60)
+    at then (http://localhost:8080/__cypress/runner/cypress_runner.js:121155:21)
+    at wrapped (http://localhost:8080/__cypress/runner/cypress_runner.js:155033:19)
+
+      + expected - actual
+
+      -[ 'color-contrast [serious] ×37',
+      -  'link-in-text-block [serious] ×2' ]
+      +[]
+      ]]></failure>
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-019 | /utilities has no new serious/critical WCAG 2.1 AA violations" time="0.929" classname="TC-A11Y-019 | /utilities has no new serious/critical WCAG 2.1 AA violations">
+      <failure message="new critical/serious accessibility violations on /utilities: expected [ &apos;color-contrast [serious] ×22&apos; ] to deeply equal []" type="AssertionError"><![CDATA[AssertionError: new critical/serious accessibility violations on /utilities: expected [ 'color-contrast [serious] ×22' ] to deeply equal []
+    at ./cypress/support/commands.js/</ (webpack://cypress-kitchen-sink-testing/./cypress/support/commands.js:63:142)
+    at getRet (http://localhost:8080/__cypress/runner/cypress_runner.js:120892:20)
+    at tryCatcher (http://localhost:8080/__cypress/runner/cypress_runner.js:1780:23)
+    at __webpack_modules__</module.exports/Promise.try (http://localhost:8080/__cypress/runner/cypress_runner.js:4288:29)
+    at thenFn (http://localhost:8080/__cypress/runner/cypress_runner.js:120904:60)
+    at then (http://localhost:8080/__cypress/runner/cypress_runner.js:121155:21)
+    at wrapped (http://localhost:8080/__cypress/runner/cypress_runner.js:155033:19)
+
+      + expected - actual
+
+      -[ 'color-contrast [serious] ×22' ]
+      +[]
+      ]]></failure>
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-020 | /cypress-api has no new serious/critical WCAG 2.1 AA violations" time="0.822" classname="TC-A11Y-020 | /cypress-api has no new serious/critical WCAG 2.1 AA violations">
+      <failure message="new critical/serious accessibility violations on /cypress-api: expected [ &apos;color-contrast [serious] ×26&apos; ] to deeply equal []" type="AssertionError"><![CDATA[AssertionError: new critical/serious accessibility violations on /cypress-api: expected [ 'color-contrast [serious] ×26' ] to deeply equal []
+    at ./cypress/support/commands.js/</ (webpack://cypress-kitchen-sink-testing/./cypress/support/commands.js:63:142)
+    at getRet (http://localhost:8080/__cypress/runner/cypress_runner.js:120892:20)
+    at tryCatcher (http://localhost:8080/__cypress/runner/cypress_runner.js:1780:23)
+    at __webpack_modules__</module.exports/Promise.try (http://localhost:8080/__cypress/runner/cypress_runner.js:4288:29)
+    at thenFn (http://localhost:8080/__cypress/runner/cypress_runner.js:120904:60)
+    at then (http://localhost:8080/__cypress/runner/cypress_runner.js:121155:21)
+    at wrapped (http://localhost:8080/__cypress/runner/cypress_runner.js:155033:19)
+
+      + expected - actual
+
+      -[ 'color-contrast [serious] ×26' ]
+      +[]
+      ]]></failure>
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-021 | /todo has no new serious/critical WCAG 2.1 AA violations" time="0.894" classname="TC-A11Y-021 | /todo has no new serious/critical WCAG 2.1 AA violations">
+      <failure message="new critical/serious accessibility violations on /todo: expected [ &apos;label [critical] ×2&apos; ] to deeply equal []" type="AssertionError"><![CDATA[AssertionError: new critical/serious accessibility violations on /todo: expected [ 'label [critical] ×2' ] to deeply equal []
+    at ./cypress/support/commands.js/</ (webpack://cypress-kitchen-sink-testing/./cypress/support/commands.js:63:142)
+    at getRet (http://localhost:8080/__cypress/runner/cypress_runner.js:120892:20)
+    at tryCatcher (http://localhost:8080/__cypress/runner/cypress_runner.js:1780:23)
+    at __webpack_modules__</module.exports/Promise.try (http://localhost:8080/__cypress/runner/cypress_runner.js:4288:29)
+    at thenFn (http://localhost:8080/__cypress/runner/cypress_runner.js:120904:60)
+    at then (http://localhost:8080/__cypress/runner/cypress_runner.js:121155:21)
+    at wrapped (http://localhost:8080/__cypress/runner/cypress_runner.js:155033:19)
+
+      + expected - actual
+
+      -[ 'label [critical] ×2' ]
+      +[]
+      ]]></failure>
+    </testcase>
+    <testcase name="11 · Accessibility — axe-core WCAG 2.1 A/AA audit of every page TC-A11Y-030 | Todo app in a populated, edited state is audited too" time="0.956" classname="TC-A11Y-030 | Todo app in a populated, edited state is audited too">
+      <failure message="new critical/serious accessibility violations on /todo (state): expected [ &apos;label [critical] ×2&apos; ] to deeply equal []" type="AssertionError"><![CDATA[AssertionError: new critical/serious accessibility violations on /todo (state): expected [ 'label [critical] ×2' ] to deeply equal []
+    at ./cypress/support/commands.js/</ (webpack://cypress-kitchen-sink-testing/./cypress/support/commands.js:63:142)
+    at getRet (http://localhost:8080/__cypress/runner/cypress_runner.js:120892:20)
+    at tryCatcher (http://localhost:8080/__cypress/runner/cypress_runner.js:1780:23)
+    at __webpack_modules__</module.exports/Promise.try (http://localhost:8080/__cypress/runner/cypress_runner.js:4288:29)
+    at thenFn (http://localhost:8080/__cypress/runner/cypress_runner.js:120904:60)
+    at then (http://localhost:8080/__cypress/runner/cypress_runner.js:121155:21)
+    at wrapped (http://localhost:8080/__cypress/runner/cypress_runner.js:155033:19)
+
+      + expected - actual
+
+      -[ 'label [critical] ×2' ]
+      +[]
+      ]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,56 @@
+[
+ {
+  "name": "home-banner",
+  "status": "baseline-created",
+  "ratio": 0,
+  "at": "2026-11-09T21:03:31.507Z"
+ },
+ {
+  "name": "navbar",
+  "status": "baseline-created",
+  "ratio": 0,
+  "at": "2026-11-09T21:03:31.796Z"
+ },
+ {
+  "name": "actions-type-form",
+  "status": "baseline-created",
+  "ratio": 0,
+  "at": "2026-11-09T21:03:32.086Z"
+ },
+ {
+  "name": "assertions-table",
+  "status": "baseline-created",
+  "ratio": 0,
+  "at": "2026-11-09T21:03:32.330Z"
+ },
+ {
+  "name": "traversal-table",
+  "status": "baseline-created",
+  "ratio": 0,
+  "at": "2026-11-09T21:03:32.599Z"
+ },
+ {
+  "name": "todo-app",
+  "status": "baseline-created",
+  "ratio": 0,
+  "at": "2026-11-09T21:03:32.865Z"
+ },
+ {
+  "name": "home-mobile",
+  "status": "baseline-created",
+  "ratio": 0,
+  "at": "2026-11-09T21:03:33.108Z"
+ },
+ {
+  "name": "home-tablet",
+  "status": "baseline-created",
+  "ratio": 0,
+  "at": "2026-11-09T21:03:33.357Z"
+ },
+ {
+  "name": "detector-banner",
+  "status": "baseline-created",
+  "ratio": 0,
+  "at": "2026-11-09T21:03:33.581Z"
+ }
+]

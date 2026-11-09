@@ -1,0 +1,56 @@
+[
+ {
+  "check": "HTTP HEAD /",
+  "status": 200,
+  "note": "static server answers non-GET methods with 200 (observation)",
+  "at": "2026-11-09T21:03:39.153Z"
+ },
+ {
+  "check": "HTTP POST /",
+  "status": 200,
+  "note": "static server answers non-GET methods with 200 (observation)",
+  "at": "2026-11-09T21:03:39.209Z"
+ },
+ {
+  "check": "HTTP PUT /",
+  "status": 200,
+  "note": "static server answers non-GET methods with 200 (observation)",
+  "at": "2026-11-09T21:03:39.300Z"
+ },
+ {
+  "check": "HTTP DELETE /",
+  "status": 200,
+  "note": "static server answers non-GET methods with 200 (observation)",
+  "at": "2026-11-09T21:03:39.349Z"
+ },
+ {
+  "check": "Content-Security-Policy",
+  "present": false,
+  "value": null,
+  "at": "2026-11-09T21:05:34.460Z"
+ },
+ {
+  "check": "X-Frame-Options (clickjacking)",
+  "present": false,
+  "value": null,
+  "at": "2026-11-09T21:05:34.558Z"
+ },
+ {
+  "check": "X-Content-Type-Options: nosniff",
+  "present": false,
+  "value": null,
+  "at": "2026-11-09T21:05:34.642Z"
+ },
+ {
+  "check": "Referrer-Policy",
+  "present": false,
+  "value": null,
+  "at": "2026-11-09T21:05:34.716Z"
+ },
+ {
+  "check": "Strict-Transport-Security (HTTPS only)",
+  "present": false,
+  "value": null,
+  "at": "2026-11-09T21:05:34.762Z"
+ }
+]

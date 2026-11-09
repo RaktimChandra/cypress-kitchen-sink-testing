@@ -1,0 +1,255 @@
+[
+ {
+  "page": "/",
+  "domContentLoaded": 144,
+  "load": 0,
+  "ttfb": 15,
+  "firstContentfulPaint": 65,
+  "resources": 9,
+  "transferKB": 447,
+  "domNodes": 348,
+  "at": "2026-11-09T21:05:57.013Z"
+ },
+ {
+  "page": "/commands/querying",
+  "domContentLoaded": 128,
+  "load": 0,
+  "ttfb": 9,
+  "firstContentfulPaint": 80,
+  "resources": 7,
+  "transferKB": 85,
+  "domNodes": 272,
+  "at": "2026-11-09T21:05:57.274Z"
+ },
+ {
+  "page": "/commands/traversal",
+  "domContentLoaded": 117,
+  "load": 0,
+  "ttfb": 8,
+  "firstContentfulPaint": 33,
+  "resources": 7,
+  "transferKB": 85,
+  "domNodes": 500,
+  "at": "2026-11-09T21:05:57.504Z"
+ },
+ {
+  "page": "/commands/actions",
+  "domContentLoaded": 170,
+  "load": 0,
+  "ttfb": 8,
+  "firstContentfulPaint": 46,
+  "resources": 7,
+  "transferKB": 85,
+  "domNodes": 744,
+  "at": "2026-11-09T21:05:57.823Z"
+ },
+ {
+  "page": "/commands/window",
+  "domContentLoaded": 101,
+  "load": 0,
+  "ttfb": 9,
+  "firstContentfulPaint": 34,
+  "resources": 7,
+  "transferKB": 85,
+  "domNodes": 119,
+  "at": "2026-11-09T21:05:58.024Z"
+ },
+ {
+  "page": "/commands/viewport",
+  "domContentLoaded": 102,
+  "load": 0,
+  "ttfb": 14,
+  "firstContentfulPaint": 54,
+  "resources": 7,
+  "transferKB": 85,
+  "domNodes": 138,
+  "at": "2026-11-09T21:05:58.258Z"
+ },
+ {
+  "page": "/commands/location",
+  "domContentLoaded": 105,
+  "load": 0,
+  "ttfb": 8,
+  "firstContentfulPaint": 33,
+  "resources": 7,
+  "transferKB": 85,
+  "domNodes": 122,
+  "at": "2026-11-09T21:05:58.458Z"
+ },
+ {
+  "page": "/commands/navigation",
+  "domContentLoaded": 115,
+  "load": 0,
+  "ttfb": 9,
+  "firstContentfulPaint": 39,
+  "resources": 7,
+  "transferKB": 85,
+  "domNodes": 145,
+  "at": "2026-11-09T21:05:58.693Z"
+ },
+ {
+  "page": "/commands/assertions",
+  "domContentLoaded": 243,
+  "load": 0,
+  "ttfb": 91,
+  "firstContentfulPaint": 144,
+  "resources": 7,
+  "transferKB": 85,
+  "domNodes": 322,
+  "at": "2026-11-09T21:05:59.109Z"
+ },
+ {
+  "page": "/commands/misc",
+  "domContentLoaded": 108,
+  "load": 0,
+  "ttfb": 8,
+  "firstContentfulPaint": 30,
+  "resources": 7,
+  "transferKB": 85,
+  "domNodes": 140,
+  "at": "2026-11-09T21:05:59.334Z"
+ },
+ {
+  "page": "/commands/connectors",
+  "domContentLoaded": 107,
+  "load": 0,
+  "ttfb": 8,
+  "firstContentfulPaint": 28,
+  "resources": 7,
+  "transferKB": 85,
+  "domNodes": 218,
+  "at": "2026-11-09T21:05:59.576Z"
+ },
+ {
+  "page": "/commands/aliasing",
+  "domContentLoaded": 157,
+  "load": 0,
+  "ttfb": 9,
+  "firstContentfulPaint": 48,
+  "resources": 7,
+  "transferKB": 85,
+  "domNodes": 138,
+  "at": "2026-11-09T21:05:59.857Z"
+ },
+ {
+  "page": "/commands/waiting",
+  "domContentLoaded": 100,
+  "load": 0,
+  "ttfb": 9,
+  "firstContentfulPaint": 40,
+  "resources": 7,
+  "transferKB": 85,
+  "domNodes": 133,
+  "at": "2026-11-09T21:06:00.069Z"
+ },
+ {
+  "page": "/commands/network-requests",
+  "domContentLoaded": 136,
+  "load": 0,
+  "ttfb": 14,
+  "firstContentfulPaint": 54,
+  "resources": 7,
+  "transferKB": 85,
+  "domNodes": 222,
+  "at": "2026-11-09T21:06:00.351Z"
+ },
+ {
+  "page": "/commands/files",
+  "domContentLoaded": 119,
+  "load": 0,
+  "ttfb": 19,
+  "firstContentfulPaint": 60,
+  "resources": 7,
+  "transferKB": 85,
+  "domNodes": 186,
+  "at": "2026-11-09T21:06:00.589Z"
+ },
+ {
+  "page": "/commands/storage",
+  "domContentLoaded": 119,
+  "load": 0,
+  "ttfb": 9,
+  "firstContentfulPaint": 67,
+  "resources": 7,
+  "transferKB": 85,
+  "domNodes": 210,
+  "at": "2026-11-09T21:06:00.909Z"
+ },
+ {
+  "page": "/commands/cookies",
+  "domContentLoaded": 124,
+  "load": 0,
+  "ttfb": 8,
+  "firstContentfulPaint": 52,
+  "resources": 7,
+  "transferKB": 85,
+  "domNodes": 275,
+  "at": "2026-11-09T21:06:01.172Z"
+ },
+ {
+  "page": "/commands/spies-stubs-clocks",
+  "domContentLoaded": 117,
+  "load": 0,
+  "ttfb": 8,
+  "firstContentfulPaint": 41,
+  "resources": 7,
+  "transferKB": 85,
+  "domNodes": 267,
+  "at": "2026-11-09T21:06:01.420Z"
+ },
+ {
+  "page": "/utilities",
+  "domContentLoaded": 142,
+  "load": 0,
+  "ttfb": 11,
+  "firstContentfulPaint": 55,
+  "resources": 7,
+  "transferKB": 85,
+  "domNodes": 192,
+  "at": "2026-11-09T21:06:01.725Z"
+ },
+ {
+  "page": "/cypress-api",
+  "domContentLoaded": 141,
+  "load": 0,
+  "ttfb": 29,
+  "firstContentfulPaint": 64,
+  "resources": 7,
+  "transferKB": 85,
+  "domNodes": 243,
+  "at": "2026-11-09T21:06:01.963Z"
+ },
+ {
+  "page": "/todo",
+  "domContentLoaded": 162,
+  "load": 0,
+  "ttfb": 9,
+  "firstContentfulPaint": 57,
+  "resources": 15,
+  "transferKB": 100,
+  "domNodes": 115,
+  "at": "2026-11-09T21:06:02.260Z"
+ },
+ {
+  "page": "/todo add-latency",
+  "samplesMs": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   1,
+   0,
+   0,
+   0,
+   0
+  ],
+  "medianMs": 0,
+  "at": "2026-11-09T21:06:02.706Z"
+ },
+ {
+  "page": "/commands/actions longtasks",
+  "durations": [],
+  "at": "2026-11-09T21:06:03.448Z"
+ }
+]
