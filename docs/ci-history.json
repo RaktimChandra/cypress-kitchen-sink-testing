@@ -1,0 +1,98 @@
+{
+  "_comment": "Real CI runs that shaped the suite (GitHub Actions, RaktimChandra/cypress-kitchen-sink-testing). Numbers copied from results-<browser>.json of each run.",
+  "runs": [
+    {
+      "label": "Run 1 · first execution",
+      "run": 42697660332,
+      "commit": "f2427e9",
+      "cases": 582,
+      "browsers": {
+        "chrome": {
+          "pass": 539,
+          "fail": 43,
+          "knownDefect": 0,
+          "skipped": 0
+        },
+        "edge": {
+          "pass": 539,
+          "fail": 43,
+          "knownDefect": 0,
+          "skipped": 0
+        },
+        "electron": {
+          "pass": 540,
+          "fail": 42,
+          "knownDefect": 0,
+          "skipped": 0
+        },
+        "firefox": {
+          "pass": 535,
+          "fail": 41,
+          "knownDefect": 0,
+          "skipped": 6
+        }
+      },
+      "note": "Known-defect cases were counted as passes because the metadata catalogue was empty (harness bug, fixed in run 2)."
+    },
+    {
+      "label": "Run 2 · after triage",
+      "run": 42700440816,
+      "commit": "3cbf851",
+      "cases": 587,
+      "browsers": {
+        "chrome": {
+          "pass": 569,
+          "fail": 4,
+          "knownDefect": 14,
+          "skipped": 0
+        },
+        "edge": {
+          "pass": 569,
+          "fail": 4,
+          "knownDefect": 14,
+          "skipped": 0
+        },
+        "electron": {
+          "pass": 569,
+          "fail": 4,
+          "knownDefect": 14,
+          "skipped": 0
+        },
+        "firefox": {
+          "pass": 563,
+          "fail": 4,
+          "knownDefect": 14,
+          "skipped": 6
+        }
+      }
+    }
+  ],
+  "triage": [
+    {
+      "category": "Real SUT defect (logged and pinned)",
+      "count": 24,
+      "examples": "22 axe page audits → DEF-KS-010…013; TC-TD-132 → DEF-KS-009 duplicate ids; TC-NAV-080 → DEF-KS-014"
+    },
+    {
+      "category": "Wrong test oracle or setup (test fixed)",
+      "count": 15,
+      "examples": "8 XSS cases typed a literal {enter}; selectors; Cypress 16 error text; reserved alias 'slow'; R1 don't-care; focus before realType"
+    },
+    {
+      "category": "Browser / tool behaviour (test adapted)",
+      "count": 5,
+      "examples": "type=email re-sanitised per key (2); autofocus suppressed in the runner iframe; CORS on a rewritten response; Firefox keeps '1e2'"
+    }
+  ],
+  "mutation": [
+    {
+      "label": "Mutation run 1",
+      "run": 42700440325,
+      "killed": 29,
+      "survived": 2,
+      "equivalent": 1,
+      "survivors": "M27 (Clear completed rendered when 0 done), M31 (disabled radio)"
+    }
+  ],
+  "triage_note": "44 distinct failing cases in run 1 (43 in Chromium browsers + TC-FC-152 in Firefox only). Three harness bugs were found and fixed alongside: catalogue lost across bundles, browser name unknown in plugins, axe evidence written after the assertion."
+}
