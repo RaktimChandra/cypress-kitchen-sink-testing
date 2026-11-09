@@ -17,11 +17,14 @@ describe('02 · Navigation — deep links and hash routes', { tags: ['@navigatio
   })
 
   tc({ id: 'TC-NAV-080', title: 'Every documented section heading on every page has a working "on.cypress.io" docs link', technique: 'ECP',
-    req: 'REQ-NAV-05', expected: 'each h4[id] contains an <a> whose href starts with https://on.cypress.io' }, () => {
+    req: 'REQ-NAV-05', expected: 'each h4[id] section links to https://on.cypress.io (in the heading, or in the first paragraph for chai helpers such as expect/assert)' }, () => {
     pages.filter((p) => p.anchors && p.anchors.length).forEach((p) => {
       cy.visitPage(p.path)
       p.anchors.forEach((a) => {
-        cy.get(`h4[id="${a}"] a`).should('have.attr', 'href').and('match', /^https:\/\/on\.cypress\.io\//)
+        cy.get(`h4[id="${a}"]`).then(($h) => {
+          const $link = $h.find('a').length ? $h.find('a') : $h.nextAll('p').first().find('a')
+          expect($link.attr('href'), `docs link for #${a}`).to.match(/^https:\/\/on\.cypress\.io\//)
+        })
       })
     })
   })

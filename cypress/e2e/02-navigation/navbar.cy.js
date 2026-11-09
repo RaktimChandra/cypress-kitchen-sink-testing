@@ -55,7 +55,7 @@ describe('02 · Navigation — navbar menu', { tags: ['@navigation'] }, () => {
 
   tc({ id: 'TC-NAV-034', title: 'Home page lists every command page as a link that resolves', technique: 'ECP', req: 'REQ-NAV-01', priority: 'P1',
     expected: 'each /commands/* link on the home page returns HTTP 200' }, () => {
-    cy.get('#commands a[href^="/commands/"]').should('have.length.at.least', 17).each(($a) => {
+    cy.get('.home-list > li > a[href^="/commands/"]').should('have.length.at.least', 17).each(($a) => {
       cy.request($a.attr('href')).its('status').should('eq', 200)
     })
   })
