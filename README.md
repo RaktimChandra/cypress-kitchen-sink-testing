@@ -91,6 +91,7 @@ The documents are generated from the repository, so they always match the code. 
 | Project report: test plan, design, defects, TSR, case studies | `tools/deliverables/build_report.js` |
 | Presentation deck | `tools/deliverables/build_deck.js` |
 | FT3 preparation pack: solved BVA/ECP/DT/CEG/STT/MC-DC problems | `tools/deliverables/build_ft3_pack.js` |
+| Presentation script: the spoken talk, demo narration and Q&A | `tools/deliverables/build_pitch.js` |
 | Charts | `tools/deliverables/charts.py` → `docs/figures/charts/` |
 
 See also [TEST_STRATEGY.md](TEST_STRATEGY.md), [DEFECTS.md](DEFECTS.md) and [CONTRIBUTING.md](CONTRIBUTING.md).

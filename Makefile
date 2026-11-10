@@ -16,3 +16,4 @@ legacy-deliverables: charts
 	node tools/deliverables/build_report.js
 	node tools/deliverables/build_deck.js
 	node tools/deliverables/build_ft3_pack.js
+	node tools/deliverables/build_pitch.js
