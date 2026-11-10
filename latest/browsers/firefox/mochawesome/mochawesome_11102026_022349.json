@@ -1,0 +1,183 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-11-10T02:23:48.287Z",
+    "end": "2026-11-10T02:23:49.515Z",
+    "duration": 1228,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4433b3c2-9a62-4764-a734-d7185f4dc0b5",
+      "title": "",
+      "fullFile": "cypress/e2e/07-todo-app/todo-decision-table.cy.js",
+      "file": "cypress/e2e/07-todo-app/todo-decision-table.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d2d8a44d-4e13-4b58-a429-f4ef8240c0fd",
+          "title": "07 · TodoMVC — decision table: footer controls",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC-TD-070 | Rule R1: footer hidden, clear hidden, toggle-all hidden",
+              "fullTitle": "07 · TodoMVC — decision table: footer controls TC-TD-070 | Rule R1: footer hidden, clear hidden, toggle-all hidden",
+              "timedOut": null,
+              "duration": 337,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visitTodos(list);\ncy.get('.footer').should(footer ? 'be.visible' : 'not.be.visible');\n// check the rendered display too: an empty but displayed button is invisible yet still wrong (mutant M27)\nif (footer) cy.get('.clear-completed').should(clear ? 'be.visible' : 'not.be.visible').and('have.css', 'display', clear ? 'block' : 'none');\nif (all === null) cy.get('.main').should('not.be.visible');else cy.get('#toggle-all').should(all ? 'be.checked' : 'not.be.checked');",
+              "err": {},
+              "uuid": "242723da-0e91-4cd3-ab14-ac1bdac26775",
+              "parentUUID": "d2d8a44d-4e13-4b58-a429-f4ef8240c0fd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-TD-071 | Rule R2: footer shown, clear hidden, toggle-all off",
+              "fullTitle": "07 · TodoMVC — decision table: footer controls TC-TD-071 | Rule R2: footer shown, clear hidden, toggle-all off",
+              "timedOut": null,
+              "duration": 127,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visitTodos(list);\ncy.get('.footer').should(footer ? 'be.visible' : 'not.be.visible');\n// check the rendered display too: an empty but displayed button is invisible yet still wrong (mutant M27)\nif (footer) cy.get('.clear-completed').should(clear ? 'be.visible' : 'not.be.visible').and('have.css', 'display', clear ? 'block' : 'none');\nif (all === null) cy.get('.main').should('not.be.visible');else cy.get('#toggle-all').should(all ? 'be.checked' : 'not.be.checked');",
+              "err": {},
+              "uuid": "da37ceba-e578-4d6f-bf41-c0e6d400f97f",
+              "parentUUID": "d2d8a44d-4e13-4b58-a429-f4ef8240c0fd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-TD-072 | Rule R3: footer shown, clear shown, toggle-all off",
+              "fullTitle": "07 · TodoMVC — decision table: footer controls TC-TD-072 | Rule R3: footer shown, clear shown, toggle-all off",
+              "timedOut": null,
+              "duration": 118,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visitTodos(list);\ncy.get('.footer').should(footer ? 'be.visible' : 'not.be.visible');\n// check the rendered display too: an empty but displayed button is invisible yet still wrong (mutant M27)\nif (footer) cy.get('.clear-completed').should(clear ? 'be.visible' : 'not.be.visible').and('have.css', 'display', clear ? 'block' : 'none');\nif (all === null) cy.get('.main').should('not.be.visible');else cy.get('#toggle-all').should(all ? 'be.checked' : 'not.be.checked');",
+              "err": {},
+              "uuid": "3ff7baff-172c-4eb0-b0f3-5e485575f4f5",
+              "parentUUID": "d2d8a44d-4e13-4b58-a429-f4ef8240c0fd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-TD-073 | Rule R4: footer shown, clear shown, toggle-all on",
+              "fullTitle": "07 · TodoMVC — decision table: footer controls TC-TD-073 | Rule R4: footer shown, clear shown, toggle-all on",
+              "timedOut": null,
+              "duration": 125,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visitTodos(list);\ncy.get('.footer').should(footer ? 'be.visible' : 'not.be.visible');\n// check the rendered display too: an empty but displayed button is invisible yet still wrong (mutant M27)\nif (footer) cy.get('.clear-completed').should(clear ? 'be.visible' : 'not.be.visible').and('have.css', 'display', clear ? 'block' : 'none');\nif (all === null) cy.get('.main').should('not.be.visible');else cy.get('#toggle-all').should(all ? 'be.checked' : 'not.be.checked');",
+              "err": {},
+              "uuid": "0714777c-6e8e-445c-8b35-19ebf88e49ba",
+              "parentUUID": "d2d8a44d-4e13-4b58-a429-f4ef8240c0fd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-TD-074 | Rules are re-evaluated after each action (R2 → R3 → R4 → R2)",
+              "fullTitle": "07 · TodoMVC — decision table: footer controls TC-TD-074 | Rules are re-evaluated after each action (R2 → R3 → R4 → R2)",
+              "timedOut": null,
+              "duration": 381,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visitTodos(['a', 'b']);\ncy.get('.clear-completed').should('not.be.visible');\ncy.get('.todo-list li').eq(0).find('.toggle').check();\ncy.get('.clear-completed').should('be.visible');\ncy.get('#toggle-all').should('not.be.checked');\ncy.get('.todo-list li').eq(1).find('.toggle').check();\ncy.get('#toggle-all').should('be.checked');\ncy.get('.clear-completed').click();\ncy.get('.footer').should('not.be.visible');",
+              "err": {},
+              "uuid": "41df64e5-8492-4a73-ac5d-911df1c6dd5b",
+              "parentUUID": "d2d8a44d-4e13-4b58-a429-f4ef8240c0fd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "242723da-0e91-4cd3-ab14-ac1bdac26775",
+            "da37ceba-e578-4d6f-bf41-c0e6d400f97f",
+            "3ff7baff-172c-4eb0-b0f3-5e485575f4f5",
+            "0714777c-6e8e-445c-8b35-19ebf88e49ba",
+            "41df64e5-8492-4a73-ac5d-911df1c6dd5b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1088,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "8.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.3.2"
+    }
+  }
+}

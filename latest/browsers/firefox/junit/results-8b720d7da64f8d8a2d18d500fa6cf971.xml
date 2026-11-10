@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="12.475" tests="21" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-11-10T02:22:26" tests="0" file="cypress/e2e/02-navigation/anchors-and-routes.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="02 · Navigation — deep links and hash routes" timestamp="2026-11-10T02:22:26" tests="21" time="12.469" failures="0">
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-060 | Deep link /commands/actions#type scrolls its section into view" time="0.261" classname="TC-NAV-060 | Deep link /commands/actions#type scrolls its section into view">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-061 | Deep link /commands/actions#focus scrolls its section into view" time="0.192" classname="TC-NAV-061 | Deep link /commands/actions#focus scrolls its section into view">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-062 | Deep link /commands/actions#blur scrolls its section into view" time="0.161" classname="TC-NAV-062 | Deep link /commands/actions#blur scrolls its section into view">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-063 | Deep link /commands/actions#clear scrolls its section into view" time="0.154" classname="TC-NAV-063 | Deep link /commands/actions#clear scrolls its section into view">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-064 | Deep link /commands/actions#submit scrolls its section into view" time="0.149" classname="TC-NAV-064 | Deep link /commands/actions#submit scrolls its section into view">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-065 | Deep link /commands/actions#click scrolls its section into view" time="0.172" classname="TC-NAV-065 | Deep link /commands/actions#click scrolls its section into view">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-066 | Deep link /commands/actions#dblclick scrolls its section into view" time="0.172" classname="TC-NAV-066 | Deep link /commands/actions#dblclick scrolls its section into view">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-067 | Deep link /commands/actions#rightclick scrolls its section into view" time="0.140" classname="TC-NAV-067 | Deep link /commands/actions#rightclick scrolls its section into view">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-068 | Deep link /commands/actions#check scrolls its section into view" time="0.147" classname="TC-NAV-068 | Deep link /commands/actions#check scrolls its section into view">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-069 | Deep link /commands/actions#uncheck scrolls its section into view" time="0.211" classname="TC-NAV-069 | Deep link /commands/actions#uncheck scrolls its section into view">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-070 | Deep link /commands/actions#select scrolls its section into view" time="0.197" classname="TC-NAV-070 | Deep link /commands/actions#select scrolls its section into view">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-071 | Deep link /commands/actions#scrollIntoView scrolls its section into view" time="0.163" classname="TC-NAV-071 | Deep link /commands/actions#scrollIntoView scrolls its section into view">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-072 | Deep link /commands/actions#scrollTo scrolls its section into view" time="0.172" classname="TC-NAV-072 | Deep link /commands/actions#scrollTo scrolls its section into view">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-073 | Deep link /commands/actions#trigger scrolls its section into view" time="0.185" classname="TC-NAV-073 | Deep link /commands/actions#trigger scrolls its section into view">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-080 | Every documented section heading on every page has a working &quot;on.cypress.io&quot; docs link" time="1.978" classname="TC-NAV-080 | Every documented section heading on every page has a working &quot;on.cypress.io&quot; docs link">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-081 | Todo route #/ selects &quot;All&quot; and shows 3 item(s)" time="0.194" classname="TC-NAV-081 | Todo route #/ selects &quot;All&quot; and shows 3 item(s)">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-082 | Todo route #/active selects &quot;Active&quot; and shows 2 item(s)" time="0.165" classname="TC-NAV-082 | Todo route #/active selects &quot;Active&quot; and shows 2 item(s)">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-083 | Todo route #/completed selects &quot;Completed&quot; and shows 1 item(s)" time="0.158" classname="TC-NAV-083 | Todo route #/completed selects &quot;Completed&quot; and shows 1 item(s)">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-084 | Clicking filters updates the hash and the back button restores the previous filter" time="0.470" classname="TC-NAV-084 | Clicking filters updates the hash and the back button restores the previous filter">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-085 | Unknown todo route falls back to showing all items" time="6.246" classname="TC-NAV-085 | Unknown todo route falls back to showing all items">
+    </testcase>
+    <testcase name="02 · Navigation — deep links and hash routes TC-NAV-086 | The &quot;cy.fixture or require&quot; section links to its documentation like every other section" time="0.153" classname="TC-NAV-086 | The &quot;cy.fixture or require&quot; section links to its documentation like every other section">
+    </testcase>
+  </testsuite>
+</testsuites>

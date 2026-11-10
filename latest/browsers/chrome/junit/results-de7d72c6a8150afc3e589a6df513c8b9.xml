@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="7.175" tests="22" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-11-10T02:22:08" tests="0" file="cypress/e2e/03-form-controls/select.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="03 · Form controls — select lists" timestamp="2026-11-10T02:22:08" tests="22" time="7.173" failures="0">
+    <testcase name="03 · Form controls — select lists TC-FC-110 | Single select defaults to the &quot;--Select a fruit--&quot; placeholder" time="0.256" classname="TC-FC-110 | Single select defaults to the &quot;--Select a fruit--&quot; placeholder">
+    </testcase>
+    <testcase name="03 · Form controls — select lists TC-FC-111 | Select &quot;apples&quot; by visible text" time="0.272" classname="TC-FC-111 | Select &quot;apples&quot; by visible text">
+    </testcase>
+    <testcase name="03 · Form controls — select lists TC-FC-114 | Select &quot;apples&quot; by value fr-apples" time="0.247" classname="TC-FC-114 | Select &quot;apples&quot; by value fr-apples">
+    </testcase>
+    <testcase name="03 · Form controls — select lists TC-FC-112 | Select &quot;oranges&quot; by visible text" time="0.235" classname="TC-FC-112 | Select &quot;oranges&quot; by visible text">
+    </testcase>
+    <testcase name="03 · Form controls — select lists TC-FC-115 | Select &quot;oranges&quot; by value fr-oranges" time="0.234" classname="TC-FC-115 | Select &quot;oranges&quot; by value fr-oranges">
+    </testcase>
+    <testcase name="03 · Form controls — select lists TC-FC-113 | Select &quot;bananas&quot; by visible text" time="0.232" classname="TC-FC-113 | Select &quot;bananas&quot; by visible text">
+    </testcase>
+    <testcase name="03 · Form controls — select lists TC-FC-116 | Select &quot;bananas&quot; by value fr-bananas" time="0.248" classname="TC-FC-116 | Select &quot;bananas&quot; by value fr-bananas">
+    </testcase>
+    <testcase name="03 · Form controls — select lists TC-FC-117 | Select by index 0 (boundary of the option list)" time="0.230" classname="TC-FC-117 | Select by index 0 (boundary of the option list)">
+    </testcase>
+    <testcase name="03 · Form controls — select lists TC-FC-118 | Select by index 1 (boundary of the option list)" time="0.237" classname="TC-FC-118 | Select by index 1 (boundary of the option list)">
+    </testcase>
+    <testcase name="03 · Form controls — select lists TC-FC-119 | Select by index 3 (boundary of the option list)" time="0.233" classname="TC-FC-119 | Select by index 3 (boundary of the option list)">
+    </testcase>
+    <testcase name="03 · Form controls — select lists TC-FC-120 | Selecting a non-existent option fails (index 4 is out of range)" time="0.615" classname="TC-FC-120 | Selecting a non-existent option fails (index 4 is out of range)">
+    </testcase>
+    <testcase name="03 · Form controls — select lists TC-FC-121 | Selecting a non-existent text fails" time="0.613" classname="TC-FC-121 | Selecting a non-existent text fails">
+    </testcase>
+    <testcase name="03 · Form controls — select lists TC-FC-122 | Change event fires once per selection" time="0.357" classname="TC-FC-122 | Change event fires once per selection">
+    </testcase>
+    <testcase name="03 · Form controls — select lists TC-FC-123 | Multi-select subset {∅}" time="0.191" classname="TC-FC-123 | Multi-select subset {∅}">
+    </testcase>
+    <testcase name="03 · Form controls — select lists TC-FC-124 | Multi-select subset {apples}" time="0.231" classname="TC-FC-124 | Multi-select subset {apples}">
+    </testcase>
+    <testcase name="03 · Form controls — select lists TC-FC-125 | Multi-select subset {oranges}" time="0.224" classname="TC-FC-125 | Multi-select subset {oranges}">
+    </testcase>
+    <testcase name="03 · Form controls — select lists TC-FC-126 | Multi-select subset {apples, oranges}" time="0.337" classname="TC-FC-126 | Multi-select subset {apples, oranges}">
+    </testcase>
+    <testcase name="03 · Form controls — select lists TC-FC-127 | Multi-select subset {bananas}" time="0.296" classname="TC-FC-127 | Multi-select subset {bananas}">
+    </testcase>
+    <testcase name="03 · Form controls — select lists TC-FC-128 | Multi-select subset {apples, bananas}" time="0.337" classname="TC-FC-128 | Multi-select subset {apples, bananas}">
+    </testcase>
+    <testcase name="03 · Form controls — select lists TC-FC-129 | Multi-select subset {oranges, bananas}" time="0.293" classname="TC-FC-129 | Multi-select subset {oranges, bananas}">
+    </testcase>
+    <testcase name="03 · Form controls — select lists TC-FC-130 | Multi-select subset {apples, oranges, bananas}" time="0.345" classname="TC-FC-130 | Multi-select subset {apples, oranges, bananas}">
+    </testcase>
+    <testcase name="03 · Form controls — select lists TC-FC-131 | Re-selecting in a multi-select replaces the previous selection" time="0.410" classname="TC-FC-131 | Re-selecting in a multi-select replaces the previous selection">
+    </testcase>
+  </testsuite>
+</testsuites>

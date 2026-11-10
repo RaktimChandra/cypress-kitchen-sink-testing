@@ -1,0 +1,183 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-11-10T02:25:03.232Z",
+    "end": "2026-11-10T02:25:07.523Z",
+    "duration": 4291,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "01a56fcd-2e35-4ad3-9ab8-3204b6ba4213",
+      "title": "",
+      "fullFile": "cypress/e2e/17-acceptance/demo-journeys.cy.js",
+      "file": "cypress/e2e/17-acceptance/demo-journeys.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8799525c-4ee7-4125-b63d-ac2a4b1bf0c8",
+          "title": "17 · Acceptance — demonstration journeys",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC-UAT-001 | Given a visitor on the home page, When they use the menu to reach Actions and fill every form control, Then each control reflects the input",
+              "fullTitle": "17 · Acceptance — demonstration journeys TC-UAT-001 | Given a visitor on the home page, When they use the menu to reach Actions and fill every form control, Then each control reflects the input",
+              "timedOut": null,
+              "duration": 1560,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Given\ncy.visitPage('/');\n// When — navigation\ncy.contains('.dropdown-toggle', 'Commands').click();\ncy.get('.dropdown-menu').contains('Actions').click();\ncy.location('pathname').should('eq', '/commands/actions');\n// When — text controls\ncy.get('.action-email').type('student@srmist.edu.in').should('have.value', 'student@srmist.edu.in');\ncy.get('.action-focus').focus().should('have.class', 'focus');\ncy.get('.action-blur').type('Raktim Chandra').blur().should('have.class', 'error');\ncy.get('.action-clear').type('temporary').clear().should('have.value', '');\ncy.get('#couponCode1').type('SVV2026');\ncy.get('.action-form').submit().next().should('contain', 'Your form has been submitted!');\n// When — choice controls\ncy.get('.action-multiple-checkboxes [type=checkbox]').check(['checkbox1', 'checkbox3']);\ncy.get('.action-radios [type=radio]').check('radio2').should('be.checked');\ncy.get('.action-select').select('bananas').should('have.value', 'fr-bananas');\ncy.get('.action-select-multiple').select(['apples', 'oranges']);\ncy.get('.trigger-input-range').invoke('val', 75).trigger('change').next('p').should('have.text', '75');\n// Then — summary assertion over the whole form state\ncy.get('.action-multiple-checkboxes :checked').should('have.length', 2);\ncy.get('.action-select-multiple').should($s => expect([...$s[0].selectedOptions].map(o => o.value)).to.deep.equal(['fr-apples', 'fr-oranges']));",
+              "err": {},
+              "uuid": "be2c8139-9a89-4e1e-b53d-3ec410407379",
+              "parentUUID": "8799525c-4ee7-4125-b63d-ac2a4b1bf0c8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-UAT-002 | Given the Actions page, When the user clicks, double-clicks, right-clicks and scrolls, Then every interaction gives visible feedback",
+              "fullTitle": "17 · Acceptance — demonstration journeys TC-UAT-002 | Given the Actions page, When the user clicks, double-clicks, right-clicks and scrolls, Then every interaction gives visible feedback",
+              "timedOut": null,
+              "duration": 403,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visitPage('/commands/actions');\ncy.get('.action-btn').click();\ncy.get('.popover').should('be.visible');\ncy.get('#action-canvas').click('center');\ncy.get('.action-div').dblclick();\ncy.get('.action-input-hidden').should('be.visible');\ncy.get('.rightclick-action-div').rightclick();\ncy.get('.rightclick-action-input-hidden').should('be.visible');\ncy.get('#scroll-both button').scrollIntoView();\ncy.get('#scrollable-both').scrollTo('bottomRight');",
+              "err": {},
+              "uuid": "50e28022-831b-47f8-abdd-74e5a860c515",
+              "parentUUID": "8799525c-4ee7-4125-b63d-ac2a4b1bf0c8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-UAT-003 | Given an empty todo list, When a user plans their day, Then the list, counter, filters and storage agree",
+              "fullTitle": "17 · Acceptance — demonstration journeys TC-UAT-003 | Given an empty todo list, When a user plans their day, Then the list, counter, filters and storage agree",
+              "timedOut": null,
+              "duration": 1028,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visitTodos([]);\n['Revise BVA and ECP', 'Write Cypress specs', 'Prepare viva'].forEach(t => cy.addTodo(t));\ncy.get('.todo-count').should('have.text', '3 items left');\ncy.contains('.todo-list li', 'Prepare viva').find('label').dblclick();\ncy.get('.todo-list li.editing .edit').clear().type('Prepare viva answers{enter}');\ncy.contains('.todo-list li', 'Revise BVA and ECP').find('.toggle').check();\ncy.contains('.filters a', 'Active').click();\ncy.get('.todo-list li').should('have.length', 2);\ncy.contains('.filters a', 'Completed').click();\ncy.get('.todo-list li').should('have.length', 1).and('contain', 'Revise BVA and ECP');\ncy.contains('.filters a', 'All').click();\ncy.get('.clear-completed').click();\ncy.storedTodos().should(t => expect(t.map(x => x.title)).to.deep.equal(['Write Cypress specs', 'Prepare viva answers']));",
+              "err": {},
+              "uuid": "e4994f12-7307-4693-be32-f4b9419d7b7d",
+              "parentUUID": "8799525c-4ee7-4125-b63d-ac2a4b1bf0c8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-UAT-004 | Given any page, When the user browses with back/forward and reload, Then they always land on the expected page",
+              "fullTitle": "17 · Acceptance — demonstration journeys TC-UAT-004 | Given any page, When the user browses with back/forward and reload, Then they always land on the expected page",
+              "timedOut": null,
+              "duration": 861,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const tour = ['/commands/querying', '/commands/traversal', '/commands/assertions', '/utilities'];\ncy.visitPage('/');\ntour.forEach(p => {\n  cy.visitPage(p);\n  cy.location('pathname').should('eq', p);\n});\ncy.go('back');\ncy.location('pathname').should('eq', '/commands/assertions');\ncy.go('back');\ncy.location('pathname').should('eq', '/commands/traversal');\ncy.reload();\ncy.get('.banner h1').should('contain', 'Traversal');\ncy.go('forward');\ncy.location('pathname').should('eq', '/commands/assertions');",
+              "err": {},
+              "uuid": "ff1d1558-346c-47dd-a6bc-8adbc315ac6f",
+              "parentUUID": "8799525c-4ee7-4125-b63d-ac2a4b1bf0c8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC-UAT-005 | Given a comments API, When the user triggers GET/POST/PUT, Then the page reports each outcome (API stubbed)",
+              "fullTitle": "17 · Acceptance — demonstration journeys TC-UAT-005 | Given a comments API, When the user triggers GET/POST/PUT, Then the page reports each outcome (API stubbed)",
+              "timedOut": null,
+              "duration": 296,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.intercept('GET', '**/comments/1', {\n  body: {\n    body: 'Hello from the stub'\n  }\n}).as('get');\ncy.intercept('POST', '**/comments', {\n  statusCode: 201,\n  body: {}\n}).as('post');\ncy.intercept('PUT', '**/comments/1', {\n  statusCode: 404,\n  body: {\n    error: 'Not Found'\n  }\n}).as('put');\ncy.visitPage('/commands/network-requests');\ncy.get('.network-btn').click();\ncy.wait('@get');\ncy.get('.network-post').click();\ncy.wait('@post');\ncy.get('.network-put').click();\ncy.wait('@put');\ncy.get('.network-comment').should('have.text', 'Hello from the stub');\ncy.get('.network-post-comment').should('have.text', 'POST successful!');\ncy.get('.network-put-comment').should('have.text', 'Not Found');",
+              "err": {},
+              "uuid": "5ca1b6ce-9bce-412c-9456-1b21bd20cd24",
+              "parentUUID": "8799525c-4ee7-4125-b63d-ac2a4b1bf0c8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "be2c8139-9a89-4e1e-b53d-3ec410407379",
+            "50e28022-831b-47f8-abdd-74e5a860c515",
+            "e4994f12-7307-4693-be32-f4b9419d7b7d",
+            "ff1d1558-346c-47dd-a6bc-8adbc315ac6f",
+            "5ca1b6ce-9bce-412c-9456-1b21bd20cd24"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4148,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "8.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "6.3.2"
+    }
+  }
+}
